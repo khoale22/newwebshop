@@ -29,7 +29,8 @@ public class CartController {
 		Cart cart = (Cart) session.getAttribute("cart");
 		int quantity = (Integer) productService.getQuantityOfProduct(productId);
 
-		System.out.println("quantity is :" + quantity);
+		System.out.println("quantity is fd :" + quantity);
+		System.out.println("quantity is abc:" + quantity);
 		if (quantity <= 0) {
 			String outOfProduct = "This product is out of quantity ,please buy other";
 			session.setAttribute("outOfProduct", outOfProduct);
@@ -42,7 +43,10 @@ public class CartController {
 				Product product = productService.getProductById(productId);
 				switch (command) {
 				case "plus":
-
+                     int quantityNew = quantity -1 ;
+                     productService.updateQuanlityProduct(quantityNew, productId);
+                     System.out.println("enter into ....");
+                    
 					if (cart.getCartItems().containsKey(productId)) {
 
 						cart.plusToCart(productId, new Item(product, cart.getCartItems().get(productId).getQuanlity()));
@@ -53,6 +57,7 @@ public class CartController {
 					}
 					break;
 				case "remove":
+					System.out.print("remove ok");
 					cart.removeToCart(productId);
 					break;
 				}

@@ -41,7 +41,6 @@
 					</label>
 				</div>
 			</form>
-
 		</div>
 		<c:if test="${error != null}">
 			<div class="alert alert-warning alert-dismissible">

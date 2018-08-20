@@ -41,13 +41,13 @@
 
 		<!-- Links -->
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+			<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">UserName</a></li>
 			<!-- Dropdown -->
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
-				data-toggle="dropdown"> Dropdown link </a>
+				data-toggle="dropdown"> Category </a>
 				<div class="dropdown-menu">
 					<c:forEach var="cate" items="${listCategory}">
 						<a class="dropdown-item"

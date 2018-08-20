@@ -43,6 +43,7 @@
 					<th>Price</th>
 					<th>Quantity</th>
 					<th>Total</th>
+					<th>delete</th>
 				</tr>
 			</thead>
 
@@ -58,6 +59,10 @@
 					<td><%=list.getValue().getProduct().getProductPrice()%></td>
 					<th><%=list.getValue().getQuanlity()%></th>
 					<td><%=list.getValue().getQuanlity() * list.getValue().getProduct().getProductPrice()%></td>
+					<%-- 					<td><a href="cart/add?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>">detele </a> </td> --%>
+					<td><a
+						href="cart/remove?command=remove&productId=pro1">detele
+					</a></td>
 				</tr>
 			</tbody>
 			<%

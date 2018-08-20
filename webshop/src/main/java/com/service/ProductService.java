@@ -23,5 +23,8 @@ public class ProductService {
 	public Product getProductById(String productId) {
 		return productDao.getProductById(productId);
 	}
+	public void updateQuanlityProduct(int quantity , String productId) {
+		productDao.updateQuanlityProduct(quantity, productId);
+	}
 
 }

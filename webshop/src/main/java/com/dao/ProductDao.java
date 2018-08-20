@@ -43,5 +43,14 @@ public class ProductDao {
 		
 	}
 	
+	@Transactional
+	public void updateQuanlityProduct(int quantity , String productId) {
+		Query query = sessionFactory.getCurrentSession().createQuery("update Product set quantity=:quantity where productId=:productId");
+		query.setParameter("productId", productId);
+		query.setParameter("quantity", quantity);
+		query.executeUpdate();
+		
+	}
+	
 
 }
