@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="styles/login.css">
+<link rel="stylesheet" type="text/css" href="styles/cart.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script
@@ -29,8 +29,8 @@
 				<img class="img-thumbnail" src="images/images2.jpeg">
 			</div>
 			<form action="login/authenticate" method="post">
-				<input type="text" class="form-control" placeholder="Email"
-					name="username" required autofocus> 
+				<input type="text" class="form-control" placeholder="UserId"
+					name="userId" required autofocus> 
 				<input type="password"
 					name="pass" class="form-control" placeholder="Password" required>
 				<button class="btn btn-success btn-block" type="submit">Login</button>

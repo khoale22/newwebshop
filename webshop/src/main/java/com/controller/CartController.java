@@ -17,12 +17,12 @@ import com.model.Item;
 import com.service.ProductService;
 
 @Controller
-@RequestMapping(value = "/cart")
+//@RequestMapping(value = "/cart")
 public class CartController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	@RequestMapping(value = "cartadd", method = RequestMethod.GET)
 	public String addProductToCart(@RequestParam("command") String command, @RequestParam("productId") String productId,
 			ModelMap mm, HttpSession session) {
 

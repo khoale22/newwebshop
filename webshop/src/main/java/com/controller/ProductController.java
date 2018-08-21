@@ -19,18 +19,20 @@ public class ProductController {
 
 	@RequestMapping(method =RequestMethod.GET)
 	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm) {
+		
+		int maxResult =3 ;
 		if(page ==1) {
 		  	
 		}else {
 			page = page -1 ;
-			page = page*3+1;
+			page = page*maxResult+1;
 		}	
 		
 		mm.addAttribute("categoryId" ,categoryId);
 		mm.addAttribute("page" ,page);
-		mm.addAttribute("listProduct" ,productService.pagination(page, 3, categoryId));
+		mm.addAttribute("listProduct" ,productService.pagination(page, maxResult, categoryId));
 		
-		return "product";
+		return "productnew";
 		
 	}
 	

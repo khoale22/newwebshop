@@ -1,0 +1,7 @@
+.label {
+    color: white;
+    padding: 8px;
+    font-family: Arial;
+    float: right;
+}
+.success {background-color: #4CAF50;} 

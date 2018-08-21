@@ -37,7 +37,7 @@
 						<span> Name: <strong>${product.productName} </strong></span> <span> Price : <strong>${product.productPrice}$
 						</strong></span> <span> Quantity: <strong>${product.quantity} </strong></span>
 <!-- 						<button type="submit" style="background-color: red;">AddToCart</button> -->
-						<a href="cart/add?command=plus&productId=${product.productId}" class="btn btn-primary">AddToCart </a>  
+						<a href="cartadd?command=plus&productId=${product.productId}" class="btn btn-primary">AddToCart </a>  
 					</div>
 				</div>
 			</div>

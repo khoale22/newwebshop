@@ -54,7 +54,7 @@
 							href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a>
 					</c:forEach>
 				</div></li>
-			<li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+			<li class="nav-item"><a class="nav-link" href="checkout">Cart</a></li>
 		</ul>
 	</nav>
 	<br>
