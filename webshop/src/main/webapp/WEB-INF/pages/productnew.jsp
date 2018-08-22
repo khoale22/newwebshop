@@ -62,12 +62,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="choose" style="text-align: center; color: black;">
+<!-- 								<div class="choose" style="text-align: center; color: black;"> -->
 									 
-										<a href="#">Detail product</a>
+<!-- 										<a href="#">Detail product</a> -->
 
 									
-								</div>
+<!-- 								</div> -->
 							</div>
 						</div>
 					</c:forEach>
