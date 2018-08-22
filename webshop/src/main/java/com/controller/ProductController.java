@@ -20,7 +20,7 @@ public class ProductController {
 	@RequestMapping(method =RequestMethod.GET)
 	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm) {
 		
-		int maxResult =3 ;
+		int maxResult =4 ;
 		if(page ==1) {
 		  	
 		}else {

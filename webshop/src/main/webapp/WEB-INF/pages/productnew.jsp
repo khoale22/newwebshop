@@ -39,7 +39,7 @@
 					<!--features_items-->
 					<h2 class="title text-center">Features Items</h2>
 					<c:forEach var="product" items="${listProduct}">
-						<div class="col-sm-4">
+						<div class="col-sm-3">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
@@ -102,7 +102,7 @@
 
 	</div>
 	<!--features_items-->
-	</div>
+	
 	<div class="container">
 		<ul class="pagination">
 			<li><a href="product?categoryId=${categoryId}&page=1">1</a></li>
@@ -110,6 +110,8 @@
 			<li><a href="product?categoryId=${categoryId}&page=3">3</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=4">4</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=5">5</a></li>
+			<li><a href="product?categoryId=${categoryId}&page=6">6</a></li>
+			<li><a href="product?categoryId=${categoryId}&page=7">7</a></li>
 		</ul>
 	</div>
 

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="com.model.Cart"%>
+<%@page import="com.entity.User"%>
 <%@page import="com.service.CategoryService"%>
 <%@page import="java.util.List"%> 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -32,6 +33,9 @@
 			cart = (Cart) session.getAttribute("cart");
 		}
 		
+		if(session.getAttribute("user")!=null){
+			User user = (User)session.getAttribute("user");
+		}
 		 CategoryService categoryService = new CategoryService();
 	%>
 
@@ -43,7 +47,6 @@
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">UserName</a></li>
 			<!-- Dropdown -->
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbardrop"
@@ -55,7 +58,11 @@
 					</c:forEach>
 				</div></li>
 			<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li> 
+
+			<li class="nav-item"><a class="nav-link" href="#">${user.userEmail}</a></li>
+		
 		</ul>
+		<div style="float: right;"><a class="navbar-brand" href="#" style="float: right;" >test</a></div> 
 	</nav>
 	<br>
 </body>

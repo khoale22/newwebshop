@@ -79,7 +79,7 @@ public class CheckOutController {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			//session.removeAttribute("cart");
+			session.removeAttribute("cart");
 		}
 		return "redirect:/";
 	}
