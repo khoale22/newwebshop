@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -162,13 +163,13 @@ IMG.displayed {
 							<div id="sportswear" class="panel-collapse collapse">
 								<div class="panel-body">
 									<ul>
-										<li><a href="#">Nike </a></li>
-										<li><a href="#">Under Armour </a></li>
-										<li><a href="#">Adidas </a></li>
-										<li><a href="#">Puma</a></li>
-										<li><a href="#">ASICS </a></li>
+									     <c:forEach var="cate" items="${listCategory}">
+										<li><a href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a></li>
+										</c:forEach>
 									</ul>
 								</div>
+								
+				
 							</div>
 						</div>
 					</div>

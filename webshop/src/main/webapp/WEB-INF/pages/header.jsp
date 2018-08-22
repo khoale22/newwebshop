@@ -3,7 +3,7 @@
 <%@page import="com.model.Cart"%>
 <%@page import="com.entity.User"%>
 <%@page import="com.service.CategoryService"%>
-<%@page import="java.util.List"%> 
+<%@page import="java.util.List"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<%	    
+	<%
 		Cart cart = (Cart) session.getAttribute("cart");
 		if (cart == null) {
 			cart = new Cart();
@@ -32,19 +32,21 @@
 		} else {
 			cart = (Cart) session.getAttribute("cart");
 		}
-		
-		if(session.getAttribute("user")!=null){
-			User user = (User)session.getAttribute("user");
+
+		if (session.getAttribute("user") != null) {
+			User user = (User) session.getAttribute("user");
 		}
-		 CategoryService categoryService = new CategoryService();
+		CategoryService categoryService = new CategoryService();
 	%>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<!-- Brand -->
-		<a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a>
+		<div style="float: left; width: 80%;">
+<%-- 			<a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a> --%>
 
-		<!-- Links -->
+			<!-- Links -->
 		<ul class="navbar-nav">
+		<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/">Home</a></li>
 			<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
 			<!-- Dropdown -->
@@ -57,12 +59,16 @@
 							href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a>
 					</c:forEach>
 				</div></li>
-			<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li> 
-
+			<c:if test="${5<0}">
+				<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
+			</c:if>
 			<li class="nav-item"><a class="nav-link" href="#">${user.userEmail}</a></li>
-		
+
 		</ul>
-		<div style="float: right;"><a class="navbar-brand" href="#" style="float: right;" >test</a></div> 
+		</div>
+		<div style="float: right;width: 10%; text-align: right;"> 
+			<a class="navbar-brand" href="#" >test</a>
+		</div>
 	</nav>
 	<br>
 </body>
