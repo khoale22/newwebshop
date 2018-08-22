@@ -12,8 +12,8 @@ public class BillService {
 	@Autowired
 	BillDao billDao;
 	
-	public Bill insertBill(Bill bill) { 
-		return billDao.insertBill(bill);
+	public void insertBill(Bill bill) { 
+		 billDao.insertBill(bill);
 	}
 	
 

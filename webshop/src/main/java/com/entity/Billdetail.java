@@ -5,6 +5,7 @@ package com.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -23,7 +24,7 @@ import org.hibernate.annotations.Proxy;
 public class Billdetail  implements java.io.Serializable {
 
 
-     private String billDetailId;
+     private int billDetailId;
      private Bill bill;
      private Product product;
      private double price;
@@ -31,24 +32,23 @@ public class Billdetail  implements java.io.Serializable {
 
     public Billdetail() {
     }
-
-    public Billdetail(String billDetailId, Bill bill, Product product, double price, int quantily) {
-       this.billDetailId = billDetailId;
+// int billDetailId, 
+    public Billdetail(Bill bill, Product product, double price, int quantily) {
+      // this.billDetailId = billDetailId;
        this.bill = bill;
        this.product = product;
        this.price = price;
        this.quantily = quantily;
     }
    
-     @Id 
-
-    
+    @Id  
+    @GeneratedValue
     @Column(name="billDetail_id", unique=true, nullable=false, length=45)
-    public String getBillDetailId() {
+    public int getBillDetailId() {
         return this.billDetailId;
     }
     
-    public void setBillDetailId(String billDetailId) {
+    public void setBillDetailId(int billDetailId) {
         this.billDetailId = billDetailId;
     }
 

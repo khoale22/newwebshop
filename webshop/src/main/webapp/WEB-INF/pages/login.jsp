@@ -17,11 +17,15 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<%
-		if (session.getAttribute("error") != null) {
-			String error = (String) session.getAttribute("error");
-		}
-	%>
+
+<%
+	if (session.getAttribute("error") != null) {
+		String error = (String) session.getAttribute("error");
+	}
+// 	if (session.getAttribute("checkout") != null) {
+// 		String error = (String) session.getAttribute("checkout");
+// 	}
+%>
 	<h1 align="center">LOGIN</h1>
 	<div style="width: 25%; margin: 0 auto;">
 		<div class="account-wall">
@@ -30,8 +34,7 @@
 			</div>
 			<form action="login/authenticate" method="post">
 				<input type="text" class="form-control" placeholder="UserId"
-					name="userId" required autofocus> 
-				<input type="password"
+					name="userId" required autofocus> <input type="password"
 					name="pass" class="form-control" placeholder="Password" required>
 				<button class="btn btn-success btn-block" type="submit">Login</button>
 				<div class="form-check">
@@ -48,11 +51,20 @@
 				<strong>${error}</strong>
 			</div>
 		</c:if>
+<%-- 		<c:if test="${checkout != null}"> --%>
+<!-- 			<div class="alert alert-warning alert-dismissible"> -->
+<!-- 				<button type="button" class="close" data-dismiss="alert">&times;</button> -->
+<%-- 				<strong>${checkout}</strong> --%>
+<!-- 			</div> -->
+<%-- 		</c:if> --%>
 	</div>
 	<%
-		if (session.getAttribute("error") != null) {
+		if (session.getAttribute("checkout") != null) {
 			session.removeAttribute("error");
 		}
+// 	    if (session.getAttribute("checkout") != null) {
+// 	 	session.removeAttribute("error");
+// 	    }
 	%>
 
 </body>

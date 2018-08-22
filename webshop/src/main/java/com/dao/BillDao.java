@@ -17,8 +17,8 @@ public class BillDao {
 	SessionFactory sessionFactory;
 
 	@Transactional
-	public Bill insertBill(Bill bill) {
-		return (Bill) sessionFactory.getCurrentSession().save(bill);
+	public void insertBill(Bill bill) {
+		 sessionFactory.getCurrentSession().save(bill);
 	}
 
 }

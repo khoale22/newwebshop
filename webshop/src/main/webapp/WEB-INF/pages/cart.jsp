@@ -54,14 +54,16 @@
 			%>
 			<tbody>
 				<tr>
-					<td><img src="images/images1.png" width="50px" height="50px"></td>
+					<td><img src="<%=list.getValue().getProduct().getProductImage()%>" width="50px" height="50px"></td>
 					<td><%=list.getValue().getProduct().getProductName()%></td>
 					<td><%=list.getValue().getProduct().getProductPrice()%></td>
 					<th><%=list.getValue().getQuanlity()%></th>
 					<td><%=list.getValue().getQuanlity() * list.getValue().getProduct().getProductPrice()%></td>
 					<%-- 					<td><a href="cart/add?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>">detele </a> </td> --%>
-					<td><a href="cart/remove?command=remove&productId=pro1">detele
-					</a></td>
+					<td><a href="cartremove?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>&quantityOfBuy=<%=list.getValue().getQuanlity()%>">
+					<img src="images/delete.png" width="20px" height="20px">
+					</a>
+					</td>
 				</tr>
 			</tbody>
 			<%
@@ -70,21 +72,21 @@
 			<tr>
 			</tr>
 		</table>
-		<form action="checkout/" method="post">
-			<div style="background-color: #f2f2f2; margin-top: 0px;"> 
+		<form action="checkout" method="post">
+			<div style="background-color: #f2f2f2; margin-top: 0px;">
 				<span style="font-size: 50px;"> Sum is : <strong> <%=cart.totalCart()%>$
 				</strong></span>
 				<div style="float: right;">
-					<button type="button" class="btn btn-success" style="background-color: #FE980F">Payment</button>
+					<button type="button" class="btn btn-success"
+						style="background-color: #FE980F">Payment</button>
 					<select name="payment" style="margin-top: 20px;">
 						<option value="Bank Transfer">Bank Transfer</option>
 						<option value="Live">Live</option>
 					</select>
 				</div>
 			</div>
-		    
+
 			<button type="submit" class="btn btn-dark btn-lg">Checkout</button>
-			
 		</form>
 	</div>
 	<%
@@ -92,6 +94,8 @@
 			session.removeAttribute("outOfProduct");
 		}
 	%>
+
+
 	<%-- <jsp:include page="footer.jsp"></jsp:include> --%>
 
 </body>

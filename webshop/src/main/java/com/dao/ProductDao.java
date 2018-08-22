@@ -15,8 +15,7 @@ import com.entity.Product;
 public class ProductDao {
 	
 	@Autowired
-	SessionFactory sessionFactory;
-	
+	SessionFactory sessionFactory;	
 	@SuppressWarnings("unchecked")
 	@Transactional
 	public List<Product> pagination(int fisrtResult , int maxResult ,String categoryId) {

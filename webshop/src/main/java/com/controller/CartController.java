@@ -22,9 +22,14 @@ public class CartController {
 	@Autowired
 	ProductService productService;
 
+	@RequestMapping(value = "/cart")
+	public String cart() {
+		return "cart";
+	}
+
 	@RequestMapping(value = "cartadd", method = RequestMethod.GET)
 	public String addProductToCart(@RequestParam("command") String command, @RequestParam("productId") String productId,
-			ModelMap mm, HttpSession session) {
+			 ModelMap mm, HttpSession session) {
 
 		Cart cart = (Cart) session.getAttribute("cart");
 		int quantity = (Integer) productService.getQuantityOfProduct(productId);
@@ -34,19 +39,18 @@ public class CartController {
 		if (quantity <= 0) {
 			String outOfProduct = "This product is out of quantity ,please buy other";
 			session.setAttribute("outOfProduct", outOfProduct);
-			
-		} else {
 
+		} else {
 
 			try {
 
 				Product product = productService.getProductById(productId);
 				switch (command) {
 				case "plus":
-                     int quantityNew = quantity -1 ;
-                     productService.updateQuanlityProduct(quantityNew, productId);
-                     System.out.println("enter into ....");
-                    
+					int quantityNew = quantity - 1;
+					productService.updateQuanlityProduct(quantityNew, productId);
+					System.out.println("enter into ....");
+
 					if (cart.getCartItems().containsKey(productId)) {
 
 						cart.plusToCart(productId, new Item(product, cart.getCartItems().get(productId).getQuanlity()));
@@ -56,9 +60,8 @@ public class CartController {
 
 					}
 					break;
-				case "remove":
-					System.out.print("remove ok");
-					cart.removeToCart(productId);
+				case "search":
+				     // chua lam
 					break;
 				}
 			} catch (Exception e) {
@@ -68,4 +71,16 @@ public class CartController {
 		return "cart";
 	}
 
+	
+	@RequestMapping(value = "cartremove", method = RequestMethod.GET)
+	public String addProductToC(@RequestParam("command") String command,@RequestParam("quantityOfBuy") int quantityOfBuy, @RequestParam("productId") String productId,
+			 ModelMap mm, HttpSession session) {
+		Cart cart = (Cart) session.getAttribute("cart");
+		int quantity = (Integer) productService.getQuantityOfProduct(productId);
+		int quantiyNewOfBuy = quantity + quantityOfBuy;
+		productService.updateQuanlityProduct(quantiyNewOfBuy, productId);
+		System.out.print("remove ok");
+		cart.removeToCart(productId);
+		return "cart";
+	}
 }

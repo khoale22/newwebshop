@@ -13,8 +13,8 @@ public class BilldetailService {
 	@Autowired
 	BillDetailDao billDetailDao;
 	
-	public Billdetail insertBill(Billdetail billdetail) {
-		return billDetailDao.insertBill(billdetail);
+	public void insertBill(Billdetail billdetail) {
+		 billDetailDao.insertBill(billdetail);
 	}
 
 }
