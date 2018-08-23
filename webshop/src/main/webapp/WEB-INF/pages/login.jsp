@@ -22,9 +22,6 @@
 	if (session.getAttribute("error") != null) {
 		String error = (String) session.getAttribute("error");
 	}
-// 	if (session.getAttribute("checkout") != null) {
-// 		String error = (String) session.getAttribute("checkout");
-// 	}
 %>
 	<h1 align="center">LOGIN</h1>
 	<div style="width: 25%; margin: 0 auto;">
@@ -51,20 +48,11 @@
 				<strong>${error}</strong>
 			</div>
 		</c:if>
-<%-- 		<c:if test="${checkout != null}"> --%>
-<!-- 			<div class="alert alert-warning alert-dismissible"> -->
-<!-- 				<button type="button" class="close" data-dismiss="alert">&times;</button> -->
-<%-- 				<strong>${checkout}</strong> --%>
-<!-- 			</div> -->
-<%-- 		</c:if> --%>
 	</div>
 	<%
-		if (session.getAttribute("checkout") != null) {
+		if (session.getAttribute("error") != null) {
 			session.removeAttribute("error");
 		}
-// 	    if (session.getAttribute("checkout") != null) {
-// 	 	session.removeAttribute("error");
-// 	    }
 	%>
 
 </body>

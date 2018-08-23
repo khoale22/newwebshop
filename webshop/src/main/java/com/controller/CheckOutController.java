@@ -58,8 +58,7 @@ public class CheckOutController {
 			}
 			
 			String billId = sb.toString();
-		    
-
+		   
 			try {
 				
 				Bill bill = new Bill();
@@ -70,16 +69,16 @@ public class CheckOutController {
 				bill.setDate(new Timestamp(new Date().getTime()));
 				bill.setTotal(cart.totalCart());
 				billService.insertBill(bill);
-
 				for (Map.Entry<String, Item> list : cart.getCartItems().entrySet()) {
 					billDetailDao.insertBill(new Billdetail( bill, list.getValue().getProduct(),
 							list.getValue().getProduct().getProductPrice(), list.getValue().getQuanlity()));
 				} 
+				session.removeAttribute("cart"); 
 
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			session.removeAttribute("cart");
+			
 		}
 		return "redirect:/";
 	}

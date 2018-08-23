@@ -42,33 +42,39 @@
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<!-- Brand -->
 		<div style="float: left; width: 80%;">
-<%-- 			<a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a> --%>
+			<%-- 			<a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a> --%>
 
 			<!-- Links -->
-		<ul class="navbar-nav">
-		<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
-			<!-- Dropdown -->
-			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" href="#" id="navbardrop"
-				data-toggle="dropdown"> Category </a>
-				<div class="dropdown-menu">
-					<c:forEach var="cate" items="${listCategory}">
-						<a class="dropdown-item"
-							href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a>
-					</c:forEach>
-				</div></li>
-			<c:if test="${5<0}">
-				<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
-			</c:if>
-			<li class="nav-item"><a class="nav-link" href="#">${user.userEmail}</a></li>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link"
+					href="${pageContext.request.contextPath}/">Home</a></li>
+				<c:if test="${user == null}">
+					<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+				</c:if>
+				<!-- Dropdown -->
+				<!-- 			<li class="nav-item dropdown"><a -->
+				<!-- 				class="nav-link dropdown-toggle" href="#" id="navbardrop" -->
+				<!-- 				data-toggle="dropdown"> Category </a> -->
+				<!-- 				<div class="dropdown-menu"> -->
+				<%-- 					<c:forEach var="cate" items="${listCategory}"> --%>
+				<!-- 						<a class="dropdown-item" -->
+				<%-- 							href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a> --%>
+				<%-- 					</c:forEach> --%>
+				<!-- 				</div></li> -->
 
-		</ul>
+				<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
+
+				<%-- 			<li class="nav-item"><a class="nav-link" href="#">${user.userEmail}</a></li> --%>
+
+			</ul>
 		</div>
-		<div style="float: right;width: 10%; text-align: right;"> 
-			<a class="navbar-brand" href="#" >test</a>
-		</div>
+		<c:if test="${user != null}">
+			<div style="float: right; width: 20%; text-align: right;">
+				<a class="navbar-brand" href="#" style="float: left; "> <strong> Hello	${user.userName} </strong></a>
+				<a class="nav-link" href="logOut" style="background-color: white; float: right; ">Logout</a>
+			</div>
+		</c:if>
 	</nav>
 	<br>
 </body>
