@@ -19,7 +19,10 @@ public class ProductController {
 
 	@RequestMapping(method =RequestMethod.GET)
 	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm) {
-		
+		Long countProduct = (Long)productService.countProduct(categoryId)/4; 
+		mm.addAttribute("countProduct",countProduct);	
+		System.out.println("count product new :" +countProduct );
+			
 		int maxResult =4 ;
 		if(page ==1) {
 		  	

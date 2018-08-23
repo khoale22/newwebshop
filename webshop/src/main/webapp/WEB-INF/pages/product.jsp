@@ -22,6 +22,8 @@
 
 
 <body>
+    
+    
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<h2>Slide in Overlay from the Top</h2>
@@ -36,7 +38,7 @@
 					<div class="text">
 						<span> Name: <strong>${product.productName} </strong></span> <span> Price : <strong>${product.productPrice}$
 						</strong></span> <span> Quantity: <strong>${product.quantity} </strong></span>
-<!-- 						<button type="submit" style="background-color: red;">AddToCart</button> -->
+ 						<button type="submit" style="background-color: red;">AddToCart</button> -->
 						<a href="cartadd?command=plus&productId=${product.productId}" class="btn btn-primary">AddToCart </a>  
 					</div>
 				</div>
@@ -47,13 +49,15 @@
 	 
 	<div class="container" >
 		<ul class="pagination">
-			<li><a href="product?categoryId=${categoryId}&page=1">1</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=2">2</a></li>
+		    <% for(int i = 0; i < 3; i++) { %>
+		     	<li><a href="product?categoryId=${categoryId}&page=<%=(i+1)%>"><%=(i+1)%></a></li> 
+ 			<% }%>  
+			<%-- <li><a href="product?categoryId=${categoryId}&page=2">2</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=3">3</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=4">4</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=5">5</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=6">6</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=7">7</a></li>
+			<li><a href="product?categoryId=${categoryId}&page=7">7</a></li> --%>
 		</ul>
 	</div>
 

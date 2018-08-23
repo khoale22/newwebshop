@@ -44,7 +44,7 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="${product.productImage}" alt="" />
-										<h2>${product.productName}</h2> 
+										<h2>${product.productName}</h2>
 										<h2>${product.productPrice}$</h2>
 										<p>Quantity :${product.quantity}</p>
 										<a href="cartadd?command=plus&productId=${product.productId}"
@@ -55,19 +55,18 @@
 										<div class="overlay-content">
 											<h2>${product.productPrice}$</h2>
 											<p>Quantity :${product.quantity}</p>
-											<a
-												href="cartadd?command=plus&productId=${product.productId}"
+											<a href="cartadd?command=plus&productId=${product.productId}"
 												class="btn btn-default add-to-cart"><i
 												class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 									</div>
 								</div>
-<!-- 								<div class="choose" style="text-align: center; color: black;"> -->
-									 
-<!-- 										<a href="#">Detail product</a> -->
+								<!-- 								<div class="choose" style="text-align: center; color: black;"> -->
 
-									
-<!-- 								</div> -->
+								<!-- 										<a href="#">Detail product</a> -->
+
+
+								<!-- 								</div> -->
 							</div>
 						</div>
 					</c:forEach>
@@ -102,16 +101,24 @@
 
 	</div>
 	<!--features_items-->
-	
+
 	<div class="container">
 		<ul class="pagination">
-			<li><a href="product?categoryId=${categoryId}&page=1">1</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=2">2</a></li>
+
+			<%
+				long countProduct = (Long) session.getAttribute("countProduct");
+				for (long i = 0; i < 8; i++) {
+			%>
+			<li><a href="product?categoryId=${categoryId}&page=<%=(i+1)%>"><%=(i + 1)%></a></li>
+			<%
+				}
+			%>
+			<%-- <li><a href="product?categoryId=${categoryId}&page=2">2</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=3">3</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=4">4</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=5">5</a></li>
 			<li><a href="product?categoryId=${categoryId}&page=6">6</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=7">7</a></li>
+			<li><a href="product?categoryId=${categoryId}&page=7">7</a></li> --%>
 		</ul>
 	</div>
 

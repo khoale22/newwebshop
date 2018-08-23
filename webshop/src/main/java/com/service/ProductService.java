@@ -26,5 +26,8 @@ public class ProductService {
 	public void updateQuanlityProduct(int quantity , String productId) {
 		productDao.updateQuanlityProduct(quantity, productId);
 	}
+	public Long countProduct(String categoryId) {
+		return productDao.countProduct(categoryId);
+	}
 
 }

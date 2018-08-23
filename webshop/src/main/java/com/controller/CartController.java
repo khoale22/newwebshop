@@ -30,20 +30,15 @@ public class CartController {
 	@RequestMapping(value = "cartadd", method = RequestMethod.GET)
 	public String addProductToCart(@RequestParam("command") String command, @RequestParam("productId") String productId,
 			 ModelMap mm, HttpSession session) {
-
 		Cart cart = (Cart) session.getAttribute("cart");
 		int quantity = (Integer) productService.getQuantityOfProduct(productId);
-
 		System.out.println("quantity is fd :" + quantity);
 		System.out.println("quantity is abc:" + quantity);
 		if (quantity <= 0) {
 			String outOfProduct = "This product is out of quantity ,please buy other";
 			session.setAttribute("outOfProduct", outOfProduct);
-
 		} else {
-
 			try {
-
 				Product product = productService.getProductById(productId);
 				switch (command) {
 				case "plus":

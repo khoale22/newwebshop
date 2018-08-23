@@ -42,15 +42,15 @@ IMG.displayed {
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img class="displayed" src="images/index1.jpeg" alt="samsung"
-						width="280" height="300">
+						width="400" height="300">
 				</div>
 				<div class="carousel-item">
 					<img class="displayed" src="images/index1.jpeg" alt="Iphone"
-						width="300" height="300">
+						width="400" height="300">
 				</div>
 				<div class="carousel-item">
 					<img class="displayed" src="images/index1.jpeg" alt="oppo"
-						width="280" height="300">
+						width="400" height="300">
 				</div>
 			</div>
 
@@ -62,18 +62,19 @@ IMG.displayed {
 			</a>
 		</div>
 	</div>
+	<div style="border:double; margin-top: 20px;"> </div>
 	<div class="container" style="margin-top: 50px;">
 		<div class="row">
-			<div class="col-sm-2">
+			<div class="col-sm-3 col-md-3 col-lg-3">
 				<div class="left-sidebar">
 					<div class="panel-group category-products" id="accordian">
-						<!--category-productsr-->
+						<!--category-products-->
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
 									<a data-toggle="collapse" data-parent="#accordian"
 										href="#sportswear"> <span class="badge pull-right"><i
-											class="fa fa-plus"></i></span> Sportswear
+											class="fa fa-plus"></i></span> Category
 									</a>
 								</h4>
 							</div>
@@ -91,8 +92,9 @@ IMG.displayed {
 						</div>
 					</div>
 				</div>
+				<div> <img alt="" src="images/quangcao.jpg" width="200" height="400""> </div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-3 col-md-3 col-lg-3">
 				<img class="rounded-circle" src="images/index1.jpeg"
 					alt="Generic placeholder image" width="140" height="140">
 				<h2>SamSung j7 Pro</h2>
@@ -107,7 +109,7 @@ IMG.displayed {
 				</p>
 			</div>
 			<!-- /.col-lg-4 -->
-			<div class="col-lg-3">
+			<div class="col-sm-3 col-md-3 col-lg-3">
 				<img class="rounded-circle" src="images/index1.jpeg"
 					alt="Generic placeholder image" width="140" height="140">
 				<h2>SamSung j7 Pro</h2>
@@ -122,7 +124,7 @@ IMG.displayed {
 				</p>
 			</div>
 			<!-- /.col-lg-4 -->
-			<div class="col-lg-3">
+			<div class="col-sm-3 col-md-3 col-lg-3">
 				<img class="rounded-circle" src="images/index1.jpeg"
 					alt="Generic placeholder image" width="140" height="140">
 				<h2>SamSung j7 Pro</h2>

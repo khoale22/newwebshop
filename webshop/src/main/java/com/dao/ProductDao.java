@@ -51,5 +51,12 @@ public class ProductDao {
 		
 	}
 	
+	@Transactional
+	public Long countProduct(String categoryId) {
+		Query query = sessionFactory.getCurrentSession().createQuery("select count(*) from Product where category.categoryId=:categoryId");
+		query.setParameter("categoryId", categoryId);
+		return (Long) query.uniqueResult();
+	}
+	
 
 }

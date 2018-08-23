@@ -9,21 +9,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LogOutController {
-	
-	
-	
-	@RequestMapping(value="/logOut" , method =RequestMethod.GET)
+	@RequestMapping(value = "/logOut", method = RequestMethod.GET)
 	public String logOut(HttpSession session) {
-		
-		if(session.getAttribute("user") !=null) {
+
+		if (session.getAttribute("user") != null) {
 			session.removeAttribute("user");
 		}
-		
-		if(session.getAttribute("cart") !=null) {
+
+		if (session.getAttribute("cart") != null) {
 			session.removeAttribute("cart");
 		}
-		
-		
+
 		return "redirect:/";
 	}
 
