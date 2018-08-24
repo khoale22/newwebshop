@@ -17,7 +17,6 @@ import com.model.Item;
 import com.service.ProductService;
 
 @Controller
-//@RequestMapping(value = "/cart")
 public class CartController {
 	@Autowired
 	ProductService productService;
@@ -26,14 +25,12 @@ public class CartController {
 	public String cart() {
 		return "cart";
 	}
-
 	@RequestMapping(value = "cartadd", method = RequestMethod.GET)
 	public String addProductToCart(@RequestParam("command") String command, @RequestParam("productId") String productId,
 			 ModelMap mm, HttpSession session) {
 		Cart cart = (Cart) session.getAttribute("cart");
 		int quantity = (Integer) productService.getQuantityOfProduct(productId);
-		System.out.println("quantity is fd :" + quantity);
-		System.out.println("quantity is abc:" + quantity);
+		System.out.println("quantity is :" + quantity);
 		if (quantity <= 0) {
 			String outOfProduct = "This product is out of quantity ,please buy other";
 			session.setAttribute("outOfProduct", outOfProduct);
@@ -56,7 +53,6 @@ public class CartController {
 					}
 					break;
 				case "search":
-				     // chua lam
 					break;
 				}
 			} catch (Exception e) {

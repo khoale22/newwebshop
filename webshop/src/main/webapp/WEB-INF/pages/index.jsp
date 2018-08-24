@@ -62,7 +62,7 @@ IMG.displayed {
 			</a>
 		</div>
 	</div>
-	<div style="border:double; margin-top: 20px;"> </div>
+	
 	<div class="container" style="margin-top: 50px;">
 		<div class="row">
 			<div class="col-sm-3 col-md-3 col-lg-3">

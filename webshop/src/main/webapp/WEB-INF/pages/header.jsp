@@ -42,8 +42,6 @@
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<!-- Brand -->
 		<div style="float: left; width: 80%;">
-			<%-- 			<a class="navbar-brand" href="${pageContext.request.contextPath}/">Home</a> --%>
-
 			<!-- Links -->
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link"
@@ -52,21 +50,7 @@
 					<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
 				</c:if>
-				<!-- Dropdown -->
-				<!-- 			<li class="nav-item dropdown"><a -->
-				<!-- 				class="nav-link dropdown-toggle" href="#" id="navbardrop" -->
-				<!-- 				data-toggle="dropdown"> Category </a> -->
-				<!-- 				<div class="dropdown-menu"> -->
-				<%-- 					<c:forEach var="cate" items="${listCategory}"> --%>
-				<!-- 						<a class="dropdown-item" -->
-				<%-- 							href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a> --%>
-				<%-- 					</c:forEach> --%>
-				<!-- 				</div></li> -->
-
 				<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
-
-				<%-- 			<li class="nav-item"><a class="nav-link" href="#">${user.userEmail}</a></li> --%>
-
 			</ul>
 		</div>
 		<c:if test="${user != null}">

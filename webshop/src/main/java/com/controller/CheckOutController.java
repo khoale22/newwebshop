@@ -33,10 +33,6 @@ public class CheckOutController {
 	@RequestMapping(value = "/checkout", method = RequestMethod.POST)
 	public String checkOut(HttpSession session, @RequestParam("payment") String payment ) {
 		if (session.getAttribute("user") == null) {
-           // String checkout = "You must login fisrt before checking out";
-           // String checkoutOk ="ok";
-           // session.setAttribute("checkout", checkout);
-           // session.setAttribute("checkoutOk", checkoutOk);
 			System.out.println("user is null");
 			return "redirect:/login";
 		} else {

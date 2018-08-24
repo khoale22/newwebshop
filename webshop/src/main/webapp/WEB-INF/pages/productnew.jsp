@@ -104,7 +104,6 @@
 
 	<div class="container">
 		<ul class="pagination">
-
 			<%
 				long countProduct = (Long) session.getAttribute("countProduct");
 				for (long i = 0; i < 8; i++) {
@@ -113,12 +112,6 @@
 			<%
 				}
 			%>
-			<%-- <li><a href="product?categoryId=${categoryId}&page=2">2</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=3">3</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=4">4</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=5">5</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=6">6</a></li>
-			<li><a href="product?categoryId=${categoryId}&page=7">7</a></li> --%>
 		</ul>
 	</div>
 

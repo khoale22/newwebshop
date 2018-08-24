@@ -50,6 +50,6 @@ public class LoginController {
 				return null;
 			}
 		}
-      return null;
+      return "error";
 	}
 }

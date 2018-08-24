@@ -59,7 +59,6 @@
 					<td><%=list.getValue().getProduct().getProductPrice()%></td>
 					<th><%=list.getValue().getQuanlity()%></th>
 					<td><%=list.getValue().getQuanlity() * list.getValue().getProduct().getProductPrice()%></td>
-					<%-- 					<td><a href="cart/add?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>">detele </a> </td> --%>
 					<td><a href="cartremove?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>&quantityOfBuy=<%=list.getValue().getQuanlity()%>">
 					<img src="images/delete.png" width="20px" height="20px">
 					</a>
@@ -94,9 +93,6 @@
 			session.removeAttribute("outOfProduct");
 		}
 	%>
-
-
-	<%-- <jsp:include page="footer.jsp"></jsp:include> --%>
 
 </body>
 </html>
