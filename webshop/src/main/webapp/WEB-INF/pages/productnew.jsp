@@ -61,12 +61,9 @@
 										</div>
 									</div>
 								</div>
-								<!-- 								<div class="choose" style="text-align: center; color: black;"> -->
-
-								<!-- 										<a href="#">Detail product</a> -->
-
-
-								<!-- 								</div> -->
+								<div class="choose" style="text-align: center; color: black;">
+									<a href="productDetail?productId=${product.productId}">Detail product</a>
+								</div>
 							</div>
 						</div>
 					</c:forEach>
@@ -106,7 +103,7 @@
 		<ul class="pagination">
 			<%
 				long countProduct = (Long) session.getAttribute("countProduct");
-				for (long i = 0; i < 8; i++) {
+				for (long i = 0; i <= countProduct; i++) {
 			%>
 			<li><a href="product?categoryId=${categoryId}&page=<%=(i+1)%>"><%=(i + 1)%></a></li>
 			<%
@@ -114,7 +111,11 @@
 			%>
 		</ul>
 	</div>
-
+	<%
+		if (session.getAttribute("countProduct") != null) {
+			session.removeAttribute("countProduct");
+		}
+	%>
 
 
 	<script src="js/jquery.js"></script>

@@ -30,7 +30,7 @@ IMG.displayed {
 
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<div id="demo" class="carousel slide" data-ride="carousel">
+		<div id="demo" class="carousel slide" data-ride="carousel" style="border-top: 2px , solid , green; ">
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
 				<li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -41,16 +41,16 @@ IMG.displayed {
 			<!-- The slideshow -->
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img class="displayed" src="images/index1.jpeg" alt="samsung"
-						width="400" height="300">
+					<img class="displayed" src="https://www.chotot.com/kinhnghiem/wp-content/uploads/2015/05/5-tieu-chi-quan-trong-de-chon-dien-thoai-chup-anh-dep-3.jpg" alt="samsung"
+						width="800" height="300">
 				</div>
 				<div class="carousel-item">
-					<img class="displayed" src="images/index1.jpeg" alt="Iphone"
-						width="400" height="300">
+					<img class="displayed" src="https://thegioidienmay.vn/wp-content/uploads/2018/05/sam-sung-03.png" alt="Iphone"
+						width="800" height="300">
 				</div>
 				<div class="carousel-item">
-					<img class="displayed" src="images/index1.jpeg" alt="oppo"
-						width="400" height="300">
+					<img class="displayed" src="https://xdamobile.vn/data/afficheimg/mua-htc-m9-gia-re-qua-ngon-1521509043.jpg" alt="oppo"
+						width="800" height="300">
 				</div>
 			</div>
 
@@ -66,81 +66,123 @@ IMG.displayed {
 	<div class="container" style="margin-top: 50px;">
 		<div class="row">
 			<div class="col-sm-3 col-md-3 col-lg-3">
-				<div class="left-sidebar">
-					<div class="panel-group category-products" id="accordian">
-						<!--category-products-->
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordian"
-										href="#sportswear"> <span class="badge pull-right"><i
-											class="fa fa-plus"></i></span> Category
-									</a>
-								</h4>
-							</div>
-							<div id="sportswear" class="panel-collapse collapse">
-								<div class="panel-body">
-									<ul>
-									     <c:forEach var="cate" items="${listCategory}">
-										<li><a href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a></li>
+<!-- 				<div class="left-sidebar"> -->
+<!-- 					<div class="panel-group category-products" id="accordian"> -->
+<!-- 						category-products -->
+<!-- 						<div class="panel panel-default"> -->
+<!-- 							<div class="panel-heading"> -->
+<!-- 								<h4 class="panel-title"> -->
+<!-- 									<a data-toggle="collapse" data-parent="#accordian" -->
+<!-- 										href="#sportswear"> <span class="badge pull-right"><i -->
+<!-- 											class="fa fa-plus"></i></span> Category -->
+<!-- 									</a> -->
+<!-- 								</h4> -->
+<!-- 							</div> -->
+<!-- 							<div id="sportswear" class="panel-collapse collapse"> -->
+<!-- 								<div class="panel-body"> -->
+<!-- 									<ul> -->
+<%-- 										<c:forEach var="cate" items="${listCategory}"> --%>
+<!-- 											<li><a -->
+<%-- 												href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a></li> --%>
+<%-- 										</c:forEach> --%>
+<!-- 									</ul> -->
+<!-- 								</div> -->
+
+
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+                <div> 
+                   <h1 style="color: #007bff;"> Category</h1>
+                   <ul>
+										<c:forEach var="cate" items="${listCategory}">
+											<li><a 
+												href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a></li>
 										</c:forEach>
 									</ul>
-								</div>
-								
-				
-							</div>
-						</div>
-					</div>
-				</div>
-				<div> <img alt="" src="images/quangcao.jpg" width="200" height="400""> </div>
+                </div>
+				<div> <img alt="" src="images/quangcao.jpg" width="200" height="400"> </div>
 			</div>
 			<div class="col-sm-3 col-md-3 col-lg-3">
-				<img class="rounded-circle" src="images/index1.jpeg"
+				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"
 					alt="Generic placeholder image" width="140" height="140">
-				<h2>SamSung j7 Pro</h2>
+				<h2>SamSung J7</h2>
 				<p>A smartphone is a handheld personal computer. It possesses
-					extensive computing capabilities, including high-speed access to
-					the Internet using both Wi-Fi and mobile broadband. Most, if not
-					all, smartphones are also built with support for Bluetooth and
-					satellite navigation.</p>
+					extensive computing capabilities</p>
 				<p>
-					<a class="btn btn-secondary" href="#" role="button">View
-						details &raquo;</a>
+					<a class="btn btn-secondary" href="#" role="button">Product
+						sale</a>
 				</p>
 			</div>
 			<!-- /.col-lg-4 -->
 			<div class="col-sm-3 col-md-3 col-lg-3">
-				<img class="rounded-circle" src="images/index1.jpeg"
+				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"
 					alt="Generic placeholder image" width="140" height="140">
-				<h2>SamSung j7 Pro</h2>
+				<h2>SamSung J7</h2>
 				<p>A smartphone is a handheld personal computer. It possesses
-					extensive computing capabilities, including high-speed access to
-					the Internet using both Wi-Fi and mobile broadband. Most, if not
-					all, smartphones are also built with support for Bluetooth and
-					satellite navigation.</p>
+					extensive computing capabilities</p>
 				<p>
-					<a class="btn btn-secondary" href="#" role="button">View
-						details &raquo;</a>
+					<a class="btn btn-secondary" href="#" role="button">Product
+						sale</a>
 				</p>
 			</div>
 			<!-- /.col-lg-4 -->
 			<div class="col-sm-3 col-md-3 col-lg-3">
-				<img class="rounded-circle" src="images/index1.jpeg"
+				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"
 					alt="Generic placeholder image" width="140" height="140">
-				<h2>SamSung j7 Pro</h2>
+				<h2>SamSung J7</h2>
 				<p>A smartphone is a handheld personal computer. It possesses
-					extensive computing capabilities, including high-speed access to
-					the Internet using both Wi-Fi and mobile broadband. Most, if not
-					all, smartphones are also built with support for Bluetooth and
-					satellite navigation.</p>
+					extensive computing capabilities</p>
 				<p>
-					<a class="btn btn-secondary" href="#" role="button">View
-						details &raquo;</a>
+					<a class="btn btn-secondary" href="#" role="button"> Product
+						sale</a>
 				</p>
 			</div>
 		</div>
-	</div>
+<!--  contanner -->
 
+		<div class="row" style="margin-top: -250px">
+			<div class="col-sm-3 col-md-3 col-lg-3">				
+<!-- 				CHUA LAM -->			
+			</div>
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"
+					alt="Generic placeholder image" width="140" height="140">
+				<h2>SamSung J7</h2>
+				<p>A smartphone is a handheld personal computer. It possesses
+					extensive computing capabilities</p>
+				<p>
+					<a class="btn btn-secondary" href="#" role="button">Product
+						sale</a>
+				</p>
+			</div>
+			<!-- /.col-lg-4 -->
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"
+					alt="Generic placeholder image" width="140" height="140">
+				<h2>SamSung J7</h2>
+				<p>A smartphone is a handheld personal computer. It possesses
+					extensive computing capabilities</p>
+				<p>
+					<a class="btn btn-secondary" href="#" role="button">Product
+						sale</a>
+				</p>
+			</div>
+			<!-- /.col-lg-4 -->
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"
+					alt="Generic placeholder image" width="140" height="140">
+				<h2>SamSung J7</h2>
+				<p>A smartphone is a handheld personal computer. It possesses
+					extensive computing capabilities</p>
+				<p>
+					<a class="btn btn-secondary" href="#" role="button"> Product
+						sale</a>
+				</p>
+			</div> 
+		</div>
+</div> 
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

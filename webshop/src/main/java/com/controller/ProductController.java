@@ -1,5 +1,7 @@
 package com.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +20,9 @@ public class ProductController {
 	ProductService productService;
 
 	@RequestMapping(method =RequestMethod.GET)
-	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm) {
+	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm ,HttpSession session) {
 		Long countProduct = (Long)productService.countProduct(categoryId)/4; 
-		mm.addAttribute("countProduct",countProduct);	
+		session.setAttribute("countProduct",countProduct);	
 		System.out.println("count product new :" +countProduct );
 			
 		int maxResult =4 ;
