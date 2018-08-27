@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+ /// THUC HIEN CUNG NHAU VOI DE TRONG ! FUNCTION , NEU KHONG SE VIET THEO THU TU
+<h2>JavaScript Statements</h2>
+
+<p>JavaScript code blocks are written between { and }</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo1").innerHTML = "Hello Dolly!";
+    document.getElementById("demo2").innerHTML = "How are you?";
+}
+</script>
+
+
+
+
+<h2>JavaScript Variables</h2>
+
+<p>The result of adding "John" + " " + "Doe":</p>
+
+<p id="demo3"></p>
+
+<script>
+var x = 'John' + " " + 'Doe';/// or var x = "John" + " " + "Doe";
+document.getElementById("demo3").innerHTML = x;
+</script>
+
+/// var x = 5 + 2 + 3; bang 10
+/// var x = "5" + 2 + 3; bang 523 vi hieu theo kieu string
+/// var x = 5 + 2 + "3"; bang 73 vi tinh theo cai dau tien bat dau 
+///// var y = 123e5;12300000
+/////var z = 123e-5;0.00123
+
+
+
+
+<p id="demo4"></p>
+
+<script>
+var cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("demo4").innerHTML = cars[0];
+</script>
+
+
+
+<p id="demo5"></p>
+
+<script>
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue"
+};
+
+document.getElementById("demo5").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+
+
+
+/// var car . typeof car : khong xac dinh vi khong co gia tri ban dau
+<h2>JavaScript typeof</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
+
+<p id="demo6"></p>
+
+<script>
+document.getElementById("demo6").innerHTML = 
+typeof "" + "<br>" +
+typeof "John" + "<br>" + 
+typeof "John Doe";
+</script>
+
+
+
+
+
+
+<h2>JavaScript</h2>
+
+<p>Objects can be emptied by setting the value to <b>null</b>.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+person = null; // khong co dong nay van object vi null trong javascip la object
+document.getElementById("demo").innerHTML = typeof person;
+</script>
+<!-- ==	equal to -->
+<!-- ===	equal value and equal type -->
+<!-- !=	not equal -->
+<!-- !==	not equal value or not equal type -->
+
+
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1, p2) {
+    return p1 * p2;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+</body>
+</html>

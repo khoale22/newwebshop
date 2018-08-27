@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo">will be change to the datetime</p>
+
+
+<p id="demo1">JavaScript can change HTML content.</p>
+<button type="button" onclick="document.getElementById('demo1').innerHTML = 'Hello' ">Click Me!</button>
+
+
+
+	
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="foder/pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+
+
+
+<p id="size"> Thay doi kick thuuoc <p>
+<button type="button" onclick="document.getElementById('size').style.fontSize = '35px'	"> KICH THUOC</button>
+
+
+<p id="hide"> an dong chu o day </p>
+<button type="button" onclick="document.getElementById('hide').style.display = 'none'"> click me to hide </button>
+
+
+
+<p id="demo2" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo2').style.display='block'">Click Me!</button>
+
+
+
+
+<p id="demo3">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it demo3</button>
+
+<p>(myFunction is stored in an external file called "myScript.js")</p>
+
+<script src="foder/myScript.js"></script>
+
+
+
+
+
+<p id="demo4"></p>
+
+<script>
+
+var x, y, z;  // Statement 1
+x = 5;        // Statement 2
+y = 6;        // Statement 3
+z = x + y;    // Statement 4
+
+document.getElementById("demo4").innerHTML =
+'The value of z is ' + z + '.';  
+
+</script>
+
+</body>
+</html> 

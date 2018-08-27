@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+/// phan chia
+<p id="demo1"></p>
+
+<p>But it helps to multiply and divide:</p>
+
+<p id="demo2"></p>
+
+<script>
+var x = 0.2 + 0.1;
+document.getElementById("demo1").innerHTML = "0.2 + 0.1 = " + x;
+var y = (0.2*10 + 0.1*10) / 10;
+document.getElementById("demo2").innerHTML = "0.2 + 0.1 = " + y;
+</script>
+
+/// bai 2
+<!-- JavaScript will try to convert strings to numbers in all numeric operations: -->
+<!-- var x = "100"; -->
+<!-- var y = "10"; -->
+<!-- var z = x / y;       // z will be 10 -->
+<!-- var z = x * y;       // z will be 1000 -->
+<!-- var z = x - y;       // z will be 90 -->
+<!-- var z = x + y;       // z will not be 110 (It will be 10010) /// LUUU Y NGOIA LE -->
+var x = 100 / "Apple";  // x will be NaN (Not a Number)
+var x = 100 / "10";     // x will be 10
+
+/// bai 3
+<h2>JavaScript Number Methods</h2>
+
+<p>The toString() method converts a number to a string.</p>
+
+<p id="demo3"></p>
+
+<script>
+var x = 123;
+document.getElementById("demo3").innerHTML =
+    x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
+/// bai 4 Array
+<p id="demo4"></p>
+
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo4").innerHTML = cars[0];
+//document.getElementById("demo4").innerHTML = cars; tatca gia tri
+</script>
+
+
+/// bai 5
+<p id="demo5"></p>
+<script>
+var fruits, text, fLen, i;
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo5").innerHTML = text;
+
+// bai 6
+// <button onclick="myFunction()">Try it</button>
+
+// <p id="demo"></p>
+
+// <script>
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits;
+
+// function myFunction() {
+//     fruits.push("Lemon");
+//     document.getElementById("demo").innerHTML = fruits;
+// }
+<!-- </script> -->
+
+</script>
+</body>
+</html>

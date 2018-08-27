@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	//bai1
+	<p id="demo3"></p>
+	<script>
+		function catelate(p1, p2) {
+			return p1 * p2
+		}
+		document.getElementById('demo3').innerHTML = catelate(5, 4);
+	</script>
+
+
+	//BAI 2
+	<br>
+	<p id="demo1"></p>
+
+	<p id="demo2"></p>
+
+	<script>
+		myFunction();
+
+		// demo1khong dc goi new khong goi function 	myFunction()
+		function myFunction() {
+			var carName = "Volvo";
+			document.getElementById("demo1").innerHTML = typeof carName + " "
+					+ carName;
+		}
+		//demo2 se dc goi
+		document.getElementById("demo2").innerHTML = typeof carName;
+	</script>
+	//bai 3
+
+
+
+	<p id="demo4"></p>
+
+	<script>
+		// Create an object:
+		var person = {
+			firstName : "John",
+			lastName : "Doe",
+			id : 5566,
+			fullName : function() {
+				return this.firstName + " " + this.lastName;
+			}
+		};
+		// Display some data from the object:
+		document.getElementById("demo4").innerHTML = person.firstName + " "
+				+ person["lastName"] + " " + person.fullName();
+	</script>
+
+	/// BAI 4
+	<br> //---------
+	<button onclick="document.getElementById('demo5').innerHTML=Date()">The
+		time is?</button>
+	<p id="demo5"></p>
+	//---------
+	<button onclick="this.innerHTML=Date()">The time is?</button>
+	//---------
+	<button onclick="displayDate()">The time is?</button>
+	//---------
+	<script>
+		function displayDate() {
+			document.getElementById("demo6").innerHTML = Date();
+		}
+	</script>
+
+	<p id="demo6"></p>
+	//--------- ///// BAI 7
+	<p id="demo7"></p>
+
+	<script>
+		var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		document.getElementById("demo7").innerHTML = txt.length;
+	</script>
+
+
+	///// Bai8 chua hoc
+
+	<p id="demo8"></p>
+
+	<script>
+		var str = "Apple, Banana, Kiwi";
+		var res = str.slice(7, 13); // lay tu phan tu 7-12
+		// var res = str.slice(7); lay tu phan tu thu 7 tro len
+		// var res = str.substring(7, 13); == slice()
+		// var res = str.substring(7, 13);
+		// str.charAt(0) ; ket qua A  = str[0];   
+		document.getElementById("demo8").innerHTML = res;
+	</script>
+
+
+	/// bai 9
+	<p id="demo9"></p>
+
+	<script>
+		var txt = "";
+		var person = {
+			fname : "John",
+			lname : "Doe",
+			age : 25
+		};
+		var x;
+		for (x in person) {
+			txt += person[x] + " ";
+		}
+		document.getElementById("demo9").innerHTML = txt;
+	</script>
+	/// bai 10
+	<p id="demo10"></p>
+
+	<script>
+		var str = "Visit W3Schools!";
+		var n = str.search("W3Schools");
+		document.getElementById("demo10").innerHTML = n;
+	</script>
+
+	// bai 11 NGOAI LE BIEN CUC BO // If you assign a value to a variable
+	that has not been declared, it will automatically become a GLOBAL
+	variable:
+
+	<p id="demo"></p>
+
+	<script>
+		myFunction();
+
+		// code here can use carName as a global variable
+		document.getElementById("demo").innerHTML = "I can display " + carName;
+
+		function myFunction() {
+			carName = "Volvo"; // khai bao var carName = "Volvo"; se khong nhan dc gia tri
+		}
+	</script>
+</body>
+</html>
