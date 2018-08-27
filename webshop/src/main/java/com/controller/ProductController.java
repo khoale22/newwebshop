@@ -21,11 +21,11 @@ public class ProductController {
 
 	@RequestMapping(method =RequestMethod.GET)
 	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm ,HttpSession session) {
-		Long countProduct = (Long)productService.countProduct(categoryId)/4; 
+		Long countProduct = (Long)productService.countProduct(categoryId)/7; 
 		session.setAttribute("countProduct",countProduct);	
 		System.out.println("count product new :" +countProduct );
 			
-		int maxResult =4 ;
+		int maxResult = 7 ;
 		if(page ==1) {
 		  	
 		}else {

@@ -17,15 +17,19 @@
 <script src="js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-	<div class="container">
-			<div class="card">
-				<div class="container-fliud">
+
+<jsp:include page="header.jsp"></jsp:include>
+
+
+	<div class="container" >
+			<div class="card" style="background-color: #ddd;">
+				<div class="container-fliud" >
 					<div class="wrapper row">
 						<div class="preview col-md-6">
 
 							<div class="preview-pic tab-content">
 								<div class="tab-pane active" id="pic-1">
-									<img style="width: 150px; height: 300px;"
+									<img style="width: 250px; height: 300px;"
 										src="${product.productImage}" alt="">
 								</div>
 							</div>

@@ -16,7 +16,7 @@ public class ProductDetailController {
 	@Autowired
 	ProductService productService;
 	
-	@RequestMapping(value="/productDetail" , method=RequestMethod.GET)
+//	@RequestMapping(value="/productDetail" , method=RequestMethod.GET)
 	public String productDetail(@RequestParam("productId") String productId,ModelMap mm) {
 		Product product = productService.getProductById(productId);
 		mm.addAttribute("product" , product);

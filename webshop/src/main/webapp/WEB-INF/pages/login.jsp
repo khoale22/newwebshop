@@ -17,12 +17,11 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<%
-	if (session.getAttribute("error") != null) {
-		String error = (String) session.getAttribute("error");
-	}
-%>
+	<%
+		if (session.getAttribute("error") != null) {
+			String error = (String) session.getAttribute("error");
+		}
+	%>
 	<h1 align="center">LOGIN</h1>
 	<div style="width: 25%; margin: 0 auto;">
 		<div class="account-wall">
@@ -34,6 +33,8 @@
 					name="userId" required autofocus> <input type="password"
 					name="pass" class="form-control" placeholder="Password" required>
 				<button class="btn btn-success btn-block" type="submit">Login</button>
+				<!-- 				<button type="submit" class="btn btn-success btn-block" data-toggle="modal" -->
+				<!-- data-target="#myModal">Login</button> -->
 				<div class="form-check">
 					<label class="form-check-label" for="check1"> <input
 						type="checkbox" class="form-check-input" id="check1"
@@ -43,11 +44,11 @@
 			</form>
 		</div>
 		<c:if test="${error != null}">
-			<div class="alert alert-warning alert-dismissible">
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<strong>${error}</strong>
-			</div>
+			<script>
+				alert("Your pass or userid are not valid");
+			</script>
 		</c:if>
+
 	</div>
 	<%
 		if (session.getAttribute("error") != null) {

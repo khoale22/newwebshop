@@ -58,5 +58,12 @@ public class ProductDao {
 		return (Long) query.uniqueResult();
 	}
 	
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<Product> listProductForIndex(int maxResult){		
+		return (List<Product>) sessionFactory.getCurrentSession().createQuery("from Product").setMaxResults(maxResult);
+		
+	}
+	
 
 }

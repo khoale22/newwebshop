@@ -66,33 +66,6 @@ IMG.displayed {
 	<div class="container" style="margin-top: 50px;">
 		<div class="row">
 			<div class="col-sm-3 col-md-3 col-lg-3">
-<!-- 				<div class="left-sidebar"> -->
-<!-- 					<div class="panel-group category-products" id="accordian"> -->
-<!-- 						category-products -->
-<!-- 						<div class="panel panel-default"> -->
-<!-- 							<div class="panel-heading"> -->
-<!-- 								<h4 class="panel-title"> -->
-<!-- 									<a data-toggle="collapse" data-parent="#accordian" -->
-<!-- 										href="#sportswear"> <span class="badge pull-right"><i -->
-<!-- 											class="fa fa-plus"></i></span> Category -->
-<!-- 									</a> -->
-<!-- 								</h4> -->
-<!-- 							</div> -->
-<!-- 							<div id="sportswear" class="panel-collapse collapse"> -->
-<!-- 								<div class="panel-body"> -->
-<!-- 									<ul> -->
-<%-- 										<c:forEach var="cate" items="${listCategory}"> --%>
-<!-- 											<li><a -->
-<%-- 												href="product?categoryId=${cate.categoryId}&page=1">${cate.categoryName}</a></li> --%>
-<%-- 										</c:forEach> --%>
-<!-- 									</ul> -->
-<!-- 								</div> -->
-
-
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
                 <div> 
                    <h1 style="color: #007bff;"> Category</h1>
                    <ul>
@@ -142,9 +115,9 @@ IMG.displayed {
 		</div>
 <!--  contanner -->
 
-		<div class="row" style="margin-top: -250px">
+		<div class="row" style="margin-top: -230px;"> 
 			<div class="col-sm-3 col-md-3 col-lg-3">				
-<!-- 				CHUA LAM -->			
+            <!-- CHUA LAM -->			
 			</div>
 			<div class="col-sm-3 col-md-3 col-lg-3">
 				<img class="rounded-circle" src="https://dangcapdigital.com/images/p/-0.jpg"

@@ -39,7 +39,7 @@
 					<!--features_items-->
 					<h2 class="title text-center">Features Items</h2>
 					<c:forEach var="product" items="${listProduct}">
-						<div class="col-sm-3">
+						<div class="col-sm-3"> 
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
@@ -70,7 +70,7 @@
 
 				</div>
 			</div>
-			<div class="col-sm-4">
+			 <div class="col-sm-4">
 				<div class="contact-info">
 					<h2 class="title text-center">Khoa-Tay Shop</h2>
 					<address>
@@ -92,10 +92,7 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-
-
 	</div>
 	<!--features_items-->
 

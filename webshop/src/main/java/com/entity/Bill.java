@@ -29,12 +29,15 @@ import org.hibernate.annotations.Proxy;
 public class Bill  implements java.io.Serializable {
 
 
-     private String billId;
+
+	private String billId;
      private User user;
      private String payment;
      private Date date;
      private  double total;
      private Set<Billdetail> billdetails = new HashSet<Billdetail>(0);
+     private int phone;
+     private String address_payment;
 
     public Bill() {
     }
@@ -116,6 +119,25 @@ public class Bill  implements java.io.Serializable {
         this.billdetails = billdetails;
     }
 
+    @Column(name="phone", nullable=true)
+    public int getPhone() {
+		return phone;
+	}
+
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
+	 @Column(name="address_payment", nullable=true)
+	public String getAddress_payment() {
+		return address_payment;
+	}
+
+
+	public void setAddress_payment(String address_payment) {
+		this.address_payment = address_payment;
+	}
 
 
 

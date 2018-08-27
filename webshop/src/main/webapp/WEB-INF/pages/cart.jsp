@@ -30,7 +30,7 @@
 	%>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<h2>Striped Rows</h2>
+		<h2>Cart </h2>
 		<c:if test="${outOfProduct != null}">
 			<div class="alert alert-warning alert-dismissible">
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -76,8 +76,7 @@
 				<span style="font-size: 50px;"> Sum is : <strong> <%=cart.totalCart()%>$
 				</strong></span>
 				<div style="float: right;">
-					<button type="button" class="btn btn-success"
-						style="background-color: #FE980F">Payment</button>
+						<label style="background-color: #FE980F; color: white;padding: 3px;">Payment</label>
 					<select name="payment" style="margin-top: 20px;">
 						<option value="Bank Transfer">Bank Transfer</option>
 						<option value="Live">Live</option>

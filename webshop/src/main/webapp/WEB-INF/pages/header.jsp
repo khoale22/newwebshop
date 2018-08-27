@@ -55,8 +55,9 @@
 		</div>
 		<c:if test="${user != null}">
 			<div style="float: right; width: 20%; text-align: right;">
-				<a class="navbar-brand" href="#" style="float: left; "> <strong> Hello	${user.userName} </strong></a>
-				<a class="nav-link" href="logOut" style="background-color: white; float: right; ">Logout</a>
+				<a class="navbar-brand" href="#" style="float: left;"> <strong>
+						Hello ${user.userName} </strong></a> <a class="nav-link" href="logOut"
+					style="background-color: white; float: right;">Logout</a>
 			</div>
 		</c:if>
 	</nav>
