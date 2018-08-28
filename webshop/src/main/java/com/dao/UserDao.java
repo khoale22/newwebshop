@@ -1,6 +1,5 @@
 package com.dao;
 
-import javax.management.relation.Role;
 import javax.transaction.Transactional;
 
 import org.hibernate.SessionFactory;
@@ -10,14 +9,15 @@ import org.springframework.stereotype.Repository;
 import com.entity.User;
 
 @Repository
-public class LoginDao {
+public class UserDao {
 	@Autowired
 	SessionFactory sessionFactory;
-
+	
+	
+	
 	@Transactional
-	public User loginUser(String userId) {
-		return (User) sessionFactory.getCurrentSession().get(User.class, userId);
+	public void insertUser(User user) {
+		sessionFactory.getCurrentSession().save(user);	
 	}
-	
-	
+
 }

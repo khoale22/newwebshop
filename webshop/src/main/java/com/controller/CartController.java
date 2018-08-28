@@ -21,13 +21,28 @@ public class CartController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(value = "/cart")
-	public String cart() {
+	/*
+	 * function return cart
+	 */
+	@RequestMapping(value = "/cart", method = RequestMethod.GET)
+	public String cart(HttpSession session) {
+		Cart cart = (Cart) session.getAttribute("cart");
+		int entryCart = cart.getCartItems().size();
+		System.out.println("cart is :" + entryCart);
+		session.setAttribute("entryCart", entryCart);
 		return "cart";
 	}
+
+	/*
+	 * function add product to cart
+	 */
 	@RequestMapping(value = "cartadd", method = RequestMethod.GET)
 	public String addProductToCart(@RequestParam("command") String command, @RequestParam("productId") String productId,
-			 ModelMap mm, HttpSession session) {
+			ModelMap mm, HttpSession session) {
+		if (session.getAttribute("user") == null) {
+			return "redirect:/login";
+		}
+
 		Cart cart = (Cart) session.getAttribute("cart");
 		int quantity = (Integer) productService.getQuantityOfProduct(productId);
 		System.out.println("quantity is :" + quantity);
@@ -62,10 +77,13 @@ public class CartController {
 		return "cart";
 	}
 
-	
+	/*
+	 * function remove product from cart
+	 */
 	@RequestMapping(value = "cartremove", method = RequestMethod.GET)
-	public String addProductToC(@RequestParam("command") String command,@RequestParam("quantityOfBuy") int quantityOfBuy, @RequestParam("productId") String productId,
-			 ModelMap mm, HttpSession session) {
+	public String addProductToC(@RequestParam("command") String command,
+			@RequestParam("quantityOfBuy") int quantityOfBuy, @RequestParam("productId") String productId, ModelMap mm,
+			HttpSession session) {
 		Cart cart = (Cart) session.getAttribute("cart");
 		int quantity = (Integer) productService.getQuantityOfProduct(productId);
 		int quantiyNewOfBuy = quantity + quantityOfBuy;

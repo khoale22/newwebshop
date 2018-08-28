@@ -43,19 +43,31 @@ public class Bill  implements java.io.Serializable {
     }
 
 	
-    public Bill(String billId, User user, String payment) {
+    public Bill(String billId, User user, String payment, Date date, double total,
+			int phone, String address_payment) {
+		super();
+		this.billId = billId;
+		this.user = user;
+		this.payment = payment;
+		this.date = date;
+		this.total = total;
+		this.phone = phone;
+		this.address_payment = address_payment;
+	}
+
+
+	public Bill(String billId, User user, String payment) {
         this.billId = billId;
         this.user = user;
         this.payment = payment;
     }
-   // , Set<Billdetail> billdetails
+ 
     public Bill(String billId, User user, String payment, Date date, double total) {
        this.billId = billId;
        this.user = user;
        this.payment = payment;
        this.date = date;
        this.total = total;
-    //   this.billdetails = billdetails;
     }
    
      @Id 

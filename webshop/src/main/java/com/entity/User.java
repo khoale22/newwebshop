@@ -43,16 +43,7 @@ public class User  implements java.io.Serializable {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPass = userPass;
-    }
-    public User(String userId, Role role, String userName, String userEmail, String userPass, Set<Bill> bills) {
-       this.userId = userId;
-       this.role = role;
-       this.userName = userName;
-       this.userEmail = userEmail;
-       this.userPass = userPass;
-       this.bills = bills;
-    }
-   
+    }  
      @Id 
 
     

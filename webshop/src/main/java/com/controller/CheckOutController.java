@@ -30,51 +30,49 @@ public class CheckOutController {
 	@Autowired
 	BillDetailDao billDetailDao;
 
+	/*
+	 * function check out from cart
+	 */
 	@RequestMapping(value = "/checkout", method = RequestMethod.POST)
-	public String checkOut(HttpSession session, @RequestParam("payment") String payment ) {
-		if (session.getAttribute("user") == null) {
-			System.out.println("user is null");
-			return "redirect:/login";
-		} else {
+	public String checkOut(HttpSession session, @RequestParam("payment") String payment,
+			@RequestParam("address_payment") String address_payment, @RequestParam("phone") int phone) {
+		Cart cart = (Cart) session.getAttribute("cart");
+		System.out.println("Run into checkout ");
+		User user = (User) session.getAttribute("user");
 
-			Cart cart = (Cart) session.getAttribute("cart");
-			System.out.println("Run into checkout ");
-			User user = (User) session.getAttribute("user");
+		System.out.println(user.getUserId());
+		System.out.println(user.getUserName());
+		System.out.println("Run into here2223new22s");
 
-			System.out.println(user.getUserId());
-			System.out.println(user.getUserName());
-			System.out.println("Run into here2223new22s");
+		char[] chars = "0123456789abcdefghijklmnopqrstuvwxyz".toCharArray();
+		StringBuilder sb = new StringBuilder(30);
+		Random random = new Random();
+		for (int i = 0; i < 30; i++) {
+			char c = chars[random.nextInt(chars.length)];
+			sb.append(c);
+		}
 
-			char[] chars = "0123456789abcdefghijklmnopqrstuvwxyz".toCharArray();
-			StringBuilder sb = new StringBuilder(30);
-			Random random = new Random();
-			for (int i = 0; i < 30; i++) {
-				char c = chars[random.nextInt(chars.length)];
-				sb.append(c);
+		String billId = sb.toString();
+
+		try {
+
+			Bill bill = new Bill();
+			bill.setBillId(billId);
+			bill.setPayment(payment);
+			bill.setUser(user);
+			bill.setDate(new Timestamp(new Date().getTime()));
+			bill.setTotal(cart.totalCart());
+			bill.setPhone(phone);
+			bill.setAddress_payment(address_payment);
+			billService.insertBill(bill);
+			for (Map.Entry<String, Item> list : cart.getCartItems().entrySet()) {
+				billDetailDao.insertBill(new Billdetail(bill, list.getValue().getProduct(),
+						list.getValue().getProduct().getProductPrice(), list.getValue().getQuanlity()));
 			}
-			
-			String billId = sb.toString();
-		   
-			try {
-				
-				Bill bill = new Bill();
-				bill.setBillId(billId);
+			session.removeAttribute("cart");
 
-				bill.setPayment(payment);
-				bill.setUser(user);
-				bill.setDate(new Timestamp(new Date().getTime()));
-				bill.setTotal(cart.totalCart());
-				billService.insertBill(bill);
-				for (Map.Entry<String, Item> list : cart.getCartItems().entrySet()) {
-					billDetailDao.insertBill(new Billdetail( bill, list.getValue().getProduct(),
-							list.getValue().getProduct().getProductPrice(), list.getValue().getQuanlity()));
-				} 
-				session.removeAttribute("cart"); 
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return "redirect:/";
 	}

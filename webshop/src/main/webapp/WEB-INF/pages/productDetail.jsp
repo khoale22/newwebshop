@@ -19,8 +19,6 @@
 <body>
 
 <jsp:include page="header.jsp"></jsp:include>
-
-
 	<div class="container" >
 			<div class="card" style="background-color: #ddd;">
 				<div class="container-fliud" >
@@ -62,8 +60,6 @@
 								</a>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>

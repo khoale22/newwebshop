@@ -12,16 +12,18 @@ import com.service.ProductService;
 
 @Controller
 public class ProductDetailController {
-	
+
 	@Autowired
 	ProductService productService;
-	
+
+	/*
+	 * function return to product Detail from specific product
+	 */
 //	@RequestMapping(value="/productDetail" , method=RequestMethod.GET)
-	public String productDetail(@RequestParam("productId") String productId,ModelMap mm) {
+	public String productDetail(@RequestParam("productId") String productId, ModelMap mm) {
 		Product product = productService.getProductById(productId);
-		mm.addAttribute("product" , product);
+		mm.addAttribute("product", product);
 		return "productDetail";
 	}
-	
 
 }

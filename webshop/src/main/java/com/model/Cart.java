@@ -40,7 +40,6 @@ public class Cart {
 
 	public double totalCart() {
 		double count = 0;
-		// count = price * quantity
 		for (Map.Entry<String, Item> list : cartItems.entrySet()) {
 			count += list.getValue().getProduct().getProductPrice() * list.getValue().getQuanlity();
 
@@ -54,4 +53,9 @@ public class Cart {
 			cartItems.remove(key);
 		}
 	}
+	public int countEntryOfCart() {
+		return cartItems.size();
+		
+	}
+	
 }

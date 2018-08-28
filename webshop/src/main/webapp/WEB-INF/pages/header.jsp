@@ -48,7 +48,7 @@
 					href="${pageContext.request.contextPath}/">Home</a></li>
 				<c:if test="${user == null}">
 					<li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+					<li class="nav-item"><a class="nav-link" href="register">Register</a></li>
 				</c:if>
 				<li class="nav-item"><a class="nav-link" href="cart">Cart</a></li>
 			</ul>

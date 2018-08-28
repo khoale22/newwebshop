@@ -27,29 +27,32 @@ public class LoginController {
 	public String login() {
 		return "login";
 	}
-	
+
+	/*
+	 * authenticate to return page
+	 */
 	@RequestMapping(value = "authenticate", method = RequestMethod.POST)
-	public String loginForm(@RequestParam("userId") String userId, @RequestParam("pass") String pass, HttpSession session ,ModelMap m2) {
+	public String loginForm(@RequestParam("userId") String userId, @RequestParam("pass") String pass,
+			HttpSession session, ModelMap m2) {
 		User user = loginService.loginUser(userId, pass);
 		if (user == null) {
 			String error = "Your pass or userid are not valid ";
-			session.setAttribute("error",  error);
-			return "redirect:/login";	
-		}else {
+			session.setAttribute("error", error);
+			return "redirect:/login";
+		} else {
 			if (user.getRole().getRoleName().equals("user")) {
-				System.out.println(user.getRole().getRoleName());				
+				System.out.println(user.getRole().getRoleName());
 				session.setAttribute("userId", userId);
 				session.setAttribute("user", user);
 				return "redirect:/";
 
-			}
-			else if(user.getRole().getRoleName().equals("admin")) {		
+			} else if (user.getRole().getRoleName().equals("admin")) {
 				System.out.println(user.getRole().getRoleName());
 				session.setAttribute("userId", userId);
 				session.setAttribute("user", user);
 				return null;
 			}
 		}
-      return "error";
+		return "error";
 	}
 }

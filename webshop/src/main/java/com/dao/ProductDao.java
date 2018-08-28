@@ -61,9 +61,13 @@ public class ProductDao {
 	@SuppressWarnings("unchecked")
 	@Transactional
 	public List<Product> listProductForIndex(int maxResult){		
-		return (List<Product>) sessionFactory.getCurrentSession().createQuery("from Product").setMaxResults(maxResult);
+		Query query = sessionFactory.getCurrentSession().createQuery("from Product");
+		query.setMaxResults(maxResult);
+		return query.list();
 		
 	}
+	
+	
 	
 
 }

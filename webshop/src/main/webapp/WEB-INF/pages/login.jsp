@@ -15,6 +15,8 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	<%
@@ -22,6 +24,7 @@
 			String error = (String) session.getAttribute("error");
 		}
 	%>
+	<jsp:include page="header.jsp"></jsp:include>
 	<h1 align="center">LOGIN</h1>
 	<div style="width: 25%; margin: 0 auto;">
 		<div class="account-wall">
@@ -44,8 +47,8 @@
 			</form>
 		</div>
 		<c:if test="${error != null}">
-			<script>
-				alert("Your pass or userid are not valid");
+			<script type="text/javascript">
+				swal("Error!", "Your pass or userid are not valid!", "success");
 			</script>
 		</c:if>
 

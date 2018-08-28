@@ -34,16 +34,16 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8">
+			<div class="col-sm-12">
 				<div class="features_items">
 					<!--features_items-->
 					<h2 class="title text-center">Features Items</h2>
 					<c:forEach var="product" items="${listProduct}">
-						<div class="col-sm-3"> 
+						<div class="col-sm-2"> 
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="${product.productImage}" alt="" />
+										<img src="${product.productImage}" alt="" />		
 										<h2>${product.productName}</h2>
 										<h2>${product.productPrice}$</h2>
 										<p>Quantity :${product.quantity}</p>
@@ -70,7 +70,8 @@
 
 				</div>
 			</div>
-			 <div class="col-sm-4">
+			<!-- DANG LAM -->
+			 <!-- <div class="col-sm-4">
 				<div class="contact-info">
 					<h2 class="title text-center">Khoa-Tay Shop</h2>
 					<address>
@@ -91,7 +92,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!--features_items-->
@@ -99,8 +100,8 @@
 	<div class="container">
 		<ul class="pagination">
 			<%
-				long countProduct = (Long) session.getAttribute("countProduct");
-				for (long i = 0; i <= countProduct; i++) {
+				float countProduct = (Float) session.getAttribute("countProduct");
+				for (int i = 0; i < countProduct; i++) {
 			%>
 			<li><a href="product?categoryId=${categoryId}&page=<%=(i+1)%>"><%=(i + 1)%></a></li>
 			<%

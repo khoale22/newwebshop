@@ -11,34 +11,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.model.Cart;
 import com.service.ProductService;
 
-@Controller 
-@RequestMapping(value ="/product")
+@Controller
+@RequestMapping(value = "/product")
 public class ProductController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(method =RequestMethod.GET)
-	public String pagation(@RequestParam("page") int page , @RequestParam("categoryId") String categoryId , ModelMap mm ,HttpSession session) {
-		Long countProduct = (Long)productService.countProduct(categoryId)/7; 
-		session.setAttribute("countProduct",countProduct);	
-		System.out.println("count product new :" +countProduct );
-			
-		int maxResult = 7 ;
-		if(page ==1) {
-		  	
-		}else {
-			page = page -1 ;
-			page = page*maxResult+1;
-		}	
-		
-		mm.addAttribute("categoryId" ,categoryId);
-		mm.addAttribute("page" ,page);
-		mm.addAttribute("listProduct" ,productService.pagination(page, maxResult, categoryId));
-		
+	/*
+	 * function return to product
+	 */
+	@RequestMapping(method = RequestMethod.GET)
+	public String pagation(@RequestParam("page") int page, @RequestParam("categoryId") String categoryId, ModelMap mm,
+			HttpSession session) {
+		Cart cart = (Cart) session.getAttribute("cart");
+
+		Float countProduct = productService.countProduct(categoryId).floatValue();
+		countProduct = countProduct / 10;
+		session.setAttribute("countProduct", countProduct);
+		System.out.println("count product new :" + countProduct);
+		int maxResult = 10;
+		if (page == 1) {
+
+		} else {
+			page = page - 1;
+			page = page * maxResult + 1;
+		}
+
+		mm.addAttribute("categoryId", categoryId);
+		mm.addAttribute("page", page);
+		mm.addAttribute("listProduct", productService.pagination(page, maxResult, categoryId));
+
 		return "productnew";
-		
+
 	}
-	
+
 }

@@ -13,7 +13,6 @@ public class LoginService {
 	@Autowired
 	LoginDao loginDao;
 
-
 	public User loginUser(String userId, String pass) {
 
 		User user = loginDao.loginUser(userId);
@@ -28,5 +27,4 @@ public class LoginService {
 		}
 		return null;
 	}
-     
 }

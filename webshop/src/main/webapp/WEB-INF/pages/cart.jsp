@@ -27,10 +27,13 @@
 		if (session.getAttribute("outOfProduct") != null) {
 			String outOfProduct = (String) session.getAttribute("outOfProduct");
 		}
+		if (session.getAttribute("entryCart") != null) {
+			int entryCart = (Integer) session.getAttribute("entryCart");
+		}
 	%>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<h2>Cart </h2>
+		<h2>Cart</h2>
 		<c:if test="${outOfProduct != null}">
 			<div class="alert alert-warning alert-dismissible">
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -54,15 +57,17 @@
 			%>
 			<tbody>
 				<tr>
-					<td><img src="<%=list.getValue().getProduct().getProductImage()%>" width="50px" height="50px"></td>
+					<td><img
+						src="<%=list.getValue().getProduct().getProductImage()%>"
+						width="50px" height="50px"></td>
 					<td><%=list.getValue().getProduct().getProductName()%></td>
 					<td><%=list.getValue().getProduct().getProductPrice()%></td>
 					<th><%=list.getValue().getQuanlity()%></th>
 					<td><%=list.getValue().getQuanlity() * list.getValue().getProduct().getProductPrice()%></td>
-					<td><a href="cartremove?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>&quantityOfBuy=<%=list.getValue().getQuanlity()%>">
-					<img src="images/delete.png" width="20px" height="20px">
-					</a>
-					</td>
+					<td><a
+						href="cartremove?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>&quantityOfBuy=<%=list.getValue().getQuanlity()%>">
+							<img src="images/delete.jpeg" width="20px" height="20px">
+					</a></td>
 				</tr>
 			</tbody>
 			<%
@@ -71,12 +76,14 @@
 			<tr>
 			</tr>
 		</table>
+
 		<form action="checkout" method="post">
 			<div style="background-color: #f2f2f2; margin-top: 0px;">
 				<span style="font-size: 50px;"> Sum is : <strong> <%=cart.totalCart()%>$
 				</strong></span>
 				<div style="float: right;">
-						<label style="background-color: #FE980F; color: white;padding: 3px;">Payment</label>
+					<label
+						style="background-color: #FE980F; color: white; padding: 3px;">Payment</label>
 					<select name="payment" style="margin-top: 20px;">
 						<option value="Bank Transfer">Bank Transfer</option>
 						<option value="Live">Live</option>
@@ -84,12 +91,60 @@
 				</div>
 			</div>
 
-			<button type="submit" class="btn btn-dark btn-lg">Checkout</button>
+			<!-- <button type="submit" class="btn btn-dark btn-lg">Checkout</button> -->
+			<c:if test="${entryCart != 0}">
+				<button type="button" class="btn btn-dark btn-lg"
+					data-toggle="modal" data-target="#myModal">Checkout</button>
+			</c:if>
+			<!-- Modal checkout -->
+			<div class="modal fade" id="myModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+
+						<!-- Modal Header -->
+						<div class="modal-header">
+							<h4 class="modal-title"
+								style="text-align: center; color: #228B22;">Successful-Please
+								enter infomation and confirm again</h4>
+							<button type="button" class="close" data-dismiss="modal">×</button>
+						</div>
+
+						<!-- Modal body -->
+						<div class="modal-body">
+
+							<div class="form-group">
+								<label for="email">Phone:</label> <input type="number"
+									class="form-control" placeholder="Example : 0905211876"
+									name="phone" required="required">
+							</div>
+							<div class="form-group">
+								<label for="pwd">Address:</label> <input type="text"
+									class="form-control" id="pwd"
+									placeholder="Example : 15 ham nghi" name="address_payment"
+									required="required">
+							</div>
+						</div>
+
+						<!-- Modal footer -->
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-dark ">Confirm</button>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
 		</form>
 	</div>
+
+
+
 	<%
 		if (session.getAttribute("outOfProduct") != null) {
 			session.removeAttribute("outOfProduct");
+		}
+		if (session.getAttribute("entryCart") != null) {
+			session.removeAttribute("entryCart");
 		}
 	%>
 

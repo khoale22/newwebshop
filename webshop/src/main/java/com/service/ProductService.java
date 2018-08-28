@@ -29,5 +29,8 @@ public class ProductService {
 	public Long countProduct(String categoryId) {
 		return productDao.countProduct(categoryId);
 	}
+	public List<Product> listProductForIndex(int maxResult){
+		return productDao.listProductForIndex(maxResult);
+	}
 
 }
