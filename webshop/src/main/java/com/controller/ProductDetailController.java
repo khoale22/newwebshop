@@ -19,7 +19,7 @@ public class ProductDetailController {
 	/*
 	 * function return to product Detail from specific product
 	 */
-//	@RequestMapping(value="/productDetail" , method=RequestMethod.GET)
+	@RequestMapping(value="/productDetail" , method=RequestMethod.GET)
 	public String productDetail(@RequestParam("productId") String productId, ModelMap mm) {
 		Product product = productService.getProductById(productId);
 		mm.addAttribute("product", product);

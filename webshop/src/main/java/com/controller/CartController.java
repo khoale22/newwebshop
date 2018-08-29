@@ -36,7 +36,7 @@ public class CartController {
 	/*
 	 * function add product to cart
 	 */
-	@RequestMapping(value = "cartadd", method = RequestMethod.GET)
+	@RequestMapping(value = "cartAdd", method = RequestMethod.GET)
 	public String addProductToCart(@RequestParam("command") String command, @RequestParam("productId") String productId,
 			ModelMap mm, HttpSession session) {
 		if (session.getAttribute("user") == null) {
@@ -64,7 +64,6 @@ public class CartController {
 
 					} else {
 						cart.plusToCart(productId, new Item(product, 1));
-
 					}
 					break;
 				case "search":
@@ -80,7 +79,7 @@ public class CartController {
 	/*
 	 * function remove product from cart
 	 */
-	@RequestMapping(value = "cartremove", method = RequestMethod.GET)
+	@RequestMapping(value = "cartRemove", method = RequestMethod.GET)
 	public String addProductToC(@RequestParam("command") String command,
 			@RequestParam("quantityOfBuy") int quantityOfBuy, @RequestParam("productId") String productId, ModelMap mm,
 			HttpSession session) {

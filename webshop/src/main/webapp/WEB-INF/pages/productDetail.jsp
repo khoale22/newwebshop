@@ -43,18 +43,21 @@
 								</div>
 								<span class="review-no">123 rating</span>
 							</div>
-							<h4 class="price">Price: ${product.productName}</h4>
+							<h4 class="price">Price: ${product.productPrice}</h4>
 							<h4 class="price">Quantity: ${product.quantity}</h4>
-							<p class="vote">
+							<h4 class="price">Screen: ${product.screen}</h4>
+							<h4 class="price">Version: ${product.version}</h4>
+							<h4 class="price">Ram: ${product.ram}</h4>
+							<!-- <p class="vote">
 								<strong>91%</strong> like this product
-							</p>
+							</p> -->
 							<h5 class="colors">
 								Color: <span class="color orange not-available"
 									data-toggle="tooltip" title="Not In store"></span> <span
 									class="color green"></span> <span class="color blue"></span>
 							</h5>
 							<div class="action">
-								<a href="cartadd?command=plus&productId=${product.productId}">
+								<a href="cartAdd?command=plus&productId=${product.productId}">
 									<button class="add-to-cart btn btn-default" type="submit">ADD
 										TO CART</button>
 								</a>

@@ -20,7 +20,6 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<form action="addUser" method="post">
-
 		<div class="container" style="margin: 50px 300px;">
 			<h1>Register</h1>
 			<p>Please fill in this form to create an account.</p>
@@ -42,13 +41,11 @@
 	</form>
 	<c:if test="${registerFail != null}">
 		<script type="text/javascript">
-			/* swal("Error!", "The name to login exists", "Ok"); */
 			swal("Error!", "The name to login exists!", "success");
 		</script>
 	</c:if>
 	<c:if test="${registerOk != null}">
-		<script type="text/javascript">
-			/* swal("Successful!", "click the button to comeback!", "Ok"); */
+		<script type="text/javascript">		
 			swal("Successful!", "click the button to comeback!", "success");
 		</script>
 	</c:if>
@@ -56,9 +53,9 @@
 		if (session.getAttribute("registerFail") != null) {
 			session.removeAttribute("registerFail");
 		}
-	if (session.getAttribute("registerOk") != null) {
-		session.removeAttribute("registerOk");
-	}
+		if (session.getAttribute("registerOk") != null) {
+			session.removeAttribute("registerOk");
+		}
 	%>
 
 

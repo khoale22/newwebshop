@@ -93,7 +93,7 @@ IMG.displayed {
 						<p>A smartphone is a handheld personal computer. It possesses
 							extensive computing capabilities</p>
 						<p>
-							<a class="btn btn-secondary" href="cartadd?command=plus&productId=${pro.productId}" role="button">AddToCart</a>
+							<a class="btn btn-secondary" href="cartAdd?command=plus&productId=${pro.productId}" role="button">AddToCart</a>
 						</p>
 					</div>
 				</c:forEach>	

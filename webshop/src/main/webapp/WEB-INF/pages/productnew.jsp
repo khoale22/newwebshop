@@ -47,7 +47,7 @@
 										<h2>${product.productName}</h2>
 										<h2>${product.productPrice}$</h2>
 										<p>Quantity :${product.quantity}</p>
-										<a href="cartadd?command=plus&productId=${product.productId}"
+										<a href="cartAdd?command=plus&productId=${product.productId}"
 											class="btn btn-default add-to-cart"><i
 											class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
@@ -55,7 +55,7 @@
 										<div class="overlay-content">
 											<h2>${product.productPrice}$</h2>
 											<p>Quantity :${product.quantity}</p>
-											<a href="cartadd?command=plus&productId=${product.productId}"
+											<a href="cartAdd?command=plus&productId=${product.productId}"
 												class="btn btn-default add-to-cart"><i
 												class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>

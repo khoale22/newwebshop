@@ -65,7 +65,7 @@
 					<th><%=list.getValue().getQuanlity()%></th>
 					<td><%=list.getValue().getQuanlity() * list.getValue().getProduct().getProductPrice()%></td>
 					<td><a
-						href="cartremove?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>&quantityOfBuy=<%=list.getValue().getQuanlity()%>">
+						href="cartRemove?command=remove&productId=<%=list.getValue().getProduct().getProductId()%>&quantityOfBuy=<%=list.getValue().getQuanlity()%>">
 							<img src="images/delete.jpeg" width="20px" height="20px">
 					</a></td>
 				</tr>
