@@ -6,8 +6,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -87,18 +85,17 @@ IMG.displayed {
 				<c:forEach var="pro" items="${listProductIndex}">
 					<div class="col-sm-4 col-md-4 col-lg-4">
 						<img class="rounded-circle"	
-							src="${pro.productImage }"
+							src="${pro.productImage}"
 							alt="Generic placeholder image" width="140" height="140">
 						<h2>${pro.productName}</h2>
-						<p>A smartphone is a handheld personal computer. It possesses
-							extensive computing capabilities</p>
+						<p>${pro.description }</p>
 						<p>
 							<a class="btn btn-secondary" href="cartAdd?command=plus&productId=${pro.productId}" role="button">AddToCart</a>
 						</p>
 					</div>
 				</c:forEach>	
 				</div>
-			</div>
+			</div> 
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>

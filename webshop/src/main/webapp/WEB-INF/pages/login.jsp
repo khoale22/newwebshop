@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="styles/login.css">
 <link rel="stylesheet" type="text/css" href="styles/cart.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -48,7 +49,7 @@
 		</div>
 		<c:if test="${error != null}">
 			<script type="text/javascript">
-				swal("Error!", "Your pass or userid are not valid!", "success");
+				swal("Error!", "Your pass or userid are not valid!");
 			</script>
 		</c:if>
 

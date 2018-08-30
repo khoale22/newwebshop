@@ -43,7 +43,6 @@ public class RegisterController {
 			@RequestParam("user_email") String user_email, @RequestParam("user_pass") String user_pass,
 			HttpSession session) {
 		User user = registerService.register(user_id);
-
 		if (user == null) {
 			String registerOk = "Successful";
 			session.setAttribute("registerOk", registerOk);
@@ -55,9 +54,7 @@ public class RegisterController {
 		} else {
 			String registerFail = "fail";
 			session.setAttribute("registerFail", registerFail);
-
 			return "redirect:/register";
 		}
-
 	}
 }

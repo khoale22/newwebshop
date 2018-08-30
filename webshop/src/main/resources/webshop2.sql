@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `webshop2` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `webshop2`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: webshop2
@@ -74,7 +76,7 @@ CREATE TABLE `bill` (
 
 LOCK TABLES `bill` WRITE;
 /*!40000 ALTER TABLE `bill` DISABLE KEYS */;
-INSERT INTO `bill` VALUES ('25dutpoh30zpuo5xcwoi5a99iiw0rp','Bank Transfer','2018-08-27 20:56:29',93,'user1',44345345,'77 thang trung'),('sia3b3rv9ojeoe5nwdxv6vu7s90eac','Bank Transfer','2018-08-27 20:55:31',20,'user1',940324,'13ham nghi');
+INSERT INTO `bill` VALUES ('5stpvycub9nzlxxfqo4ymumx0eau8o','Bank Transfer','2018-08-29 19:01:44',20,'user1',905211322,'12 ham nghi'),('85ccy0xdju9xm9481qh426wkk0d0uu','Live','2018-08-29 23:38:25',40,'user1',905433333,'12B quang trung'),('bbvekdjrxe33j048os6w7s84klfox4','Bank Transfer','2018-08-29 19:18:06',20,'user1',905445324,'12 quang trung'),('gfl5nsz8qj8tmp9oljy2us2a26r067','Live','2018-08-30 00:47:50',60,'user1',905211222,'15 to ngoc van'),('ivkvewt51f2oygvar69wcijizi8ahv','Bank Transfer','2018-08-30 00:34:25',40,'user1',98764843,'12 ham nghi'),('kthxouf84le2464l69m1495qbj66s6','Live','2018-08-29 21:18:34',20,'user1',905686653,'12 ham nghi'),('liagtc67nksyslaa2w8y0va7u9wevv','Bank Transfer','2018-08-30 00:36:56',45,'user1',95673833,'15 to ngoc van'),('odnmsc5l73pg25kjmcyrbumyda8s0p','Bank Transfer','2018-08-30 02:03:36',20,'user1',5646,'12 ham nghi'),('swget2m50l0k1fj9sfamopbfmr54tg','Bank Transfer','2018-08-29 19:02:04',20,'user1',905443233,'12B quang trung'),('v9sp4r13bcr13m7fxxrzs1jyu2k2re','Bank Transfer','2018-08-29 18:52:16',40,'user1',767667,'12 ham nghi'),('xjb8z3gx3ne1b090bhvz60cwmcrezi','Bank Transfer','2018-08-30 01:20:19',20,'user1',5435435,'543543');
 /*!40000 ALTER TABLE `bill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +99,7 @@ CREATE TABLE `billdetail` (
   KEY `asddadsfsf_idx` (`product_id`),
   CONSTRAINT `asddadsfsf` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fdsafasfd` FOREIGN KEY (`bill_id`) REFERENCES `bill` (`bill_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +108,7 @@ CREATE TABLE `billdetail` (
 
 LOCK TABLES `billdetail` WRITE;
 /*!40000 ALTER TABLE `billdetail` DISABLE KEYS */;
-INSERT INTO `billdetail` VALUES (99,20,'pro1',1,'sia3b3rv9ojeoe5nwdxv6vu7s90eac'),(100,20,'pro1',2,'25dutpoh30zpuo5xcwoi5a99iiw0rp'),(101,30,'pro2',1,'25dutpoh30zpuo5xcwoi5a99iiw0rp'),(102,23,'pro5',1,'25dutpoh30zpuo5xcwoi5a99iiw0rp');
+INSERT INTO `billdetail` VALUES (120,20,'pro1',2,'v9sp4r13bcr13m7fxxrzs1jyu2k2re'),(121,20,'pro1',1,'5stpvycub9nzlxxfqo4ymumx0eau8o'),(122,20,'pro1',1,'swget2m50l0k1fj9sfamopbfmr54tg'),(123,20,'pro1',1,'bbvekdjrxe33j048os6w7s84klfox4'),(124,20,'pro1',1,'kthxouf84le2464l69m1495qbj66s6'),(125,40,'pro3',1,'85ccy0xdju9xm9481qh426wkk0d0uu'),(126,20,'pro1',2,'ivkvewt51f2oygvar69wcijizi8ahv'),(127,45,'pro9',1,'liagtc67nksyslaa2w8y0va7u9wevv'),(128,20,'pro1',1,'gfl5nsz8qj8tmp9oljy2us2a26r067'),(129,40,'pro3',1,'gfl5nsz8qj8tmp9oljy2us2a26r067'),(130,20,'pro1',1,'xjb8z3gx3ne1b090bhvz60cwmcrezi'),(131,20,'pro1',1,'odnmsc5l73pg25kjmcyrbumyda8s0p');
 /*!40000 ALTER TABLE `billdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,10 +146,14 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
   `product_id` varchar(45) NOT NULL,
   `product_name` varchar(45) NOT NULL,
-  `product_image` varchar(45) NOT NULL,
+  `product_image` varchar(2525) NOT NULL,
   `product_price` double NOT NULL,
   `category_id` varchar(45) NOT NULL,
   `quantity` int(11) NOT NULL,
+  `screen` varchar(45) default NULL,
+  `version` varchar(45) default NULL,
+  `ram` varchar(45) default NULL,
+  `description` varchar(2525) default NULL,
   PRIMARY KEY  (`product_id`),
   KEY `fdsfs_idx` (`category_id`),
   CONSTRAINT `fdsaf` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -160,7 +166,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES ('pro1','Iphone1','images/iphone1.jpg',20,'cate1',58788),('pro2','Iphone2','images/iphone2.jpeg',30,'cate1',339),('pro3','Iphone3','images/iphone3.jpeg',40,'cate1',3380),('pro4','Iphone4','images/iphone4.jpeg',24,'cate1',424),('pro5','Iphone5','images/iphone5.jpeg',23,'cate1',3431),('pro6','Iphone6','images/iphone6.jpeg',23,'cate1',343),('pro7','Iphone7','images/iphone7.jpeg',23,'cate1',322),('pro8','Iphone8','images/iphone8.jpeg',23,'cate1',228),('pro9','IphoneX','images/iphoneX.jpeg',45,'cate1',4);
+INSERT INTO `product` VALUES ('pro1','Iphone1','images/iphone1.jpg',20,'cate1',58752,'400x300','IOS 8','2GB','Iphone 1 is a handheld personal computer. It possesses extensive computing capabilities'),('pro10','Samsung1','https://i.ebayimg.com/thumbs/images/g/8P0AAOSwduZbMGDc/s-l225.jpg',34,'cate2',0,'700x500','Adroid6','1GB','Samsung 1 is a handheld personal computer. It possesses extensive computing capabilities'),('pro11','Samsung2','https://i.ebayimg.com/thumbs/images/g/TvQAAOSwC81atJ1M/s-l225.jpg',23,'cate2',1,'400x300','Adroid5','3GB','Samsung 2 is a handheld personal computer. It possesses extensive computing capabilities'),('pro12','Samsung3','http://giahuemobile.com/wp-content/uploads/2016/03/vo-j5.jpg',23,'cate2',34,'400x400','Adroid7','4GB','Samsung 2 is a handheld personal computer. It possesses extensive computing capabilities'),('pro13','Samsung4','https://dienthoaidoc.com/wp-content/uploads/2013/06/samsung-galaxy-note-3-02.jpg',34,'cate2',4,'700x700','Adroid9','4Gb','Samsung 4 is a handheld personal computer. It possesses extensive computing capabilities'),('pro14','Samsung5','https://i.ebayimg.com/thumbs/images/g/0C4AAOSwMNxXXwfV/s-l225.jpg',34,'cate2',4,'600x600','Adroid5','5GB','Samsung 5 is a handheld personal computer. It possesses extensive computing capabilities'),('pro15','Samsung6','https://i.ebayimg.com/thumbs/images/g/cLoAAOSwXoxaU0Gu/s-l225.jpg',345,'cate2',2,'700x700','Adroid8','5Gb','Samsung 6 is a handheld personal computer. It possesses extensive computing capabilities'),('pro2','Iphone2','images/iphone2.jpeg',30,'cate1',330,'400x350','IOS 8.5','3GB','Iphone 2 is a handheld personal computer. It possesses extensive computing capabilities'),('pro3','Iphone3','images/iphone3.jpeg',40,'cate1',3376,'450x700','IOS 9','3GB','Iphone 3 is a handheld personal computer. It possesses extensive computing capabilities'),('pro4','Iphone4','images/iphone4.jpeg',24,'cate1',424,'500x560','IOS 9','4GB','Iphone 4 is a handheld personal computer. It possesses extensive computing capabilities'),('pro5','Iphone5','images/iphone5.jpeg',23,'cate1',3431,'400x560','IOS 9','3GB','Iphone 5 is a handheld personal computer. It possesses extensive computing capabilities'),('pro6','Iphone6','images/iphone6.jpeg',23,'cate1',343,'600x650','IOS 10','3GB','Iphone 6 is a handheld personal computer. It possesses extensive computing capabilities'),('pro7','Iphone7','images/iphone7.jpeg',23,'cate1',322,'670x700','IOS 10','3GB','Iphone 7 is a handheld personal computer. It possesses extensive computing capabilities'),('pro8','Iphone8','images/iphone8.jpeg',23,'cate1',227,'600x700','IOS 10','6GB','Iphone 8 is a handheld personal computer. It possesses extensive computing capabilities'),('pro9','IphoneX','images/iphoneX.jpeg',45,'cate1',3,'750x700','IOS 10','8GB','Iphone X is a handheld personal computer. It possesses extensive computing capabilities');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,7 +219,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('user1','khoa','hbkkhoa1@gmail.com','123','role2'),('user2','trung','hbkkhoa2@gmail.com','123','role2');
+INSERT INTO `user` VALUES ('fdhsj','fdsaf','fdas','fsda','role2'),('fdsf','fdsf','fdsf','fds','role2'),('user1','khoa','hbkkhoa1@gmail.com','123','role2'),('user100','trung phan','trung@gmail.com','12323434','role2'),('user11','fdsf','fds','fdsf','role2'),('user2','trung','hbkkhoa2@gmail.com','123','role2'),('user3','fdaf','fdsaf','fdaf','role2'),('user34','khoale34','hbkkhoa34@gmail.com','123','role2'),('user4','fdf','fdsf','fdsf','role2'),('user5','fds','fds','fds','role2'),('user6','342','4324','24342','role2'),('user7','abc','fsfds','123','role2'),('user78','fdsf','fds','fds','role2'),('user8','fdsf','fds','fds','role2'),('user9','dsff','fds','fds','role2'),('user90','sdfs','sfd','sdf','role2');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -226,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-27 21:31:12
+-- Dump completed on 2018-08-30  2:54:31

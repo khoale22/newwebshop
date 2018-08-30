@@ -29,17 +29,13 @@ public class HomeController {
 		mm.addAttribute("listCategory", categoryService.getAllCategory());
 		if (session.getAttribute("user") != null) {
 			User user = (User) session.getAttribute("user");
-			System.out.println(user.getUserId());
-			System.out.println(user.getUserName());
 		}
 		if (session.getAttribute("cart") != null) {
 			Cart cart = (Cart) session.getAttribute("cart");
 			System.out.println(cart.getCartItems());
-			System.out.println("CART RUN INTO HERE");
 		}
 		int maxResult = 6;
-		mm.addAttribute("listProductIndex", productService.listProductForIndex(maxResult));
-
+		mm.addAttribute("listProductIndex", productService.GetListProductForIndex(maxResult));
 		return "index";
 	}
 }

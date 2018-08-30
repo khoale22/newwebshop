@@ -18,7 +18,7 @@ public class ProductDao {
 	SessionFactory sessionFactory;	
 	@SuppressWarnings("unchecked")
 	@Transactional
-	public List<Product> pagination(int fisrtResult , int maxResult ,String categoryId) {
+	public List<Product> CreatePagination(int fisrtResult , int maxResult ,String categoryId) {
 		Query query = sessionFactory.getCurrentSession().createQuery("from Product where category.categoryId=:categoryId");
 		query.setFirstResult(fisrtResult-1);
 		query.setMaxResults(maxResult);
@@ -60,7 +60,7 @@ public class ProductDao {
 	
 	@SuppressWarnings("unchecked")
 	@Transactional
-	public List<Product> listProductForIndex(int maxResult){		
+	public List<Product> GetListProductForIndex(int maxResult){		
 		Query query = sessionFactory.getCurrentSession().createQuery("from Product");
 		query.setMaxResults(maxResult);
 		return query.list();

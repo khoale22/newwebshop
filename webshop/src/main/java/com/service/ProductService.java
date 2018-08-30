@@ -13,8 +13,8 @@ public class ProductService {
 	
 	@Autowired
 	ProductDao productDao ;
-	public List<Product> pagination(int fisrtResult , int maxResult ,String categoryId) {
-		return productDao.pagination(fisrtResult, maxResult, categoryId);
+	public List<Product> CreatePagination(int fisrtResult , int maxResult ,String categoryId) {
+		return productDao.CreatePagination(fisrtResult, maxResult, categoryId);
 	}
 	
 	public Object getQuantityOfProduct(String productId) {
@@ -29,8 +29,8 @@ public class ProductService {
 	public Long countProduct(String categoryId) {
 		return productDao.countProduct(categoryId);
 	}
-	public List<Product> listProductForIndex(int maxResult){
-		return productDao.listProductForIndex(maxResult);
+	public List<Product> GetListProductForIndex(int maxResult){
+		return productDao.GetListProductForIndex(maxResult);
 	}
 
 }

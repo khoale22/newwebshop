@@ -31,6 +31,7 @@ public class Product implements java.io.Serializable {
 	private String screen;
 	private String version;
 	private String ram;
+	private String description;
 
 	@Column(name = "quantity", nullable = false)
 	public int getQuantity() {
@@ -94,7 +95,7 @@ public class Product implements java.io.Serializable {
 		this.productName = productName;
 	}
 
-	@Column(name = "product_image", nullable = false, length = 45)
+	@Column(name = "product_image", nullable = false, length = 2525)
 	public String getProductImage() {
 		return this.productImage;
 	}
@@ -147,5 +148,14 @@ public class Product implements java.io.Serializable {
 	public void setRam(String ram) {
 		this.ram = ram;
 	}
+	@Column(name = "description", nullable = true, length = 2525)
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 
 }

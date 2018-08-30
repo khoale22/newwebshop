@@ -52,7 +52,7 @@ public class CartController {
 		} else {
 			try {
 				Product product = productService.getProductById(productId);
-				switch (command) {
+				switch (command) { 
 				case "plus":
 					int quantityNew = quantity - 1;
 					productService.updateQuanlityProduct(quantityNew, productId);
@@ -89,6 +89,9 @@ public class CartController {
 		productService.updateQuanlityProduct(quantiyNewOfBuy, productId);
 		System.out.print("remove ok");
 		cart.removeToCart(productId);
+		int entryCart = cart.getCartItems().size();
+		System.out.println("cart is :" + entryCart);
+		session.setAttribute("entryCart", entryCart);
 		return "cart";
 	}
 }

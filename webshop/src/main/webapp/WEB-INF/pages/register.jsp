@@ -15,6 +15,9 @@
 		if (session.getAttribute("registerFail") != null) {
 			String error = (String) session.getAttribute("registerFail");
 		}
+		if (session.getAttribute("registerOk") != null) {
+			String error = (String) session.getAttribute("registerOk");
+		}
 	%>
 
 	<jsp:include page="header.jsp"></jsp:include>
@@ -41,11 +44,11 @@
 	</form>
 	<c:if test="${registerFail != null}">
 		<script type="text/javascript">
-			swal("Error!", "The name to login exists!", "success");
+			swal("Error!", "The name to login exists!");
 		</script>
 	</c:if>
 	<c:if test="${registerOk != null}">
-		<script type="text/javascript">		
+		<script type="text/javascript">
 			swal("Successful!", "click the button to comeback!", "success");
 		</script>
 	</c:if>

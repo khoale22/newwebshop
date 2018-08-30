@@ -39,11 +39,8 @@ public class CheckOutController {
 		Cart cart = (Cart) session.getAttribute("cart");
 		System.out.println("Run into checkout ");
 		User user = (User) session.getAttribute("user");
-
 		System.out.println(user.getUserId());
 		System.out.println(user.getUserName());
-		System.out.println("Run into here2223new22s");
-
 		char[] chars = "0123456789abcdefghijklmnopqrstuvwxyz".toCharArray();
 		StringBuilder sb = new StringBuilder(30);
 		Random random = new Random();
@@ -55,7 +52,6 @@ public class CheckOutController {
 		String billId = sb.toString();
 
 		try {
-
 			Bill bill = new Bill();
 			bill.setBillId(billId);
 			bill.setPayment(payment);
@@ -70,11 +66,13 @@ public class CheckOutController {
 						list.getValue().getProduct().getProductPrice(), list.getValue().getQuanlity()));
 			}
 			session.removeAttribute("cart");
+			String checkOutOk = "successful";
+			session.setAttribute("checkOutOk", checkOutOk);
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/";
+		return "redirect:/contact";
 	}
 
 }

@@ -18,55 +18,52 @@
 </head>
 <body>
 
-<jsp:include page="header.jsp"></jsp:include>
-	<div class="container" >
-			<div class="card" style="background-color: #ddd;">
-				<div class="container-fliud" >
-					<div class="wrapper row">
-						<div class="preview col-md-6">
+	<div style="height: 96; font-size: 16px;">
+		<jsp:include page="header.jsp"></jsp:include>
+	</div>
+	<div class="container">
+		<div class="card" style="background-color: #ddd;">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
 
-							<div class="preview-pic tab-content">
-								<div class="tab-pane active" id="pic-1">
-									<img style="width: 250px; height: 300px;"
-										src="${product.productImage}" alt="">
-								</div>
+						<div class="preview-pic tab-content">
+							<div class="tab-pane active" id="pic-1">
+								<img style="width: 250px; height: 300px;"
+									src="${product.productImage}" alt="">
 							</div>
 						</div>
-						<div class="details col-md-6">
-							<h3 class="product-title">${product.productName}</h3>
-							<div class="rating">
-								<div class="stars">
-									<span class="fa fa-star checked"></span> <span
-										class="fa fa-star checked"></span> <span
-										class="fa fa-star checked"></span> <span class="fa fa-star"></span>
-									<span class="fa fa-star"></span>
-								</div>
-								<span class="review-no">123 rating</span>
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title">${product.productName}</h3>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span> <span
+									class="fa fa-star checked"></span> <span
+									class="fa fa-star checked"></span> <span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
 							</div>
-							<h4 class="price">Price: ${product.productPrice}</h4>
-							<h4 class="price">Quantity: ${product.quantity}</h4>
-							<h4 class="price">Screen: ${product.screen}</h4>
-							<h4 class="price">Version: ${product.version}</h4>
-							<h4 class="price">Ram: ${product.ram}</h4>
-							<!-- <p class="vote">
-								<strong>91%</strong> like this product
-							</p> -->
-							<h5 class="colors">
-								Color: <span class="color orange not-available"
-									data-toggle="tooltip" title="Not In store"></span> <span
-									class="color green"></span> <span class="color blue"></span>
-							</h5>
-							<div class="action">
-								<a href="cartAdd?command=plus&productId=${product.productId}">
-									<button class="add-to-cart btn btn-default" type="submit">ADD
-										TO CART</button>
-								</a>
-							</div>
+						</div>
+						<h4 class="price">Price: ${product.productPrice}</h4>
+						<h4 class="price">Quantity: ${product.quantity}</h4>
+						<h4 class="price">Screen: ${product.screen}</h4>
+						<h4 class="price">Version: ${product.version}</h4>
+						<h4 class="price">Ram: ${product.ram}</h4>
+						<h5 class="colors">
+							Color: <span class="color orange not-available"
+								data-toggle="tooltip" title="Not In store"></span> <span
+								class="color green"></span> <span class="color blue"></span>
+						</h5>
+						<div class="action">
+							<a href="cartAdd?command=plus&productId=${product.productId}">
+								<button class="add-to-cart btn btn-default" type="submit">ADD
+									TO CART</button>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-
+		</div>
 	</div>
 </body>
 </html>

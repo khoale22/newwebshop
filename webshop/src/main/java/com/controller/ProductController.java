@@ -27,7 +27,6 @@ public class ProductController {
 	public String pagation(@RequestParam("page") int page, @RequestParam("categoryId") String categoryId, ModelMap mm,
 			HttpSession session) {
 		Cart cart = (Cart) session.getAttribute("cart");
-
 		Float countProduct = productService.countProduct(categoryId).floatValue();
 		countProduct = countProduct / 10;
 		session.setAttribute("countProduct", countProduct);
@@ -42,7 +41,7 @@ public class ProductController {
 
 		mm.addAttribute("categoryId", categoryId);
 		mm.addAttribute("page", page);
-		mm.addAttribute("listProduct", productService.pagination(page, maxResult, categoryId));
+		mm.addAttribute("listProduct", productService.CreatePagination(page, maxResult, categoryId));
 
 		return "productnew";
 

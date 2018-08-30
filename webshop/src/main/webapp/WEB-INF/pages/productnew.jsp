@@ -20,7 +20,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Shop | E-Shopper</title>
+<title>Shop</title>
 <link href="styles/bootstrap.min.css" rel="stylesheet">
 <link href="styles/font-awesome.min.css" rel="stylesheet">
 <link href="styles/prettyPhoto.css" rel="stylesheet">
@@ -29,70 +29,49 @@
 <link href="styles/main.css" rel="stylesheet">
 <link href="styles/responsive.css" rel="stylesheet">
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
+	<div style="font-size: 16px;">
+		<jsp:include page="header.jsp"></jsp:include>
+	</div>
 
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<div class="features_items">
-					<!--features_items-->
-					<h2 class="title text-center">Features Items</h2>
-					<c:forEach var="product" items="${listProduct}">
-						<div class="col-sm-2"> 
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="${product.productImage}" alt="" />		
-										<h2>${product.productName}</h2>
+			<!-- <div class="col-sm-12"> -->
+			<div class="features_items">
+				<!--features_items-->
+				<h2 class="title text-center">Features Items</h2>
+				<c:forEach var="product" items="${listProduct}">
+					<div class="col-sm-12 col-md-2 col-lg-2">
+						<div class="product-image-wrapper">
+							<div class="single-products">
+								<div class="productinfo text-center">
+									<img src="${product.productImage}" alt="" />
+									<h2>${product.productName}</h2>
+									<h2>${product.productPrice}$</h2>
+									<p>Quantity :${product.quantity}</p>
+									<a href="cartAdd?command=plus&productId=${product.productId}"
+										class="btn btn-default add-to-cart"><i
+										class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+								<div class="product-overlay">
+									<div class="overlay-content">
 										<h2>${product.productPrice}$</h2>
 										<p>Quantity :${product.quantity}</p>
 										<a href="cartAdd?command=plus&productId=${product.productId}"
 											class="btn btn-default add-to-cart"><i
 											class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
-									<div class="product-overlay">
-										<div class="overlay-content">
-											<h2>${product.productPrice}$</h2>
-											<p>Quantity :${product.quantity}</p>
-											<a href="cartAdd?command=plus&productId=${product.productId}"
-												class="btn btn-default add-to-cart"><i
-												class="fa fa-shopping-cart"></i>Add to cart</a>
-										</div>
-									</div>
-								</div>
-								<div class="choose" style="text-align: center; color: black;">
-									<a href="productDetail?productId=${product.productId}">Detail product</a>
 								</div>
 							</div>
+							<div class="choose" style="text-align: center; color: black;">
+								<a href="productDetail?productId=${product.productId}">Detail
+									product</a>
+							</div>
 						</div>
-					</c:forEach>
-
-				</div>
-			</div>
-			<!-- DANG LAM -->
-			 <!-- <div class="col-sm-4">
-				<div class="contact-info">
-					<h2 class="title text-center">Khoa-Tay Shop</h2>
-					<address>
-						<p>Contact info if you have any problem with product</p>
-						<p>935 W. Webster Ave New Streets Chicago, IL 60614, NY</p>
-						<p>Newyork USA</p>
-						<p>Mobile: 0905211865</p>
-						<p>Fax: 1-714-252-0026</p>
-						<p>Email: hbkkhoa1@gmail.com</p>
-					</address>
-					<div class="social-networks">
-						<h2 class="title text-center">Social Networking</h2>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-						</ul>
 					</div>
-				</div>
-			</div> -->
+				</c:forEach>
+
+			</div>
 		</div>
 	</div>
 	<!--features_items-->

@@ -45,7 +45,6 @@ public class LoginController {
 				session.setAttribute("userId", userId);
 				session.setAttribute("user", user);
 				return "redirect:/";
-
 			} else if (user.getRole().getRoleName().equals("admin")) {
 				System.out.println(user.getRole().getRoleName());
 				session.setAttribute("userId", userId);
