@@ -20,6 +20,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	<%
@@ -35,10 +36,13 @@
 	<div class="container">
 		<h2>Cart</h2>
 		<c:if test="${outOfProduct != null}">
-			<div class="alert alert-warning alert-dismissible">
+			<%-- <div class="alert alert-warning alert-dismissible">
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
 				<strong>${outOfProduct}</strong>
-			</div>
+			<%-- </div> --%> --%>
+			<script type="text/javascript">
+			swal("Error!", "This product is out of quantity ,please buy other!");
+		</script>
 		</c:if>
 		<table class="table table-striped">
 			<thead style="background-color: #808080;">
@@ -78,7 +82,7 @@
 		</table>
 
 		<form action="checkout" method="post">
-			<div style="background-color: #f2f2f2; margin-top: 0px;">
+			<div style="background-color: #f2f2f2; margin-top: -10px;">
 				<span style="font-size: 50px;"> Sum is : <strong> <%=cart.totalCart()%>$
 				</strong></span>
 				<div style="float: right;">
@@ -90,7 +94,6 @@
 					</select>
 				</div>
 			</div>
-
 			<!-- <button type="submit" class="btn btn-dark btn-lg">Checkout</button> -->
 			<c:if test="${entryCart != 0}">
 				<button type="button" class="btn btn-dark btn-lg"
@@ -104,8 +107,8 @@
 						<!-- Modal Header -->
 						<div class="modal-header">
 							<h4 class="modal-title"
-								style="text-align: center; color: #228B22;">Successful-Please
-								enter infomation and confirm again</h4>
+								style="text-align: center; color: #228B22;">Please
+								enter infomation and confirm </h4>
 							<button type="button" class="close" data-dismiss="modal">×</button>
 						</div>
 
@@ -136,9 +139,6 @@
 			</div>
 		</form>
 	</div>
-
-
-
 	<%
 		if (session.getAttribute("outOfProduct") != null) {
 			session.removeAttribute("outOfProduct");
@@ -147,6 +147,5 @@
 			session.removeAttribute("entryCart");
 		}
 	%>
-
 </body>
 </html>

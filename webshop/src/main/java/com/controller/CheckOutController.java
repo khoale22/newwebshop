@@ -60,6 +60,7 @@ public class CheckOutController {
 			bill.setTotal(cart.totalCart());
 			bill.setPhone(phone);
 			bill.setAddress_payment(address_payment);
+			// bill.setState("not yet");
 			billService.insertBill(bill);
 			for (Map.Entry<String, Item> list : cart.getCartItems().entrySet()) {
 				billDetailDao.insertBill(new Billdetail(bill, list.getValue().getProduct(),

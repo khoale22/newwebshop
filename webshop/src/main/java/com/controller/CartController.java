@@ -61,7 +61,6 @@ public class CartController {
 					if (cart.getCartItems().containsKey(productId)) {
 
 						cart.plusToCart(productId, new Item(product, cart.getCartItems().get(productId).getQuanlity()));
-
 					} else {
 						cart.plusToCart(productId, new Item(product, 1));
 					}

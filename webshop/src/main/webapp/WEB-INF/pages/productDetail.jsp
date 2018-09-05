@@ -35,7 +35,7 @@
 						</div>
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">${product.productName}</h3>
+						<h1 class="product-title">${product.productName}</h1>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span> <span

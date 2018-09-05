@@ -64,7 +64,6 @@ public class ProductDao {
 		Query query = sessionFactory.getCurrentSession().createQuery("from Product");
 		query.setMaxResults(maxResult);
 		return query.list();
-		
 	}
 	
 	

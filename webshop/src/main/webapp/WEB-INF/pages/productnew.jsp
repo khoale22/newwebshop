@@ -32,8 +32,6 @@
 	<div style="font-size: 16px;">
 		<jsp:include page="header.jsp"></jsp:include>
 	</div>
-
-
 	<div class="container">
 		<div class="row">
 			<!-- <div class="col-sm-12"> -->
@@ -70,7 +68,6 @@
 						</div>
 					</div>
 				</c:forEach>
-
 			</div>
 		</div>
 	</div>

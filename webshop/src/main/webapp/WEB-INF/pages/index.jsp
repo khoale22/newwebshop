@@ -82,20 +82,21 @@ IMG.displayed {
 			</div>
 			<div class="col-sm-9 col-md-9 col-lg-9">
 				<div class="row">
-				<c:forEach var="pro" items="${listProductIndex}">
-					<div class="col-sm-4 col-md-4 col-lg-4">
-						<img class="rounded-circle"	
-							src="${pro.productImage}"
-							alt="Generic placeholder image" width="140" height="140">
-						<h2>${pro.productName}</h2>
-						<p>${pro.description }</p>
-						<p>
-							<a class="btn btn-secondary" href="cartAdd?command=plus&productId=${pro.productId}" role="button">AddToCart</a>
-						</p>
-					</div>
-				</c:forEach>	
+					<c:forEach var="pro" items="${listProductIndex}">
+						<div class="col-sm-4 col-md-4 col-lg-4">
+							<img class="rounded-circle" src="${pro.productImage}"
+								alt="Generic placeholder image" width="140" height="140">
+							<h2>${pro.productName}</h2>
+							<p>${pro.description }</p>
+							<p>
+								<a class="btn btn-secondary"
+									href="cartAdd?command=plus&productId=${pro.productId}"
+									role="button">AddToCart</a>
+							</p>
+						</div>
+					</c:forEach>
 				</div>
-			</div> 
+			</div>
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>

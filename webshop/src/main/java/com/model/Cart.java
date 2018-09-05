@@ -54,8 +54,7 @@ public class Cart {
 		}
 	}
 	public int countEntryOfCart() {
-		return cartItems.size();
-		
+		return cartItems.size();	
 	}
 	
 }
