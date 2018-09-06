@@ -12,15 +12,21 @@
 	<div ng-app=myapp>
 		<div ng-controller="HeaderController">
 		  <h2> Xin chao {{data.title}} den voi {{data.website}}!</h2>
+		  <h2>{{list}}</h2>
 		</div>
 		 <div ng-controller="ContentController">
                 <h2>Xin chao 11 {{data.title}} den voi  {{data.website}}!</h2>
             </div>
+            
 	</div>
 
 	<script>
   
      angular.module("myapp" , []).controller("HeaderController" ,function($scope){
+    	 
+    	
+    	 $scope.list = "abc"
+    	 
     	 $scope.data={
     			 title : "cac bans1" , 
     	         website : 'freetuts.new'
