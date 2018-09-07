@@ -25,7 +25,7 @@
      angular.module("myapp" , []).controller("HeaderController" ,function($scope){
     	 
     	
-    	 $scope.list = "abc"
+    	 $scope.list = "abc2";
     	 
     	 $scope.data={
     			 title : "cac bans1" , 

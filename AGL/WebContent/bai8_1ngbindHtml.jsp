@@ -13,6 +13,7 @@
         </script>
     </head>
     <body ng-app="myapp">
+     <h1> nhap vao the a href se co duong dan</h1>
         <div ng-controller="ExampleController">
             <input type="text" ng-model="myHTML2"/>
             <p ng-bind-html="myHTML2"></p>

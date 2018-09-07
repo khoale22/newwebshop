@@ -22,9 +22,9 @@
     </head>
     <body ng-app="myapp">
         <form name="myForm" ng-controller="FormController" class="my-form">
-            Thông báo: <input name="input" ng-model="userType" required><br/>
-            <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br>
-            <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br>
+            Thông báo: <input name="input2" ng-model="userType" required><br/>
+            <tt>myForm.input.$valid = {{myForm.input2.$valid}}</tt><br>
+            <tt>myForm.input.$error = {{myForm.input2.$error}}</tt><br>
             <tt>myForm.$valid = {{myForm.$valid}}</tt>
         </form>
     </body>
