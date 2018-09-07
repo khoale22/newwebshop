@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+ 
+ 
+ <style type="text/css">
+ 
+ .oddle{
+   background-color: red;
+   color: white;
+ 
+ }
+  .evenchan{
+                background: blue;
+                color:#FFF;
+            }
+ </style>
+ <script type="text/javascript">
+ angular.module('MyApp' , []).controller('MyController' , function($scope) {
+	    $scope.students =[
+		   { name : "Nguyen Van 1"},
+		   { name : "Nguyen Van 2"},
+		   { name : "Nguyen Van 3"},
+		   { name : "Nguyen Van 4"}
+	   ];
+	   $scope.data = {
+			   abc : "khoale",
+			   bcd : "ngatran"
+	   };
+});
+ </script>
+ 
+</head>
+<body ng-app="MyApp">
+
+ <div ng-controller="MyController"> 
+     <div ng-repeat="student in students" ng-class-odd="'oddle'"  ng-class-even="'evenchan'"> {{student.name}}</div> <br> <br><br> 
+    
+    <h1> {{data.abc}}</h1>
+    
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

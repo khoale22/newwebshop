@@ -28,7 +28,6 @@ color: red;
 	};
 	 
  $scope.game = 'KHONG22';
-	 
 });
 
 
@@ -52,8 +51,9 @@ color: red;
    <!-- /// bai 17 ng_show_ng_hide -->
    
    check se show ra :<input type="checkbox" ng-model="willbeshow">
-      <div ng-show="willbeshow">
-      
+      <div ng-show="willbeshow">    
+      <!-- // TEST TRUONG HOP    <div ng-show="true"> and false   TEST YOURSELF -->
+           {{willbeshow}}   //se ra true
            hien thi o day
       
       </div>
@@ -61,18 +61,12 @@ color: red;
    
     <br/><br/>
     check se an di :<input type="checkbox" ng-model="willbehide">
-      <div ng-hide="willbehide">
+      <div ng-hide="willbehide"> 
       
            hien thi o day
       
       </div>
  
   </form> 
-  
- 
-  
-  
-  
-
 </body>
 </html>

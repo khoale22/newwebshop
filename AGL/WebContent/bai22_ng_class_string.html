@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ví dụ sử dụng ngClass trong AngularJS - Freetuts.net</title>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+        <style>
+            *{margin:0;padding:0}
+            body{margin:20px;}
+            .red{
+                padding: 20px;
+                background-color: red;
+                color:#FFF;
+            }
+            .border{
+                border:solid 1px blue;
+            }
+        </style>
+        <script>
+            /*
+             * Author: thehalfheart@gmail.com
+             * Website: freetuts.net
+             */
+            angular.module('ngClassExample', [])
+                    .controller('ngControllerExample', function($scope){
+                        $scope.className = 'red border';
+                    });
+        </script>
+    </head>
+    <body ng-app="ngClassExample">
+        <div ng-controller="ngControllerExample">
+            <p ng-class="className">Học angularjs miễn phí tại freetuts.net</p>
+        </div>
+    </body>
+</html>

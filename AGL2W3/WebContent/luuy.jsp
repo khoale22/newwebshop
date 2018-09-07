@@ -5,15 +5,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 <body>
+   
+<!--    
+   
+   
+<form  name="myForm">
 
-<div ng-app="myApp" ng-controller="myCtr1">
+ //PHAI CO NAME = "MYNAME O DAY"
+<input name="myName" ng-model="myName" required>  
+
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+ 
+    -->
+    
+ <!-- /////BAI2
+ 
+ <div ng-app="myApp" ng-controller="myCtr1">
 
   First Name : <input type="text" name="firstName" ng-model="firstName"> <br> // name="firstName"  khong co nhiue y nghia trong agl
   Last Name : <input type="text" ng-model="lastName"> <br>  
-<!--   ten the p test <p > </p>  -->
+  ten the p test <p > </p> 
   Fullname : {{firstName + " " +  lastName + " " +tentuyy}}
      
      
@@ -28,19 +41,6 @@ app.controller("myCtr1" , function($scope) {
 	$scope.tentuyy = "abcd";
 })
 </script>	
-
-<!-- <div ng-app="myApp" ng-controller="myCtrl">
-{{ firstName + " " + lastName }}
-</div>
-
-<script>
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
-});
-</script> -->
-
-
+     -->
 </body>
 </html>

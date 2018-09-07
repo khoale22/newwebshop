@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+<h1 > VALIDATION MUST BE IN A FORM </h1>
+
+<form  name="myForm">
+
+ //PHAI CO NAME = "MYNAME O DAY"
+<input name="myName" ng-model="myName" required>  
+
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+ 
+
+
+
+</form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0
+}
+
+body {
+	margin: 50px
+}
+</style>
+<script>
+	angular.module('MyApp', []).controller('MyController', function($scope) {
+		$scope.items = [ "khoa", "trung", "nga" ];
+		
+		   <!-- BAI 3 -->
+		   $scope.data ={
+				  name : 'turngphan',
+				  age : 3
+				  
+		   };
+		   
+		   <!-- BAI 3 -->
+	});
+</script>
+
+</head>
+<body ng-app="MyApp">
+	<div ng-controller="MyController">
+		<div ng-repeat="abc1 in items" style="border: solid 1px red; margin: 20px">{{abc1}}</div>
+
+
+   <!-- BAI 2 -->
+		<header ng-repeat-start="item in items"> Header {{ item }} </header> 
+		<div>Body {{ item }}</div>
+		<footer ng-repeat-end> Footer {{ item }} </footer>
+   <!-- BAI 2 -->
+   
+      <!-- BAI 3 -->
+              <div ng-repeat="(key ,value) in data">
+              
+                        {{key}} - {{value}}
+              
+               </div>                     
+         <!-- BAI 3 -->
+	</div>
+
+</body>
+</html>

@@ -15,8 +15,8 @@
 
 				// Khi submit form thì chạy hàm này
 				$scope.submit22 = function() {
-					// nếu người dùng có nhập nội dung thì lưu nó vào list
-					if ($scope.text) {
+					// nếu người dùng có nhập nội dung thì lưu nó vào list hoac if ($scope.text)  ///  $scope.text = this.text
+					if ($scope.text !=null) {
 						$scope.list.push(this.text);
 
 						// đồng thời xóa dữ liệu trong thẻ input
@@ -30,10 +30,7 @@
 	<form ng-submit="submit22()" ng-controller="ExampleController">
 		<h3>Nhap ten sinh vien</h3>
 		<input type="text" ng-model="text"/> <input type="submit" value="them" />
-
 		<pre>list={{list}}</pre>
-
-
 	</form>
 
 </body>
