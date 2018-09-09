@@ -28,7 +28,7 @@ var html = '<table>';
     html += '</table>'
     
     return{
-    	template : html
+    	template : html 
     };
 });
  

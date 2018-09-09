@@ -18,6 +18,7 @@ body {
 <script>
 	angular.module('ngShowHide', []).controller('myController',
 			function($scope) {
+		    
 				$scope.checkAge = function() {
 					
 					if ($scope.age >= 20) {

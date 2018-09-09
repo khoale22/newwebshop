@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+	crossorigin="anonymous">
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="../session9/app.js"></script>
+
+</head>
+<body ng-app="app">
+	<div ng-controller="filterDemoCtrl">
+		<select ng-model="sortColumn">
+		 <!-- VALUE="NAME" VA  TANG DAN THEO NAME DEU LA VALUE CUA NG-MODEL="SORTCOLUMN" NHUNG VALUE="NAME" UU TIEN NEU GI CA 2 -->
+			<option value="name">tang dan theo name</option>
+			<option value="salary">tang dan theo salary</option>
+			<option value="-name">giam dan theo name</option>
+			<option value="-salary">giam dan theo salary</option>
+
+		</select>
+		<table class="table">
+			<tr>
+				<td>Name</td>
+				<td>Date of Birth</td>
+				<td>Salary</td>
+				<td>Gender</td>
+				<td>Status</td>
+			</tr>
+			<!--  true la giam dan <tr ng-repeat="employee in employees | orderBy : 'name':true"> -->
+			<tr ng-repeat="employee in employees | orderBy : sortColumn">
+				<td>{{employee.name | uppercase}}</td>
+				<td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+				<td>{{employee.salary | currency}}</td>
+				<td>{{employee.gender | lowercase}}</td>
+				<td>{{employee.status | status22}}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

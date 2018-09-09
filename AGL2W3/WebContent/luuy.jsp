@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-   
-<!--    
+   <h1> TAT CA NHUNG GI KHAI BAO BANG ng-?? DEU NAM TRONG $scope</h1>
+<!--    ng-init XEM BAI nested-repeaet.html  khong can thong qua scope tao bien trong <body> <body>
    
    
 <form  name="myForm">
@@ -42,5 +42,43 @@ app.controller("myCtr1" , function($scope) {
 })
 </script>	
      -->
+     
+     
+     
+     <form  name="myForm">
+
+ //PHAI CO NAME = "MYNAME O DAY"
+
+ 
+
+<input name="myName1" ng-model="myName1" required> // PHAI SU DUNG CA HAI  name="myName1" ng-model="myName1"
+
+
+<span ng-show="myForm.myName1.$touched && myForm.myName1.$invalid">The name is required.</span>
+
+
+/// bai 4
+
+ $scope.products.splice(3, 2); /// 3 O DAY LA BAT DAU BANG INDEX NAO , 2 LA XOA BAO NHIEU PHAN TU BAT DAU BANG INDEX DO
+
+</form>
+     
 </body>
 </html>
+
+
+
+
+<!-- $scope.items = [ "khoa", "trung", "nga" ];
+		
+		   BAI 3
+		   $scope.data ={
+				  name : 'turngphan',
+				  age : 3
+				  
+		   }; -->
+<!-- 		   $scope.cars = [
+    {model : "Ford Mustang", color : "red"},
+    {model : "Fiat 500", color : "white"},
+    {model : "Volvo XC90", color : "black"}
+]; -->

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8" />
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="../session6/script.js"></script>
+<!-- // khi thu muc hien tai nam trong session 6 -->
+<!--  <script src="session6/script.js"></script>  // khi thu muc hien tai nam trong webcontent -->
+
+</head>
+<body ng-app="MyApp">
+	<div ng-controller="MyCtl">
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Like</th>
+				<th>DisLike</th>
+				<th>Minus</th>
+				<th>Action</th>
+				<td> Test </td>
+			</tr>
+			<tr ng-repeat="tech in technologies">
+				<td>{{tech.name}}</td>
+				<td>{{tech.like}}</td>
+				<td>{{tech.dislike}}</td>
+				<td>{{tech.minus}}</td>
+				<td>
+				    <!-- // likeFunction(tech) tech o day la 1 doi tuong khong the thay the -->
+					<button ng-click="likeFunction(tech)">Like</button>
+					<button ng-click="dislikeFunction(tech)">Like</button>
+				</td>
+				<td>{{tech}} --- tech</td>
+			</tr>
+		</table>
+         
+	</div>
+</body>
+</html>

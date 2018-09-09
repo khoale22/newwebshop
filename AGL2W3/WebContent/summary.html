@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<script type="text/javascript">
+	angular.module('myShoppingList', []).controller('myCtrl', function($scope) {
+		$scope.products = [ "duong", "sua", "com2" ];
+
+		$scope.addItem = function() {
+			$scope.error = "";
+			if ($scope.addMe != null) {
+				// neu khong co trong mang thi push vao -1 : co nghia khong co phan tu nay trong mang
+				if ($scope.products.indexOf($scope.addMe) == -1) {
+					$scope.products.push($scope.addMe);
+				} else {
+					$scope.error = " this is error trung lap";
+				}
+			}
+		};
+		$scope.removeItem = function(x) {
+			/* $scope.products.splice(3, 2); /// 3 O DAY LA BAT DAU BANG INDEX NAO , 2 LA XOA BAO NHIEU PHAN TU BAT DAU BANG INDEX DO */
+			/// x o day se lay gia tri cua $index ()  $index la tu khoa 
+			$scope.products.splice(x, 1);
+		};
+	});
+</script>
+<body>
+
+
+	<div ng-app="myShoppingList" ng-controller="myCtrl">
+		<div
+			style="text-align: center; height: 800px; width: 40%; margin: 0px auto;">
+			<div style="max-height: 20%; background-color: #f1f1f1">
+				<h1>MY SHOP</h1>
+			</div>
+			<ul>
+				<li ng-repeat="x in products">
+					<div>
+						{{x}} <span style="float: right;" ng-click="removeItem($index)">×</span>
+					</div>
+				</li>
+			</ul>
+			<div style="max-height: 20%; background-color: #f1f1f1">
+				<input type="text" ng-model="addMe">
+				<button ng-click="addItem()">Add</button>
+			</div>
+			{{error}}
+		</div>
+	</div>
+</body>
+</html>

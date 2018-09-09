@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript">
+
+	/* angular.module('myApp', []).controller('myCtrl', function($scope, $http) {
+		$http.get("welcome.htm").then(function(response) {
+			$scope.myHttp = response.data;
+		});
+	}); */
+
+
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope, $http) {
+	  $http.get("welcome.html").then(function (response22) {
+	      $scope.myWelcome = response22.data;
+	      $scope.myWelcome1 = response22.headers;
+	      $scope.myWelcome2 = response22.status;
+	      $scope.myWelcome3 = response22.statusText;
+	      $scope.myWelcome4 = response22.config; 
+	  }); 
+	});
+</script>
+
+
+
+ 
+
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myCtrl">
+<h1>df</h1>
+		<h1>{{myWelcome}}</h1> <br> <br> <br>
+        <h1>{{myWelcome1}}</h1> <br> <br> <br>
+        <h1>{{myWelcome2}}</h1> <br> <br> <br>
+        <h1>{{myWelcome3}}</h1> <br> <br> <br>
+         <h1>{{myWelcome4}}</h1> <br> <br> <br>
+	</div>
+
+</body>
+</html>

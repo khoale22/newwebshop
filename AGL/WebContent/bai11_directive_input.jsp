@@ -27,7 +27,7 @@ color: red;
 		
 	};
 	 
- $scope.game = 'KHONG22';
+ $scope.game2 = 'KHONG22';
 });
 
 
@@ -45,10 +45,10 @@ color: red;
             <input type="submit" value='Login'/> <br>
   <!-- /// bai 12 checkbox  LUU Y : ng-true-value="'co'"  -->
   
-   Choi game : <input type="checkbox" ng-model="game" ng-true-value="'co'" ng-false-value="'khong'" value="tenhienthi" name="abcd"	> 
-   <h2> Playgame = {{game}}</h2> <br>
+   Choi game : <input type="checkbox" ng-model="game2" ng-true-value="'co'" ng-false-value="'khong'" value="tenhienthi" name="abcd"	> 
+   <h2> Playgame = {{game2}}</h2> <br>
    
-   <!-- /// bai 17 ng_show_ng_hide -->
+    /// bai 17 ng_show_ng_hide 
    
    check se show ra :<input type="checkbox" ng-model="willbeshow">
       <div ng-show="willbeshow">    
