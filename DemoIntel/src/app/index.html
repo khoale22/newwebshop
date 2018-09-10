@@ -1,0 +1,34 @@
+<html ng-app="phonecatApp">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="phone-list.component.js"></script>
+</head>
+<body >
+
+
+<ul>
+    <li>
+        <span>Nexus S</span>
+        <p>
+            Fast just got faster with Nexus S.
+        </p>
+    </li>
+    <li>
+        <span>Motorola XOOM™ with Wi-Fi</span>
+        <p>
+            The Next, Next Generation tablet.
+        </p>
+    <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+    </li>
+
+    <!-- Use a custom component to render a list of phones -->
+    <phone-list></phone-list>
+
+</ul>
+</body>
+</html>
