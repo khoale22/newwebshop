@@ -1,0 +1,36 @@
+<html>
+<head>
+   <title>Vi du Service trong AngularJS</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+   <h2>Ung dung AngularJS</h2>
+   <div ng-app="ungdungAngularJS" ng-controller="tinhBPController">
+      <p>Nhap mot so: <input type="number" ng-model="number" />
+      <button ng-click="binhphuong()">X<sup>2</sup></button>
+      <p>Ket qua: {{ketqua}}</p>
+   </div>
+   <script>
+      var ungdungAngularJS = angular.module("ungdungAngularJS", []);
+      ungdungAngularJS.factory('toanhocService', function() {     
+         var factory = {};  
+         factory.phepnhan = function(a, b) {
+            return a * b 
+         }
+         return factory;
+      }); 
+
+      ungdungAngularJS.service('tinhBPService', function(toanhocService){
+            this.binhphuong = function(a) { 
+            return toanhocService.phepnhan(a,a); 
+         }
+      });
+
+      ungdungAngularJS.controller('tinhBPController', function($scope, tinhBPService) {
+            $scope.binhphuong = function() {
+            $scope.ketqua = tinhBPService.binhphuong($scope.number);
+         }
+      });
+   </script>
+</body>
+</html>

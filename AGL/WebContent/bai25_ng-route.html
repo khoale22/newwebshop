@@ -1,0 +1,51 @@
+<html>
+<head>
+   <title>Vi du View trong Angular JS</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+</head>
+<body>
+   <h2>Ung dung AngularJS</h2>
+   <div ng-app="ungdungAngularJS">
+      <p><a href="#themSV">Them sinh vien</a></p>
+      <p><a href="#quansatSV">Quan sat sinh vien</a></p>
+      <div ng-view></div>
+      <script type="text/ng-template" id="themSV.html">
+         <h2> Them sinh vien </h2>
+         {{message}}
+      </script>
+      <script type="text/ng-template" id="quansatSV.html">
+         <h2> Quan sat sinh vien </h2>	    
+         {{message}}
+      </script>	
+   </div>
+
+   <script>
+      var ungdungAngularJS = angular.module("ungdungAngularJS", ['ngRoute']);
+      
+      ungdungAngularJS.config(['$routeProvider',
+         function($routeProvider) {
+            $routeProvider.
+               when('/themSV', {
+                  templateUrl: 'themSV.html',
+                  controller: 'themSVController'
+               }).
+               when('/quansatSV', {
+                  templateUrl: 'quansatSV.html',
+                  controller: 'quansatSVController'
+               }).
+               otherwise({
+                  redirectTo: '/themSV'
+               });
+         }]);
+
+         ungdungAngularJS.controller('themSVController', function($scope) {
+            $scope.message = "Trang nay se duoc su dung de hien thi mot form de them sinh vien";
+         });
+
+         ungdungAngularJS.controller('quansatSVController', function($scope) {
+            $scope.message = "Trang nay se duoc su dung de quan sat tat ca sinh vien";
+         });
+   </script>
+</body>
+</html>

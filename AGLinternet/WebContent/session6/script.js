@@ -8,4 +8,7 @@
 		getTech.like++;
 		getTech.minus++
 	};
+	$scope.likeByAnotherWay = function(getTechByAnotherWay) {
+		getTechByAnotherWay++;
+	}
 });

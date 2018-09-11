@@ -32,6 +32,15 @@
 		<input type="text" ng-model="text"/> <input type="submit" value="them" />
 		<pre>list={{list}}</pre>
 	</form>
+	
+	
+	<!-- CACH 2 -->
+	<!-- 
+	 <div ng-controller="ExampleController">
+		<h3>Nhap ten sinh vien</h3>
+		<input type="text" ng-model="text"/> <button ng-click="submit22()"  > them</button>
+		<pre>list={{list}}</pre>
+	 </div>	 -->
 
 </body>
 </html>
