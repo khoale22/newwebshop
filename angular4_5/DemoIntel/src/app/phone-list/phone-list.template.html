@@ -1,0 +1,32 @@
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <!--Sidebar content-->
+           <p>
+            Search: <input ng-model="$ctrl.query1" />
+           </p>
+           <p>
+             Sort by:
+               <select ng-model = "nameOption">
+                   <option value="name">Sort by Name default +</option>
+                   <option value="age">Sort by Name age default +</option>
+               </select>
+           </p>
+        </div>
+        <div class="col-md-10">
+            <!--Body content-->
+
+            <ul class="phones">
+                <li ng-repeat="phone in $ctrl.phones | filter : $ctrl.query1 | orderBy : nameOption">
+                    <span>{{phone.name}}</span>
+                    <p>{{phone.snippet}}</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

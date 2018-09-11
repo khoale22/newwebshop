@@ -15,6 +15,7 @@
             { name: 'Thủy', birthDate: new Date('12/3/1988'), salary: 10000000, gender: 'Female', status: 'true1' }
         ];
         $scope.employees = employees;
+        $scope.sortColumn = "salary";
     }
 
     // input o day chinh la =(NHIEU ) employee.status
