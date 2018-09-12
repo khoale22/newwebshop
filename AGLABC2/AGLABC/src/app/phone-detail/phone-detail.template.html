@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-5">
+      <!--  <img ng-src="{{$ctrl.phone.images[0]}}">-->
+        <img ng-src="{{$ctrl.imageOfUrt}}">
+        <h1>{{$ctrl.phone.name}}</h1>
+        <p>{{$ctrl.phone.description}}</p>
+    </div>
+    <div class="col-md-7">
+
+
+           <ul class="row">
+                <li ng-repeat="img in $ctrl.phone.images" class="col-md-4">
+                  <img ng-src="{{img}}" width="200px" height="200px" ng-click="$ctrl.setImage(img)">
+               </li>
+            </ul>
+
+    </div>
+</div>
+
+
+</body>
+</html>

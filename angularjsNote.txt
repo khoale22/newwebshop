@@ -1,0 +1,5 @@
+[] represents Array
+
+{} represents Object
+
+angular.module('myAppln',[]); Actually [] is an array with the dependencies that are required by the module.

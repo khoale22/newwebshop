@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
 <body>
 
 <div ng-app="myApp" ng-controller="customersCtrl"> 
 
-<table>
+<!-- <table>
   <tr ng-repeat="x in names ">
     <td>{{ x.Firstname }}</td>
     <td>{{ x.Lastname }}</td>
   </tr>
 </table>
- <h1> {{names}}</h1>
+ <h1> {{names}}</h1> -->
+ <table>
+   <tr>
+      <th>Ho va Ten</th>
+      <th>MSSV</th>
+	  <th>Diem thi</th>
+   </tr>
+   <tr ng-repeat="sinhvien in sinhvienk60">
+      <td>{{ sinhvien.HovaTen }}</td>
+      <td>{{ sinhvien.MSSV }}</td>
+	  <td>{{ sinhvien.Diemthi }}</td>
+   </tr>
+</table>
 </div>
 
 <script>
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
-    $http.get("table1.html")
-    .then(function (response) {$scope.names = response.data;});
+   // $http.get("table1.html")
+    $http.get("khoa.txt")
+    .then(function (response) {$scope.sinhvienk60  = response.data;});
 });
 </script>
 

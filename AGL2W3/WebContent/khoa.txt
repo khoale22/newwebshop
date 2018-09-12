@@ -1,0 +1,22 @@
+[
+{
+"HovaTen" : "Tran Minh Chinh",
+"MSSV" : 20150456,
+"Diemthi" : "8.0"
+},
+{
+"HovaTen" : "Nguyen Thi Chinh",
+"MSSV" : 20150457,
+"Diemthi" : "9.0"
+},
+{
+"HovaTen" : "Ha Kieu Linh",
+"MSSV" : 20150458,
+"Diemthi" : "8.5"
+},
+{
+"HovaTen" : "Ho Ngoc Ha",
+"MSSV" : 20150459,
+"Diemthi" : "9.5"
+}
+]

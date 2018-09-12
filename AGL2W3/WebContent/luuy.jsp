@@ -82,3 +82,35 @@ app.controller("myCtr1" , function($scope) {
     {model : "Fiat 500", color : "white"},
     {model : "Volvo XC90", color : "black"}
 ]; -->
+
+
+
+  <!-- VI BAT DAU BANG '$locationProvider' NEN PHAI CO NGOAC VUONG  -->
+<!--   LUU Y NEW $LOCATIONPROVIDER KHONG CO '' THI DUNG  () -->
+  
+<!--   config([ '$locationProvider' , '$routeProvider' ,
+       function config($locationProvider , $routeProvider) {
+           $locationProvider.hashPrefix('!');
+
+           $routeProvider.
+               when('/phones' ,{
+                   template : ' <phone-list></phone-list>'
+               }).
+               when('/phones/:phoneId22' ,{
+                    template: '{{$ctrl.phoneId}} <phone-detail></phone-detail>'
+               }).
+               /// tuc la khi chay ung dung len se khong co duong dan url nao cu the nen se duoc chuyen ve   when('/phones' ,{
+             //template : ' <phone-list></phone-list>'
+             //}).
+               otherwise('/phones');
+       }
+
+]); -->
+
+
+
+
+bai 10  khi nao dung , va ;
+ templateUrl : 'phone-list/phone-list.template.html',
+    var seft = this;
+      seft.phones = response.data;
