@@ -31,7 +31,6 @@ component('phoneList', {
             self.mainImageUrl = imageUrl;
         };
         $http.get('phones/phones.json').then(function (response) {
-
             seft.phones = response.data;
             self.setImage(self.phone.images[0]);
         });
