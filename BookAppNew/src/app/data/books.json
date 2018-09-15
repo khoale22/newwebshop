@@ -1,0 +1,106 @@
+[{
+	"bookId": 101,
+	"bookTitle": "Angular JS",
+	"topic": "AngularJS",
+	"author": "Green",
+	"cost": 375,
+	"imgUrl": "imgs/AngularJS1.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+
+}, {
+	"bookId": 102,
+	"bookTitle": "Instant Angular JS Starter",
+	"topic": "AngularJS",
+	"author": "Dan Menard",
+	"cost": 150,
+	"imgUrl": "imgs/AngularJS2.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+
+}, {
+	"bookId": 103,
+	"bookTitle": "Ng-Book: The Complete Book on AngularJS",
+	"topic": "AngularJS",
+	"author": "Ari Lerner",
+	"cost": 4657,
+	"imgUrl": "imgs/AngularJS3.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+
+}, {
+	"bookId": 104,
+	"bookTitle": "Develping BackboneJS Applications",
+	"topic": "BackboneJS",
+	"author": "Addy Osmani",
+	"cost": 650,
+	"imgUrl": "imgs/BackboneJS1.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+
+}, {
+	"bookId": 105,
+	"bookTitle": "Backbone.js Patterns and Best Practices",
+	"topic": "BackboneJS",
+	"author": "Swarnendu De",
+	"cost": 390,
+	"imgUrl": "imgs/BackboneJS2.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+}, {
+	"bookId": 107,
+	"bookTitle": "Ember.js in Action",
+	"topic": "EmberJS",
+	"author": "Joachim Haagen Skeie",
+	"cost": 2500,
+	"imgUrl": "imgs/EmberJS1.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+}, {
+	"bookId": 108,
+	"bookTitle": "Mastering Ember.js",
+	"topic": "EmberJS",
+	"author": "Mitchel Kelonye",
+	"cost": 3500,
+	"imgUrl": "imgs/EmberJS2.JPG",
+	"avaiable" : "yes",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+}, {
+	"bookId": 109,
+	"bookTitle": "Developing an EmberJS Edge",
+	"topic": "EmberJS",
+	"author": "Jamie White and Matthew Beale",
+	"cost": 2000,
+	"imgUrl": "imgs/EmberJS3.JPG",
+	"avaiable" : "no",
+     "content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+}, {
+	"bookId": 110,
+	"bookTitle": "Node.js in Action",
+	"topic": "NodeJS",
+	"author": "Mike Cantelon and Marc Harter",
+	"cost": 800,
+	"imgUrl": "imgs/NodeJS1.JPG",
+	"avaiable" : "no",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+}, {
+	"bookId": 111,
+	"bookTitle": "Node.js in the Right Way",
+	"topic": "NodeJS",
+	"author": "Jim R. Wilson",
+	"cost": 1200,
+	"imgUrl": "imgs/NodeJS2.JPG",
+	"avaiable" : "no",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+
+}, {
+	"bookId": 112,
+	"bookTitle": "Pro Node.js for Developers",
+	"topic": "NodeJS",
+	"author": "Colin Ihrig",
+	"cost": 2800,
+	"imgUrl": "imgs/NodeJS3.JPG",
+	"avaiable" : "no",
+	"content" : "This year, the big news we’ve got company. We’ve teamed with Target for a first-of-its-kind collaboration that brings some of our ‘favorite things’ from its exclusive brands like Nate Berkus and Archer Farms to our story. How’d it all come about? We went to Target HQ in Minnesota and handpicked items we thought would complete a story filled with inspiring gifts for him, her, and everyone (Bullseye included.)For the first time ever, you’ll be able to shop our Target favorites alongside too-decadent to resist chocolates from Vosges or hand-embroidered pieces from Coral and Tusk.Other firsts to discover: an in-store installation by local artists Nick Bakita and Matt G. Wells, a top shelf digital display from Perch Interactive, and events that give new meaning to the phrase, have a “good weekend.” #OMT (oh my Target,) are you ready to come home for the holidays?"
+
+}]

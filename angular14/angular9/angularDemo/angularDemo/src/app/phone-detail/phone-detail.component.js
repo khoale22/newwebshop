@@ -28,6 +28,4 @@ component('phoneDetail' ,{
             })
 
         }]
-
-
 });

@@ -8,6 +8,6 @@
 	"role": "student"
 }, {
 	"username": "librarian",
-	"password": "lib@123",
+	"password": "librarian",
 	"role": "librarian"
 }]

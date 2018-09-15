@@ -6,6 +6,7 @@ angular.module('phonecatApp').
            $locationProvider.hashPrefix('!');
            $routeProvider.
                when('/phones' ,{
+                   // day chinh la component component('phoneList', { .....
                    template : ' <phone-list></phone-list>'
                }).
                when('/phones/:phoneId22' ,{

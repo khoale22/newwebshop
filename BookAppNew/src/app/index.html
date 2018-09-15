@@ -1,0 +1,32 @@
+<html ng-app="BookApp">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+   <!-- <script src="phone-list/phone-list.module.js"></script>
+    <script src="phone-list/phone-list.component.js"></script>
+    <script src="phone-detail/phone-detail.module.js"></script>
+    <script src="phone-detail/phone-detail.component.js"></script>-->
+   <script src="login-function/login.module.js"></script>
+    <script src="login-function/login.component.js"></script>
+    <script src="student-function/student.module.js"></script>
+    <script src="student-function/student.component.js"></script>
+    <script src="admin-function/admin.module.js"></script>
+    <script src="admin-function/admin.component.js"></script>
+
+</head>
+<body>
+
+<div ng-include="'Header.html'"></div>
+
+11 
+<div ng-view></div>
+
+<div ng-include="'Footer.html'"></div>
+
+</body>
+</html>
+

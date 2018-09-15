@@ -45,9 +45,9 @@ libraryModule.controller('BookListCtrl_Student', function($scope, BookData) {
 
 	$scope.title = "View Books";
 
-	$scope.changeView = function() {
+	/*$scope.changeView = function() {
 		BookData.getData();
-	}
+	}*/
 });
 
 /*
@@ -133,3 +133,5 @@ libraryModule.controller('AddBookCtrl', function($scope, $rootScope, $location, 
 		$location.path('/home/librarian');
 	}
 });
+
+
