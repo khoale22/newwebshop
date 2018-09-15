@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="LoginFormDiv">
+    <table border="0">
+        <tr>
+            <td> Username </td>
+            <td>: <input  class="input" type="text" ng-model="$ctrl.name"/></td>
+        </tr>
+        <tr>
+            <td> Password</td>
+            <td>: <input  class="input" type="password" ng-model="$ctrl.pass"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button" ng-click="$ctrl.validate()">Login</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

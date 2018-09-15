@@ -12,6 +12,7 @@ angular.module('loginForm' , []).
         });
 
         seft.validate = function () {
+            /// THIS IS FUNCTION , HAVE TO BUTTON TO SHOW IT
             angular.forEach(seft.data1, function(user) {
                 if (user.username == seft.name && user.password == seft.pass) {
                      // seft.role = user.role;
@@ -20,7 +21,7 @@ angular.module('loginForm' , []).
                           $location.path('/home/student')
                       }else{
                           if(user.role == "admin"){
-                              alert("Welcome  " + seft.name) ; //or user.username
+                              alert("Welcome  " + seft.name) ;
                               $location.path('/home/admin')
                           }
                       }

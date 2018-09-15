@@ -1,0 +1,49 @@
+<div  align="center" >
+    <h2 ng-bind="title" ng-style="{'color':'red','font-style':'italic'}"></h2>
+    <div>
+        <label>View Books</label>
+        <select ng-model="view">
+            <option value="">All Books</option>
+            <option value="yes">Available Books</option>
+        </select>
+    </div>
+    <div>
+        <label>Search books: </label><input type="text" ng-model="bookSrch"></input>
+    </div>
+    <div>
+        <label>Sort books: </label>
+        <select ng-model="bookSort">
+            <option value="">No Sort</option>
+            <option value="cost">Cost</option>
+            <option value="-cost">-Cost</option>
+            <option value="topic">Topic</option>
+            <option value="-topic">-Topic</option>
+        </select>
+    </div><br></br>
+    <div>
+        <table border="1">
+            <tr class="LoginFormDiv">
+                <th>Sl. No.</th>
+                <th>Image</th>
+                <th>Details</th>
+
+            </tr>
+           <!-- <tr highlight class="LoginFormDiv" ng-repeat="i in books | filter:bookSrch | orderBy:bookSort | filterunissued:view">-->
+            <tr highlight class="LoginFormDiv" ng-repeat="i in $ctrl.books | filter:bookSrch | orderBy:bookSort |  filter:view ">
+            <td>{{$index+1}}</td>
+                <td><img width="50%" height="50%" ng-src="{{i.imgUrl}}"></img></td>
+                <td>
+                    <div>Book ID     : {{i.bookId}}</div>
+                    <div>Book Title  : {{i.bookTitle}}</div>
+                    <div>Book Topic  : {{i.topic}}</div>
+                    <div>Book Author : {{i.author}}</div>
+                    <div>Book Cost   : {{i.cost | currency:'Rs.'}}</div>
+                    <div> <button> <a href="#!/book/detail/{{i.bookId}}">Detail </a> </button></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br></br>
+</div>
+
+<div class="LoginFormDivTest"> hdfkjsf</div>

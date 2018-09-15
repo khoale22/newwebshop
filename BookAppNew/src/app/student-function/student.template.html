@@ -38,7 +38,9 @@
                     <div>Book Topic  : {{i.topic}}</div>
                     <div>Book Author : {{i.author}}</div>
                     <div>Book Cost   : {{i.cost | currency:'Rs.'}}</div>
-                    <div> <button> <a href="#!/book/detail/{{i.bookId}}">Detail </a> </button></div>
+                    <div> <a href="#!/detail/{{i.bookId}}" >Detail </a> </div>
+
+                         <!-- <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>-->
                 </td>
             </tr>
         </table>

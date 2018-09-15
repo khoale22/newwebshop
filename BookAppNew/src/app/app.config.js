@@ -13,7 +13,7 @@ angular.module('BookApp').config(['$locationProvider', '$routeProvider',
         }).when('/home/admin', {
 
             template: ' <admin-form></admin-form>'
-        }).when('/book/detail: bookId', {
+        }).when('/detail/:bookId', {
 
             template: ' <book-detail></book-detail>'
         }).otherwise('/login');
