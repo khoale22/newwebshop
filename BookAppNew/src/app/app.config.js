@@ -16,6 +16,9 @@ angular.module('BookApp').config(['$locationProvider', '$routeProvider',
         }).when('/detail/:bookId', {
 
             template: ' <book-detail></book-detail>'
+        }).when('/bookAdd', {
+
+            template: ' <book-add></book-add>'
         }).otherwise('/login');
     }
 

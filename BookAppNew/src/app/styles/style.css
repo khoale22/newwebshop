@@ -58,9 +58,10 @@ border-radius: 10px;
 	font-style: italic;
 	color: red;
 }
+/*
 .css-form input.ng-invalid.ng-dirty {
-	background-color: pink
+    background-color: pink
 }
 .css-form input.ng-valid {
-	background-color: green
-}
+    background-color: green
+}*/

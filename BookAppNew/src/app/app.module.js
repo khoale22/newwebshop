@@ -6,5 +6,6 @@ angular.module('BookApp', [
     'loginForm',
     'studentForm',
     'adminForm',
-    'bookDetail'
+    'bookDetail',
+    'bookAdd'
 ]);

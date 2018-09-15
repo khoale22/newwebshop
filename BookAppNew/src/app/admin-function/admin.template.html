@@ -3,8 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        .css-form input.ng-invalid.ng-dirty {
+            background-color: red;
+        }
+        .css-form input.ng-valid {
+            background-color: green
+        }
+    </style>
 </head>
 <body>
-<h1> HEllo Admin</h1>
+<div  align="center" >
+    <h2 ng-bind="title" ng-style="{'color':'red','font-style':'italic'}"></h2>
+    <div><a href="#!/bookAdd">Add Book</a></div>
+    <div>
+        <label>Search books: </label><input type="text" ng-model="bookSrch"></input>
+    </div>
+    <div>
+        <label>Sort books: </label>
+        <select ng-model="bookSort">
+            <option value="">No Sort</option>
+            <option value="cost">Cost</option>
+            <option value="topic">Topic</option>
+        </select>
+    </div><br>
+    <div>
+        <table border="1">
+            <tr class="LoginFormDiv">
+                <th>Sl. No.</th>
+                <th>Image</th>
+                <th>Details</th>
+            </tr>
+            <tr highlight class="LoginFormDiv" ng-repeat="i in $ctrl.books | filter:bookSrch | orderBy:bookSort">
+                <td>{{$index+1}}</td>
+                <td><img width="50%" height="50%" ng-src="{{i.imgUrl}}"></td>
+                <td>
+                    <div>Book ID     : {{i.bookId}}</div>
+                    <div>Book Title  : {{i.bookTitle}}</div>
+                    <div>Book Topic  : {{i.topic}}</div>
+                    <div>Book Author : {{i.author}}</div>
+                    <div>Book Cost   : {{i.cost | currency:'Rs.'}}</div>
+                 <!--   <div>Issued      : {{i.issued}}</div>-->
+                   <!-- <input type="button" value="Issue Book" ng-disabled="i.issued" ng-click="issue(i.bookId)"></input>
+                    <input type="button" value="Return Book" ng-disabled="i.issued != true" ng-click="return(i.bookId)"></input>-->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+</div>
 </body>
 </html>

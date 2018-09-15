@@ -12,12 +12,6 @@ component('bookDetail' ,{
            self.books = response.data;
 
            angular.forEach(self.books, function (book) {
-               if ($routeParams.bookId != null) {
-                   alert("bookId not null")
-               } else {
-                   alert("bookId null")
-               }
-
                if (book.bookId == $routeParams.bookId) {
                    self.eachBook = book;
                }

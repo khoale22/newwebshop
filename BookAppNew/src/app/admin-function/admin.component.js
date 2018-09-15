@@ -5,12 +5,11 @@ component('adminForm' , {
     templateUrl : 'admin-function/admin.template.html',
 
 
-   /* controller: ['$http', '$location' ,function loginController($http , $location) {
+    controller: ['$http', '$location' ,function loginController($http , $location) {
         var seft = this ;
-        $http.get('data/roles.json').then(function (response) {
-            seft.data1 = response.data;
+        $http.get('data/books.json').then(function (response) {
+            seft.books = response.data;
         });
 
-
-    }]*/
+    }]
 });

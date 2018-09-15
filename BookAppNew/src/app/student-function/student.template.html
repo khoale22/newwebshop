@@ -22,7 +22,7 @@
     </div><br></br>
     <div>
         <table border="1">
-            <tr class="LoginFormDiv">
+                <tr class="LoginFormDiv">
                 <th>Sl. No.</th>
                 <th>Image</th>
                 <th>Details</th>
@@ -38,7 +38,7 @@
                     <div>Book Topic  : {{i.topic}}</div>
                     <div>Book Author : {{i.author}}</div>
                     <div>Book Cost   : {{i.cost | currency:'Rs.'}}</div>
-                    <div> <a href="#!/detail/{{i.bookId}}" >Detail </a> </div>
+                    <div> <button> <a href="#!/detail/{{i.bookId}}" >Detail </a></button> </div>
 
                          <!-- <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>-->
                 </td>
