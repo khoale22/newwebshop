@@ -48,7 +48,7 @@
                     <td><input type="number" class="input" name="cost" ng-model="$ctrl.cost" required ng-minlength="1" ng-maxlength="10"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="button" ng-click="$ctrl.addBook(bookId,bookTitle,topic,author,cost)" ng-disabled="form.id.$invalid || form.title.$invalid || form.topic.$invalid || form.author.$invalid || form.cost.$invalid" value="Add Book"></input></td>
+                    <td colspan="2"><input type="button" ng-click="$ctrl.addBook($ctrl.bookId,$ctrl.bookTitle,$ctrl.topic,$ctrl.author,$ctrl.cost)" ng-disabled="form.id.$invalid || form.title.$invalid || form.topic.$invalid || form.author.$invalid || form.cost.$invalid" value="Add Book"></input></td>
                 </tr>
             </table>
 
