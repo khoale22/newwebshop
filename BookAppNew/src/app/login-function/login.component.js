@@ -28,10 +28,7 @@ angular.module('loginForm' , []).
 
                 }
             });
-
         };
-
-
     }]
 }).directive('highlight', function() {
     return {
