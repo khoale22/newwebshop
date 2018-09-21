@@ -2,7 +2,7 @@ package com.controller;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.catalina.Session;
+//import org.apache.catalina.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +22,7 @@ public class LogOutController {
 
 		if (session.getAttribute("cart") != null) {
 			session.removeAttribute("cart");
+
 		}
 
 		return "redirect:/";
