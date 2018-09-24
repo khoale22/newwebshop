@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+
+<div ng-app="app">
+    <h3>Change the value in the parent input and see the child input update.</h3>
+    <h3>Then change the value in the child input and notice that the parent does not update.</h3>
+    <div class="controller" ng-controller="ParentController">
+        ParentController: <input type="text" ng-model="foo" />
+        foo: {{ foo }}
+        <div class="controller" ng-controller="ChildController">
+            ChildController: <input type="text" ng-model="foo" />
+            foo: {{ foo }}
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+    angular.module('app', [])
+        .controller('ParentController', ParentController)
+        .controller('ChildController', ChildController);
+
+    function ParentController($scope) {
+        $scope.foo = "bar";
+    }
+
+    function ChildController() {
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -4,13 +4,11 @@ angular.module('loginForm' , []).
     component('loginForm' , {
         templateUrl : 'login-function/login.template.html',
 
-
     controller: ['$http', '$location' ,function loginController($http , $location) {
         var seft = this ;
         $http.get('data/roles.json').then(function (response) {
              seft.data1 = response.data;
         });
-
         seft.validate = function () {
             /// THIS IS FUNCTION , HAVE TO BUTTON TO SHOW IT
             angular.forEach(seft.data1, function(user) {
@@ -25,7 +23,6 @@ angular.module('loginForm' , []).
                               $location.path('/home/admin')
                           }
                       }
-
                 }
             });
         };
@@ -41,7 +38,6 @@ angular.module('loginForm' , []).
             function mouseover22() {
                 this.classList.add('highlight');
             }
-
             function mouseout22() {
                 /// The classList property returns the class name(s) of an element, as a DOMTokenList object.
                 this.classList.remove('highlight');

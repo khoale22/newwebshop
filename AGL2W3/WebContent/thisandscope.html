@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this $sope vs controller</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script>
+        var app=angular.module("myApp",[]);
+        app.controller("ctrlExample",function($scope){
+           console.log("ctrl 'this'",this);
+            //this(object) of controller different then $scope
+            $scope.firstName="Andy2";
+            $scope.lastName="Bot";
+            this.nickName="ABot";
+            this.controllerMethod=function(){
+
+                console.log("controllerMethod ",this);
+            }
+            $scope.show=function(){
+                console.log("$scope 'this",this);
+                //this of $scope
+                $scope.message="Welcome User";
+            }
+
+        });
+    </script>
+</head>
+<body ng-app="myApp" >
+<div ng-controller="ctrlExample as ctrl">
+    Comming From $SCOPE :{{ctrl.firstName}}
+    <br><br>
+    Comming from $SCOPE:{{lastName}}
+    <br><br>
+    Should Come From Controller:{{ctrl.nickName}}
+    <p>
+        Blank nickName is because nickName is attached to
+        'this' of controller.
+    </p>
+
+    <br><br>
+    <button ng-click="ctrl.controllerMethod()">Controller Method</button>
+
+    <br><br>
+    <button ng-click="show()">Show</button>
+    <p>{{message}}</p>
+
+</div>
+
+</body>
+</html>

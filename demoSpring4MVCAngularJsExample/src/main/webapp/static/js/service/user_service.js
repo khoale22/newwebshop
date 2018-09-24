@@ -10,10 +10,8 @@ angular.module('myApp').factory('UserService', ['$http', '$q', function($http, $
        createUser: createUser,
        /* updateUser:updateUser,
         deleteUser:deleteUser*!/*/
-    }; 
-	
+    };
     return factory;
-    
     function fetchAllUsers() { 
         var deferred = $q.defer();
         $http.get(REST_SERVICE_URI)
@@ -28,8 +26,6 @@ angular.module('myApp').factory('UserService', ['$http', '$q', function($http, $
         );
         return deferred.promise;
     }
-
-
     function updateUser(id ,user) {
         var deferred = $q.defer();
         $http.put(REST_SERVICE_URI+id , user)
@@ -44,7 +40,6 @@ angular.module('myApp').factory('UserService', ['$http', '$q', function($http, $
             );
         return deferred.promise;
     }
-
     function createUser(user) {
         var deferred = $q.defer();
         $http.post(REST_SERVICE_URI , user)
@@ -59,6 +54,6 @@ angular.module('myApp').factory('UserService', ['$http', '$q', function($http, $
             );
         return deferred.promise;
     }
-
-
 }]);
+
+
