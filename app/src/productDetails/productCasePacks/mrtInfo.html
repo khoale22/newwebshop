@@ -1,0 +1,96 @@
+<div can-view="CP_MRT_01">
+	<div ng-if="$ctrl.itemMaster.mrt">
+		<loading-spinner ng-show="$ctrl.isWaitingForResponse">
+		</loading-spinner>
+		<div class="row col-md-offset-11 col-md-1 pull-right" >
+			<div class="glyphicon glyphicon-folder-open pointer" style="color: blue; font-size: small; padding-bottom: 5px; float: right;" ng-click="$ctrl.showMrtAuditInfo()"></div>
+		</div>
+		<div class="row" data-ng-if="$ctrl.error">
+			<span class="alert alert-danger col-md-4 col-md-push-4 text-center myfade" role="alert">{{$ctrl.error}}</span>
+		</div>
+		<div class="row" data-ng-if="$ctrl.success">
+			<span class="alert alert-success col-md-4 col-md-push-4 text-center myfade" role="alert">{{$ctrl.success}}</span>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table ng-table="defaultConfigTableParams"
+					   class="table-heb table-bordered table-striped"
+					   width="100%">
+					<div>
+						<div>
+							<div style="float: left"><strong>MRT UPC </strong> {{$ctrl.itemMaster.caseUpc}}</div>
+							<div style="float: right"><strong>{{$ctrl.itemMaster.description}}</strong></div>
+						</div>
+					</div>
+					<thead>
+					<tr>
+						<th can-edit="CP_MRT_01">
+							<input type="checkbox">
+						</th>
+						<th>Element UPC</th>
+						<th>Description</th>
+						<th>Department</th>
+						<th>Size</th>
+						<th>Quantity</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="shipper in $ctrl.itemMaster.primaryUpc.shipper">
+						<td align="center" can-edit="CP_MRT_01">
+							<input type="checkbox" ng-model="shipper.isChecked" ng-change="$ctrl.rowChecked(shipper)">
+						</td>
+						<td>
+							<input type="text" ng-model="shipper.key.shipperUpc" style="width: 100%" can-edit="CP_MRT_01" ng-change="$ctrl.disableSave()">
+							<label style="font-weight: normal; width: 100%" view-only="CP_MRT_01">{{shipper.key.shipperUpc}}</label>
+						</td>
+						<td>{{shipper.realUpc.associateUpcs[0].sellingUnit.displayName}}</td>
+						<td><div ng-if="!shipper.newRow">{{$ctrl.productMaster.departmentString}}</div></td>
+						<td>{{shipper.realUpc.associateUpcs[0].sellingUnit.tagSize}}</td>
+						<td>
+							<input type="number"
+								   class="form-control input-no-spinner"
+								   ng-model="shipper.shipperQuantity"
+								   style="width: 100%;"
+								   ng-change="$ctrl.calculateQuantityTotal($ctrl.itemMaster.primaryUpc.shipper)"
+								   ng-pattern="/^[0-9]*$/"
+								   min="0"
+								   can-edit="CP_MRT_01">
+							<label style="width: 100%;font-weight:normal" view-only="CP_MRT_01">{{shipper.shipperQuantity}}</label>
+
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<strong class="pull-right" style="padding-top: 10px">Total Quantity: {{$ctrl.totalQuantity}}</strong>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="pull-right clearfix" >
+					<button type="button" class="btn  btn-primary btn-default btn-sm" can-edit="CP_MRT_01"
+							ng-click="$ctrl.reset()">Reset</button>
+					<button type="button" class="btn  btn-primary btn-default btn-sm" can-edit="CP_MRT_01"
+							style="padding-right: 10px" ng-click="$ctrl.saveMrtInfo()"
+							ng-disabled="$ctrl.disableSave()">Save</button>
+					<button type="button" class="btn  btn-primary btn-default btn-sm" can-edit="CP_MRT_01"
+							style="padding-right: 10px" ng-click="$ctrl.addRow()">Add</button>
+					<button type="button" class="btn  btn-primary btn-default btn-sm" can-edit="CP_MRT_01"
+							style="padding-right: 10px" ng-click="$ctrl.deleteMrt()">Delete</button>
+					<button data-ng-disabled="$ctrl.disableReturnToList" class="btn btn-primary"
+							data-ng-click="$ctrl.returnToList()">Return To List</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div ng-if="!$ctrl.itemMaster.mrt">
+		Item {{$ctrl.itemMaster.key.itemCode}} is not an MRT.
+		<div class="row">
+			<div class="col-md-12">
+				<div class="inline-block pull-right">
+					<button data-ng-disabled="$ctrl.disableReturnToList" class="btn btn-primary"
+							data-ng-click="$ctrl.returnToList()">Return To List</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

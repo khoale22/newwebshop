@@ -1,0 +1,73 @@
+<!--
+  ~ checkstatus.html
+  ~
+  ~  Copyright (c) 2017 HEB
+  ~  All rights reserved.
+  ~
+  ~  This software is the confidential and proprietary information
+  ~  of HEB.
+  @author s753601
+  -->
+<div can-view="BU_STAT_01" class="col-md-12 container-fluid" ng-cloak="true"
+	 ng-controller="checkstatusController as checkstatusController"
+	 ng-init="checkstatusController.init()">
+
+	<div class="col-md-12" >
+		<div class="panel-group" >
+			<div class="panel panel-primary" >
+				<div class="panel-heading" >
+					<h4 class="panel-title inline-block"><b>Mass Update/Upload - Check Status</b></h4>
+				</div>
+				<div class="panel-body">
+					<div class="row form-inline form-horizontal" style="padding: 25px">
+
+						<div class="row" data-ng-if="checkstatusController.error" ng-show="!checkstatusController.isWaiting">
+							<span class="alert alert-danger col-md-4 col-md-push-4 text-center myfade" role="alert">
+								{{checkstatusController.error}}
+							</span>
+						</div>
+						<loading-spinner ng-show="checkstatusController.isWaiting">
+						</loading-spinner>
+
+						<div  ng-show="!checkstatusController.isWaiting" class="checkbox" style="padding: 10px 10px 10px 0;">
+							<label><strong>Request ID</strong></label>
+							<input ng-model="checkstatusController.requestIdFilter" style="height: 28px" numbers-only maxlength="15"
+								   placeholder="Enter Request ID to search for" class="form-control"/>
+							<button ng-click="checkstatusController.searchByID()" class=" btn btn-primary ">Search</button>
+						</div>
+
+
+
+						<div  ng-show="!checkstatusController.isWaiting" class="checkbox pull-right" style="padding: 10px;padding-right: 0;">
+							<label> <input id="auto-refresh" type="checkbox" ng-click="checkstatusController.checkAutoRefresh()"> Auto Refresh </label>
+							<button ng-click="checkstatusController.clearResult()" class=" btn btn-primary ">Clear Result</button>
+							<button ng-click="checkstatusController.manualRefresh()" class=" btn btn-primary ">Manual Refresh</button>
+						</div>
+						<table ng-show="!checkstatusController.isWaiting" ng-table="checkstatusController.tableParams"  show-filter="true" class="table-heb table-bordered table-striped" style="width: 100%">
+							<thead>
+								<tr >
+									<th ng-repeat="column in checkstatusController.columns">{{column.title}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat = "attribute in checkstatusController.data ">
+									<td data-title="'Request ID'" ><a ng-click="checkstatusController.selectTrackingId(attribute)" style="cursor: pointer;"> {{attribute.requestId}}</a></td>
+									<td data-title="'Attribute Selected'">{{attribute.attributeSelected}}</td>
+									<td data-title="'Description'">{{attribute.updateDescription}}</td>
+									<td data-title="'Date & Time of Request'">{{checkstatusController.convertStringToDateTime(attribute.dateTime) | date : 'MM/dd/yyyy HH:mm:ss'}}</td>
+									<td data-title="'Status'">{{attribute.status}}</td>
+									<td data-title="'Result'">{{attribute.result}}</td>
+									<td data-title="'User'">{{attribute.userId}}</td>
+								</tr>
+							</tbody>
+
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<tracking-detail-panel ng-if="checkstatusController.showDetail && checkstatusController.selectedItem!==null" selected-item="checkstatusController.selectedItem"></tracking-detail-panel>
+</div>
+

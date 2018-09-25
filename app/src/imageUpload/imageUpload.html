@@ -1,0 +1,217 @@
+
+<div ng-controller="ImageUploadController as imageUploadController" ng-init="imageUploadController.init()"
+	can-view="PI_MENU_00">
+	<loading-spinner ng-show="imageUploadController.isLoading"></loading-spinner>
+	<div class="row" data-ng-if="imageUploadController.error">
+		<span class="alert alert-danger col-md-4 col-md-push-4 text-center myfade" role="alert">{{imageUploadController.error}}</span>
+	</div>
+	<div class="row" data-ng-if="imageUploadController.success">
+		<span class="alert alert-success col-md-4 col-md-push-4 text-center myfade" role="alert">{{imageUploadController.success}}</span>
+	</div>
+	<loading-spinner ng-show="imageUploadController.isWaitingForResponse">
+	</loading-spinner>
+	<div ng-show="!imageUploadController.isLoading">
+		<div class="panel-group" style="margin-right: 10px; margin-left: 10px">
+			<div class="panel panel-primary" >
+				<div class="panel-heading" >
+					<h4 class="panel-title inline-block"><b>Image Upload</b></h4>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="row" style="margin-left: 0px">
+								<label>Step 1: Select the Image Category</label>
+							</div>
+							<div class="row" style="margin-left: 0px">
+								<ui-select ng-model="imageUploadController.imageCategory" theme="bootstrap"  style="max-width: 200px; margin-bottom: 15px">
+									<ui-select-match placeholder="--Select Image Category--">
+										<span ng-bind="$select.selected.description"></span>
+									</ui-select-match>
+									<ui-select-choices repeat="category in imageUploadController.imageCategories" refresh-delay="0">
+										{{category.description}}
+									</ui-select-choices>
+								</ui-select>
+							</div>
+							<div class="row" style="margin-left: 0px">
+								<label>Step 2: Select Image Source</label>
+							</div>
+							<!--Source dropdown-->
+							<div class="row" style="margin-left: 0px; margin-bottom: 15px">
+								<ui-select ng-model="imageUploadController.imageSource" theme="bootstrap"  style="max-width: 200px; margin: 0px">
+									<ui-select-match placeholder="--Select Image Source--">
+										<span ng-bind="$select.selected.description"></span>
+									</ui-select-match>
+									<ui-select-choices repeat="source in imageUploadController.imageSources" refresh-delay="0">
+										{{source.description}}
+									</ui-select-choices>
+								</ui-select>
+							</div>
+							<div class="row" style="margin-left: 0px">
+							<div class="row" style="margin-left: 0px">
+								<label>Step 3: Upload one or more images under the image category</label>
+							</div>
+							<div class="row" style="margin-left: 0px">
+								<label style="font-weight: normal; text: italic;">*JPEG, and PNG formats only and image name must start with an UPC</label>
+							</div>
+						</div>
+					</div>
+						<div class="col-md-6">
+							<div class="row" style="padding-bottom: 2px">
+								<div class="col-md-2 pull-right" style="text-align: start; padding-right: 0px; padding-left: 0px; margin-top: 16px">
+									<button  class="btn btn-primary dropdown-toggle " ng-click="imageUploadController.massFill()"
+											 style="margin: 0px; padding-left: 0px; padding-right: 0px; margin-bottom:0px; width: 75%">
+										<label style="margin-bottom: 0px" >Mass Fill</label>
+									</button>
+								</div>
+								<div class="col-md-3 pull-right">
+									<div class="col-md-2-push4">
+										<label>Destination Domains</label>
+									</div>
+										<ui-select ng-model="imageUploadController.selectedDestinations" theme="bootstrap" multiple style="margin: 0px">
+											<ui-select-match placeholder="--Select Destination Domains--">
+												<span ng-bind="$item.description"></span>
+											</ui-select-match>
+											<ui-select-choices repeat="destination in imageUploadController.destinationDomains" refresh-delay="0">
+												{{destination.description}}
+											</ui-select-choices>
+										</ui-select>
+								</div>
+
+							</div>
+							<div class="row" style="margin-top: 12px; margin-bottom: 12px">
+								<div class="col-md-2 pull-right" style="text-align: start; padding-right: 0px; padding-left: 0px">
+									<button  class="btn btn-primary dropdown-toggle "
+											 style="margin: 0px; padding-left: 0px; padding-right: 0px; margin-bottom:0px; width: 75%" ng-click="imageUploadController.clearList()">
+										<span class="glyphicon glyphicon-minus"  > </span>
+										<label style="margin-bottom: 0px" >Clear List</label>
+									</button>
+								</div>
+								<div class="col-md-2 pull-right" style="text-align: center; padding-right: 0px; padding-left: 0px">
+									<button  class="btn btn-primary dropdown-toggle " ng-disabled="imageUploadController.validToUpload()"
+											 style="margin: 0px; padding-left: 0px; padding-right: 0px; margin-bottom:0px; width: 75%"
+											 ng-click="imageUploadController.startUploads()" ng-show="!imageUploadController.isUploading">
+										<span class="glyphicon glyphicon-upload"  > </span>
+										<label style="margin-bottom: 0px" ng-disabled="imageUploadController.validToUpload()">Upload</label>
+									</button>
+									<button  class="btn btn-primary dropdown-toggle "
+											 style="background-color:red; border-color: red; margin: 0px; padding-left: 0px; padding-right: 0px; margin-bottom:0px; width: 75%"
+											 ng-click="imageUploadController.stopUploads()" ng-show="imageUploadController.isUploading">
+										<span class="glyphicon glyphicon-remove"  > </span>
+										<label style="margin-bottom: 0px">Stop</label>
+									</button>
+								</div>
+								<div class="col-md-2 pull-right" style="text-align: end; padding-right: 0px; padding-left: 0px">
+									<input type="file" id="selectedFiles" accept="image/jpg, image/tif, image/jpeg, image/tiff, image/png" style="display: none;" multiple/>
+									<button  class="btn btn-primary dropdown-toggle " onclick="document.getElementById('selectedFiles').click();"
+										style="margin: 0px; padding-left: 0px; padding-right: 0px; margin-bottom:0px; width: 75%">
+											<span class="glyphicon glyphicon-plus"  > </span>
+											<label style="margin-bottom: 0px" >Browse</label>
+									</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<table id="table" class="table-heb table-bordered table-striped table-hover"
+						   style="width: 100%"  ng-table="imageUploadController.tableParams">
+						<thead>
+							<th style="text-align: center; width: 8px">
+								<input type="checkbox" ng-model="imageUploadController.uploadAllChecked" ng-change="imageUploadController.checkAllRows(1)" ng-disabled="!imageUploadController.isHeaderEnable()">
+							</th>
+							<th style="text-align: center; min-width: 70px">Image Name</th>
+							<th style="text-align: center; width: 120px">Status</th>
+							<th style="width:120px">Set As Primary<br>
+								<input type="checkbox" ng-model="imageUploadController.primaryAllChecked" ng-change="imageUploadController.checkAllRows(4)" ng-disabled="!imageUploadController.isHeaderEnable()">
+							</th>
+							<th style="text-align: center; width: 200px">Existing Primary</th>
+							<th style="text-align: center; width: 400px">Destination Domain</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="image in imageUploadController.data">
+								<td style="text-align: center; width: 8px">
+									<input type="checkbox" ng-model="image.toUpload" ng-change="imageUploadController.selectImageToUpload($index)" ng-disabled="!imageUploadController.isValidToChange(image)">
+								</td>
+								<td>
+									<div class="row">
+										<div class="col-md-6 col-sm-12" style=" padding-top: 5px">
+											<span  style="display:block; width:100%; word-wrap:break-word;">{{image.name}}</span>
+										</div>
+										<div class="col-md-4 col-sm-6" style="padding-right: 0px; padding-left: 18%; padding-top: 5px">{{image.size}}
+										</div>
+										<div class="col-md-2 col-sm-6" style="padding-right: 0px">
+											<span ng-if="(image.success === null)" class="glyphicon glyphicon-minus-sign" title="Remove Image" style="color:red; font-size: 20px" ng-click="imageUploadController.removeImage($index)"></span>
+											<span ng-if="(image.success !== null)" class="glyphicon glyphicon-ok" title="The image was uploaded successfully" style="color:green; font-size: 20px" ng-click="imageUploadController.removeImage($index)"></span>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div style="max-height: 50px;" ng-show="image.isUploading">
+										<div class="row"  style="text-align: center;max-height: 50px;">
+											<div class="col-md-12">Image Uploading... Please wait...
+											</div>
+										</div>
+										<div class="row" style="padding-left: 25px; max-height: 50px; max-width: 50px; margin: 0px">
+											<div class="loader" style="text-align:center; margin: 0px; max-height: 25px; max-width: 25px"></div>
+										</div>
+									</div>
+									<label style=" color: red">{{image.status}}</label>
+									<label style=" color: green">{{image.success}}</label>
+								</td>
+								<td style="text-align: center; width: 8px">
+									<input ng-model="image.setToPrimary" type="checkbox" ng-change="imageUploadController.changePrimary($index)" ng-disabled="!imageUploadController.isValidToChange(image)">
+								</td>
+								<td>
+									<ui-select ng-model="image.existingPrimary" theme="bootstrap"  ng-disabled="!image.setToPrimary || !imageUploadController.isValidToChange(image)" style="max-width: 200px; margin: 0px" >
+										<ui-select-match placeholder="--Select Action to Current Primary--">
+											<span ng-bind="$select.selected.description"></span>
+										</ui-select-match>
+										<ui-select-choices repeat="action in imageUploadController.existingPrimaryAction" refresh-delay="0">
+											{{action.description}}
+										</ui-select-choices>
+									</ui-select>
+								</td>
+								<td class="{{image.destinationDomain.length == 0? 'has-error':''}}">
+									<ui-select ng-model="image.destinationDomain" theme="bootstrap" multiple style="margin: 0px; text-align: end;"
+											   ng-disabled="!imageUploadController.isValidToChange(image)"
+											   title="Destination Domain is a mandatory field."
+									>
+										<ui-select-match ng-required="true">
+											<span ng-bind="$item.description"></span>
+										</ui-select-match>
+										<ui-select-choices repeat="destination in imageUploadController.destinationDomains" refresh-delay="0">
+											{{destination.description}}
+										</ui-select-choices>
+									</ui-select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal - view Image - ends-->
+	<!-- Modal - Confirm Select Products- starts -->
+	<div id="confirmSelectDestinationsModal" class="modal fade">
+		<div class="modal-dialog" role="form">
+			<div class="modal-content">
+				<div class="modal-header pm-modal-header">
+					<div class="row">
+						<div class="col-lg-6" style="text-align: left"><h5 class="modal-title">Upload</h5></div>
+						<div class="col-lg-6" style="text-align: right">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1">
+								<span style="color:white">&times;</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h5>Please select at least one Destination Domain.</h5>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" tabindex="1" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

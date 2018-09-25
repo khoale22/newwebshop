@@ -1,0 +1,63 @@
+<div class="col-md-8">
+	<div class="panel-group">
+		<div class="panel panel-primary">
+			<div class="panel-heading">NLEA 2016 Nutrient Statement Search
+				<i ng-click="nutrientStatementController.searchPanelVisible = !nutrientStatementController.searchPanelVisible"
+				   class="pull-right pointer"
+				   ng-class="{'glyphicon glyphicon-minus': nutrientStatementController.searchPanelVisible, 'glyphicon glyphicon-plus': !nutrientStatementController.searchPanelVisible}">
+				</i>
+			</div>
+			<div ng-show="nutrientStatementController.searchPanelVisible"
+				 class="panel-body black-border">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<!-- The text box for the user input. -->
+							<div class="col-md-6" style="min-width: 349px">
+									<textarea
+										pattern="[0-9\s,]+"
+										rows="8"
+										data-ng-model="nutrientStatementController.searchSelection"
+										style="min-width: 334px"
+										placeholder="Enter NLEA 2016 Nutrient Statement ids to search"
+										class="col-md-12 noresize">
+									</textarea>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-6">
+										<button class="btn btn-primary btn-block"
+												data-ng-click="nutrientStatementController.newSearch()"
+												data-ng-disabled="!nutrientStatementController.searchSelection">
+											Search
+										</button>
+										<button
+											data-ng-click="nutrientStatementController.searchAll()"
+											class="btn btn-primary btn-block">Search All
+										</button>
+									</div>
+									<div class="col-md-6">
+										<button
+											data-ng-click="nutrientStatementController.clearSearch()"
+											data-ng-disabled="!nutrientStatementController.searchSelection"
+											class="btn btn-primary btn-block">
+											Clear
+										</button>
+										<button title="Add an NLEA 2016 Nutrient Statement"
+												data-toggle="modal"
+												data-target="#addNewPanelModal"
+												class="btn btn-primary btn-block"
+												ng-click="nutrientStatementController.sourceSystemReferenceId = ''; nutrientStatementController.errorSearchPanel = ''"
+												data-ng-disabled="!nutrientStatementController.canEditNutrientStatement()">
+											Add
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

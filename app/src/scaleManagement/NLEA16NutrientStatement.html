@@ -1,0 +1,389 @@
+<div class="row container-fluid"
+	 ng-controller="NLEA16NutrientStatementController as nutrientStatementController"
+	 ng-init="nutrientStatementController.init()">
+	<div class="row">
+		<span data-ng-if="nutrientStatementController.success"
+			  class="alert alert-success col-md-4 col-md-push-4 text-center myfade" role="alert">
+			{{nutrientStatementController.success}}
+		</span>
+		<span data-ng-if="nutrientStatementController.error"
+			  class="alert alert-danger col-md-4 col-md-push-4 text-center myfade" role="alert">
+			{{nutrientStatementController.error}}
+		</span>
+	</div>
+	<div class="col-md-8">
+		<div class="panel-group">
+			<div class="panel panel-primary">
+				<div class="panel-heading">NLEA 2016 Nutrient Statement Search
+					<i ng-click="nutrientStatementController.searchPanelVisible = !nutrientStatementController.searchPanelVisible"
+					class="pull-right pointer"
+					ng-class="{'glyphicon glyphicon-minus': nutrientStatementController.searchPanelVisible, 'glyphicon glyphicon-plus': !nutrientStatementController.searchPanelVisible}">
+					</i>
+				</div>
+				<div ng-show="nutrientStatementController.searchPanelVisible"
+					 class="panel-body black-border">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<!-- The text box for the user input. -->
+								<div class="col-md-6" style="min-width: 349px">
+									<textarea
+										pattern="[0-9\s,]+"
+										rows="8"
+										data-ng-model="nutrientStatementController.searchSelection"
+										style="min-width: 334px"
+										placeholder="Enter NLEA 2016 Nutrient Statement ids to search"
+										class="col-md-12 noresize">
+									</textarea>
+								</div>
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-md-6">
+											<button class="btn btn-primary btn-block"
+														data-ng-click="nutrientStatementController.newSearch()"
+													data-ng-disabled="!nutrientStatementController.searchSelection">
+												Search
+											</button>
+											<button
+													data-ng-click="nutrientStatementController.searchAll()"
+												class="btn btn-primary btn-block">Search All
+											</button>
+										</div>
+										<div class="col-md-6">
+											<button
+												data-ng-click="nutrientStatementController.clearSearch()"
+												data-ng-disabled="!nutrientStatementController.searchSelection"
+												class="btn btn-primary btn-block">
+												Clear
+											</button>
+											<button title="Add an NLEA 2016 Nutrient Statement"
+													data-toggle="modal"
+													data-target="#addNewPanelModal"
+													class="btn btn-primary btn-block"
+													ng-click="nutrientStatementController.sourceSystemReferenceId = ''; nutrientStatementController.errorSearchPanel = ''"
+													data-ng-disabled="!nutrientStatementController.canEditNutrientStatement()">
+												Add
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<loading-spinner ng-show="nutrientStatementController.isWaiting">
+	</loading-spinner>
+	<div class="col-md-12">
+		<div class="panel-group"
+			 ng-show="!nutrientStatementController.isWaiting && nutrientStatementController.data != null">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<div
+						ng-if="!nutrientStatementController.isAddingNutrientStatement && nutrientStatementController.resultMessage != null && !nutrientStatementController.isEditing">
+						<h4 class="panel-title inline-block"><b>Search Results</b></h4>
+						<h5 class="panel-title inline-block">
+							{{nutrientStatementController.resultMessage}}</h5>
+
+						<div class="glyphicon glyphicon-download-alt inline-block pull-right pointer"
+							 ng-click="nutrientStatementController.export()"
+							 style="color: orange; padding-left: 10px; padding-bottom: 5px;  font-size: medium"
+							 data-toggle="tooltip" title="Export to Excel"></div>
+						<div class="inline-block pull-right"
+							 ng-show="nutrientStatementController.downloading" style="color: orange">
+							Downloading...
+						</div>
+					</div>
+				</div>
+				<div class="panel-body"
+					 ng-class="{'ng-table-pager-none' : nutrientStatementController.noPagination}">
+					<table ng-table="nutrientStatementController.tableParams"
+						   class="table-heb table-bordered table-striped" style="width: 100%">
+						<tr style="color: white; background-color: #00476b">
+							<th style="min-width: 100px">Statement ID</th>
+							<th style="min-width: 100px">Measure Quantity</th>
+							<th style="min-width: 100px">Metric Quantity</th>
+							<th style="min-width: 100px">Servings Per Container</th>
+							<th style="min-width: 100px">Effective Date</th>
+							<th style="min-width: 100px"></th>
+						</tr>
+						<tr ng-repeat="nutrientStatement in nutrientStatementController.data track by $index">
+							<td>
+								<div>{{nutrientStatement.sourceSystemReferenceId}}</div>
+							</td>
+							<td>
+								<div>{{nutrientStatement.imperialDisplayName}}</div>
+							</td>
+							<td>
+								<div>{{nutrientStatement.metricDisplayName}}</div>
+							</td>
+							<td>
+								<div >{{nutrientStatement.servingsPerContainer}}</div>
+							</td>
+							<td>
+								<div>{{nutrientStatement.effectiveDate | date: 'MM/dd/yyyy'}}</div>
+							</td>
+
+							<td>
+								<i
+									data-toggle="modal"
+									title = "Edit"
+									ng-click="nutrientStatementController.viewFullPanel(nutrientStatement)"
+									class="glyphicon glyphicon-edit pointer" style="color: orange; font-size: large"></i>
+								<span can-edit="SM_NTRN_02">
+									<a
+										class="glyphicon glyphicon-remove pointer"
+										title = "Delete"
+										style="color: red; font-size: large"></a>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="viewPanelModal" class="modal fade" role="dialog">
+		<div class="modal-dialog" style="width: 90%">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #337ab7">
+					<h5 class="modal-title inline-block" style="color: #ffffff">
+						{{nutrientStatementController.viewPanelModalTitle}}</h5>
+				</div>
+				<div class="modal-body">
+					<div class="well" style="margin-bottom: 0">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Statement ID</label>
+											<input class="form-control" ng-disabled="true"
+												   ng-model="nutrientStatementController.nutrientStatementDetail.sourceSystemReferenceId"
+												   ng-pattern="/^[0-9]*$/">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<div class="form-group">
+												<label>Serving Size Label</label>
+												<span ng-style="{'color': nutrientStatementController.servingLabel.length>22 ? 'red':'green'}">
+													Characters Remaining:  {{nutrientStatementController.servingTextCharacterRemainingCharacterCount}}</span>
+												<br>
+												<div id="scaleManagementNutrientStatementLabel" style="padding-top: 7px">
+													{{nutrientStatementController.servingLabel}}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="measureQuantity">Measure Quantity</label>
+											<input
+												id="measureQuantity"
+												class="form-control input-no-spinner"
+												ng-model="nutrientStatementController.nutrientStatementDetail.measureQuantity"/>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="nutrientCommonUom">Measure UOM Code</label>
+											<div can-edit="SM_NLEA_01">
+												<ui-select
+													id="nutrientCommonUom"
+													ng-model="nutrientStatementController.nutrientStatementDetail.nutrientImperialUom"
+													theme="bootstrap"
+													title="Choose a UOM">
+													<ui-select-match allow-clear="true">
+														{{$select.selected.displayUOM}}
+													</ui-select-match>
+													<ui-select-choices
+														repeat="element in nutrientStatementController.valueList"
+														refresh="nutrientStatementController.getCurrentDropDownResults(nutrientStatementController.COMMON_MEASURE_SYSTEM, $select.search)"
+														refresh-delay="0">{{element.displayName}}
+													</ui-select-choices>
+												</ui-select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="metricQuantity">Metric Quantity</label>
+											<input can-edit="SM_NLEA_01"
+												   id="metricQuantity"
+												   class="form-control input-no-spinner"
+												   ng-model="nutrientStatementController.nutrientStatementDetail.metricQuantity">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="nutrientMetricUom">Metric UOM Code</label>
+											<div can-edit="SM_NLEA_01">
+												<ui-select id="nutrientMetricUom"
+														   ng-model="nutrientStatementController.nutrientStatementDetail.nutrientMetricUom"
+														   theme="bootstrap"
+														   id="nutrientStatementUomSelection"
+														   title="Choose a UOM"
+														   ng-change="nutrientStatementController.updateServingLabelComponents()">
+													<ui-select-match allow-clear="true">
+														{{$select.selected.displayUOM}}
+													</ui-select-match>
+													<ui-select-choices
+														repeat="element in nutrientStatementController.valueList"
+														refresh="nutrientStatementController.getCurrentDropDownResults(nutrientStatementController.METRIC_MEASURE_SYSTEM, $select.search)"
+														refresh-delay="0">{{element.displayName}}
+													</ui-select-choices>
+												</ui-select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="servingsPerContainer">Servings Per Container</label>
+											<div id="servingsPerContainerGroup" can-edit="SM_NLEA_01"
+												 class="input-group" style="display: table; width: 100%">
+												<input id="servingsPerContainer" class="form-control" style="width:100%"
+													   ng-model="nutrientStatementController.nutrientStatementDetail.servingsPerContainer"
+													   ng-pattern="/^[0-9]*$/"
+													   maxlength="3">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Effective Date</label>
+											<div class="input-group pull-right">
+												<input class="form-control date-picker"
+													   type="text"
+													   ng-model="nutrientStatementController.nutrientStatementDetail.effectiveDate"/>
+												<span class="input-group-btn">
+												  <button type="button" class="btn btn-default">
+													<i class="glyphicon glyphicon-calendar"></i	>
+												  </button>
+                    							</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<ng-form name="nutrientForm">
+								<div class="col-md-6">
+									<div class="row"
+										 ng-show="nutrientStatementController.nutrientStatementDetail.nutrientPanelDetails.length > 0">
+										<div class="col-md-12">
+											<div class="row">
+												<br>
+												<div class="col-md-12">
+													<div class="row">
+														<strong class="col-md-6">Nutrient</strong>
+														<strong class="col-md-2"></strong>
+														<strong class="col-md-2">Amount</strong>
+														<strong class="col-md-2">%DV</strong>
+													</div>
+												</div>
+												<br>
+												<div ng-repeat="detail in nutrientStatementController.nutrientStatementDetail.nutrientPanelDetails track by $index">
+													<br>
+
+													<div class="col-md-12">
+														<div class="row">
+															<div class="col-md-6">
+																<p>{{detail.nutrient.nutrientDescription}}</p>
+															</div>
+															<div class="col-md-2"></div>
+															<!-- Wait/OK/Error messages for rounding. -->
+
+															<!-- If the user can edit, then open up text boxes for them to do so. -->
+															<div can-edit="SM_NLEA_01">
+																<!-- The user can edit the measure. -->
+																<input
+																	value="detail.nutrientQuantity"
+																	type="text"
+																	ng-model="detail.nutrientQuantity"
+																	class="col-md-2"
+																	ng-pattern="/^[0-9]*(\.[0-9]{0,1})?$/"/>
+																<span
+																	ng-if="detail.nutrientDailyValue"
+																	class="col-md-2">
+																	<p>{{detail.nutrientDailyValue	}}%</p>
+																</span>
+															</div>
+														</div>
+													</div>
+													<br>
+													<br>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</ng-form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="inline-block btn btn-success btn-sm" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="addNewPanelModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #337ab7">
+					<h5 class="modal-title inline-block" style="color: #ffffff">Add NLEA 2016 Nutrient Statements</h5>
+				</div>
+				<div class="modal-body">
+					<loading-spinner ng-show="nutrientStatementController.isWaitingSearchPanel">
+					</loading-spinner>
+					<div ng-show="!nutrientStatementController.isWaitingSearchPanel">
+						<div class="row" data-ng-if="nutrientStatementController.errorSearchPanel">
+							<span class="alert alert-danger col-md-4 col-md-push-4 text-center myfade" role="alert">{{nutrientStatementController.errorSearchPanel}}</span>
+						</div>
+						<div class="row">
+							<div class="col-md-8 col-md-push-2">
+								<input name="sourceSystemReferenceId"
+									class="form-control"
+									type="text"
+									numbers-only
+									maxlength="5"
+									id="sourceSystemReferenceId"
+									ng-model="nutrientStatementController.sourceSystemReferenceId">
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary"
+						data-ng-disabled="nutrientStatementController.sourceSystemReferenceId == null || nutrientStatementController.sourceSystemReferenceId == ''"
+						ng-click="nutrientStatementController.getNutrientPanelBySourceSystemReferenceId()">Submit</button>
+					<button type="button" class="inline-block btn btn-danger btn-sm" data-dismiss="modal" ng-click="nutrientStatementController.sourceSystemReferenceId = ''">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="viewPanelModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #337ab7">
+					<h5 class="modal-title inline-block" style="color: #ffffff">{{nutrientStatementController.viewPanelModalTitle}}</h5>
+				</div>
+				<div class="modal-body">
+					This page is currently under development.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="inline-block btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
