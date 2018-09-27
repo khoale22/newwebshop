@@ -10,6 +10,7 @@ angular.module('loginForm' , []).
              seft.data1 = response.data;
         });
         seft.validate = function () {
+            seft.test = 'khoale';
             /// THIS IS FUNCTION , HAVE TO BUTTON TO SHOW IT
             angular.forEach(seft.data1, function(user) {
                 if (user.username == seft.name && user.password == seft.pass) {
