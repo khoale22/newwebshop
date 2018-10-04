@@ -10,5 +10,6 @@ https://www.youtube.com/watch?v=LGoXRNU4I-A
 function a{
 
 int a ;
+int c ;
 int b ;
 }
