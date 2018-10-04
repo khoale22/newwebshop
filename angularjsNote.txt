@@ -14,3 +14,11 @@ int c ;
 int b ;
 int e ;
 }
+
+
+function b{
+
+int a ;
+int c ;
+int b ;
+}
