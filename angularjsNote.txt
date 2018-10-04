@@ -22,4 +22,5 @@ function b{
 int a ;
 int c ;
 int b ;
+ind fdsf;
 }
