@@ -6,6 +6,4 @@ angular.module('myAppln',[]); Actually [] is an array with the dependencies that
 
 
 https://www.youtube.com/watch?v=LGoXRNU4I-A
-testKhole2
-test2
 
