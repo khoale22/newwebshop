@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e563786-a871-48b2-b578-490d7605b5c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGL2W3/WebContent/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/AGL2W3/WebContent/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angularjsNote.txt" beforeDir="false" afterPath="$PROJECT_DIR$/angularjsNote.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/demoSpring4MVCAngularJsExample/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +30,18 @@
     <session id="-760761951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="20" />
+          <entry key="html" value="21" />
           <entry key="js" value="38" />
-          <entry key="jsp" value="1" />
+          <entry key="jsp" value="2" />
           <entry key="txt" value="2" />
           <entry key="xml" value="1" />
         </counts>
@@ -48,8 +49,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="20" />
-          <entry key="JSP" value="1" />
+          <entry key="HTML" value="21" />
+          <entry key="JSP" value="2" />
           <entry key="JavaScript" value="38" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="1" />
@@ -57,27 +58,56 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="72" />
+          <entry key="html" value="129" />
           <entry key="js" value="431" />
-          <entry key="txt" value="84" />
+          <entry key="txt" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="72" />
+          <entry key="HTML" value="129" />
           <entry key="JavaScript" value="431" />
-          <entry key="PLAIN_TEXT" value="84" />
+          <entry key="PLAIN_TEXT" value="101" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angularjsNote.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AGL/WebContent/test.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AGL/WebContent/REPORT.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" column="36" lean-forward="true" selection-start-line="10" selection-end-line="42" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +117,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -120,6 +150,7 @@
         <option value="$PROJECT_DIR$/angular16/angular9/angularDemo/angularDemo/src/app/phone-detail/phone-detail.component.js" />
         <option value="$PROJECT_DIR$/AGL2W3/WebContent/welcome.html" />
         <option value="$PROJECT_DIR$/angularjsNote.txt" />
+        <option value="$PROJECT_DIR$/AGL/WebContent/REPORT.html" />
       </list>
     </option>
   </component>
@@ -155,6 +186,9 @@
       <path value="$PROJECT_DIR$/BookAppNew/src/app/bower_components/angular-route/package.json" />
       <path value="$PROJECT_DIR$/BookAppNew/src/app/bower_components/angular/package.json" />
       <path value="$PROJECT_DIR$/BookAppNew/src/app/bower_components/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/NgTableDemo-master/node_modules/angular/package.json" />
+      <path value="$PROJECT_DIR$/NgTableDemo-master/node_modules/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/NgTableDemo-master/node_modules/ng-table/package.json" />
       <path value="$PROJECT_DIR$/angular14/angular9/angularDemo/angularDemo/src/app/bower_components/angular-animate/package.json" />
       <path value="$PROJECT_DIR$/angular14/angular9/angularDemo/angularDemo/src/app/bower_components/angular-mocks/package.json" />
       <path value="$PROJECT_DIR$/angular14/angular9/angularDemo/angularDemo/src/app/bower_components/angular-resource/package.json" />
@@ -193,7 +227,7 @@
       <path value="$PROJECT_DIR$/angular9/angularDemo/angularDemo/src/app/bower_components/bootstrap/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -203,14 +237,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGL" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
@@ -222,14 +265,16 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538650352261" />
-    <property name="last_opened_file_path" value="E:/trainning/CodeMagrabiit/product-maintenance-api-development-77e259038718081853fb80f0b773d43fe17e7f92/product-maintenance-api-development-77e259038718081853fb80f0b773d43fe17e7f92" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538734315113" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -261,6 +306,7 @@
       <option name="presentableId" value="Default" />
       <updated>1537755407746</updated>
       <workItem from="1537755409285" duration="11364000" />
+      <workItem from="1538733674976" duration="514000" />
     </task>
     <task id="LOCAL-00001" summary="ewr">
       <created>1538646617866</created>
@@ -311,16 +357,24 @@
       <option name="project" value="LOCAL" />
       <updated>1538650017710</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ewrfdsf">
+      <created>1538650415512</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1538650415512</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13617000" />
+    <option name="totallyTimeSpent" value="14427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2750533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2782516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -515,6 +569,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angularjsNote.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGL/WebContent/test.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGL/WebContent/REPORT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="10" selection-end-line="42" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -530,13 +601,6 @@
             <element signature="n#style#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angularjsNote.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
