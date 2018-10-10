@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7e563786-a871-48b2-b578-490d7605b5c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angularjsNote.txt" beforeDir="false" afterPath="$PROJECT_DIR$/angularjsNote.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGL/WebContent/REPORT.html" beforeDir="false" afterPath="$PROJECT_DIR$/AGL/WebContent/REPORT.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/demoSpring4MVCAngularJsExample/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,18 +30,21 @@
     <session id="-760761951">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
           <entry key="html" value="21" />
-          <entry key="js" value="38" />
-          <entry key="jsp" value="2" />
+          <entry key="java" value="1" />
+          <entry key="js" value="40" />
+          <entry key="jsp" value="3" />
           <entry key="txt" value="2" />
           <entry key="xml" value="1" />
         </counts>
@@ -50,22 +53,23 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="21" />
-          <entry key="JSP" value="2" />
-          <entry key="JavaScript" value="38" />
+          <entry key="JAVA" value="1" />
+          <entry key="JSP" value="3" />
+          <entry key="JavaScript" value="40" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="129" />
+          <entry key="html" value="656" />
           <entry key="js" value="431" />
           <entry key="txt" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="129" />
+          <entry key="HTML" value="656" />
           <entry key="JavaScript" value="431" />
           <entry key="PLAIN_TEXT" value="101" />
         </counts>
@@ -91,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AGL/WebContent/REPORT.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="36" lean-forward="true" selection-start-line="10" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="289">
+              <caret line="17" column="15" lean-forward="true" selection-end-line="45" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -110,6 +114,38 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/WEB-INF/views/UserManagement.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/static/js/service/user_service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/java/com/websystique/springmvc/controller/HelloWorldRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/static/js/controller/user_controller.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -227,9 +263,9 @@
       <path value="$PROJECT_DIR$/angular9/angularDemo/angularDemo/src/app/bower_components/bootstrap/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="width" value="1195" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -247,13 +283,120 @@
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
-              <item name="AGL" type="462c0819:PsiDirectoryNode" />
+              <item name="AGL2W3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
-              <item name="AGL" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springmvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="springmvc" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="demoSpring4MVCAngularJsExample" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
@@ -264,16 +407,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538734315113" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538736675586" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -306,7 +449,10 @@
       <option name="presentableId" value="Default" />
       <updated>1537755407746</updated>
       <workItem from="1537755409285" duration="11364000" />
-      <workItem from="1538733674976" duration="514000" />
+      <workItem from="1538733674976" duration="1791000" />
+      <workItem from="1538995390502" duration="962000" />
+      <workItem from="1539081049803" duration="1106000" />
+      <workItem from="1539167251127" duration="1395000" />
     </task>
     <task id="LOCAL-00001" summary="ewr">
       <created>1538646617866</created>
@@ -368,13 +514,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14427000" />
+    <option name="totallyTimeSpent" value="19167000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="1195" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2782516" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20969163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -448,13 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="96" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/WEB-INF/views/UserManagement.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -582,10 +721,34 @@
     <entry file="file://$PROJECT_DIR$/AGL/WebContent/test.jsp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/WEB-INF/views/UserManagement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/static/js/service/user_service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/java/com/websystique/springmvc/controller/HelloWorldRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/static/js/controller/user_controller.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/AGL/WebContent/REPORT.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="10" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="289">
+          <caret line="17" column="15" lean-forward="true" selection-end-line="45" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
