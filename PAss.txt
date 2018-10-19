@@ -1,0 +1,8 @@
+https://git.heb.com/Product-Management/product-maintenance-api
+https://git.heb.com/Product-Management/product-maintenance-ui
+
+jira vn02179/ab0007AB
+git heb.com vn87351/ab0008AB
+
+
+https://jira.heb.com:8443/secure/RapidBoard.jspa?rapidView=104&projectKey=PM&view=planning.nodetail
