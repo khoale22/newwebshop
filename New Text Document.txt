@@ -1,0 +1,120 @@
+<div class="row container-fluid"
+	 ng-controller="AuthorizationController as authorizationController"
+	 ng-init="authorizationController.init()">
+	<!--<div class="row">
+		<span data-ng-if="nutrientStatementController.success"
+			  class="alert alert-success col-md-4 col-md-push-4 text-center myfade" role="alert">
+			{{nutrientStatementController.success}}
+		</span>
+		<span data-ng-if="nutrientStatementController.error"
+			  class="alert alert-danger col-md-4 col-md-push-4 text-center myfade" role="alert">
+			{{nutrientStatementController.error}}
+		</span>
+	</div>-->
+	<div class="col-md-12">
+		<div class="panel-group">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Authorization</div>
+				<div ng-show="true" class="panel-body black-border">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="row">
+										<div class="col-md-6" style="margin-bottom: 10px">
+											<label for="multiValueSearchType">Criteria type</label>
+											<select class="form-control"
+													ng-model="productSearchController.selectionType "
+													id="multiValueSearchType">
+												<option>select</option>
+												<option value="0066">00066</option>
+												<option value="00616">00616</option>
+												<option value="00640">00640</option>
+											</select>
+										</div>
+										<div class="col-md-4" style="margin-bottom: 10px">
+											<label for="multiValueSearchType">UPC/PLU</label>
+											<<!--textarea
+												data-ng-model="authorizationController.searchSelection"
+												style="min-width: 234px"
+												class="col-md-12 noresize">
+									        </textarea>-->
+											<input name="sourceSystemReferenceId"
+												   class="form-control"
+												   type="text"
+												   numbers-only
+												   ng-model="authorizationController.sourceSystemReferenceId">
+										</div>
+										<div class="col-md-2" STYLE="margin-top: 15px">
+											<button class="btn btn-light"
+													data-ng-click="authorizationController.Search()">
+												Search
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<loading-spinner ng-show="authorizationController.isWaiting"></loading-spinner>
+					<div class="col-md-12">
+						<!--<div class="panel-group" ng-show="!nutrientStatementController.isWaiting && nutrientStatementController.data != null">-->
+						<div class="panel-group" ng-show="true">
+							<div class="panel-body">
+								<table ng-table="nutrientStatementController.tableParams"
+									   class="table-heb table-bordered table-striped" style="width: 100%">
+									<tr style="color: white; background-color: #00476b">
+										<th style="min-width: 100px">Type</th>
+										<th style="min-width: 100px">Item</th>
+										<th style="min-width: 100px">Description</th>
+										<th style="min-width: 100px">Status</th>
+										<th style="min-width: 100px">Vendor ID</th>
+										<th style="min-width: 100px">Vendor Name</th>
+										<th style="min-width: 100px">Size</th>
+										<th style="min-width: 100px">List Cost{$}}</th>
+									</tr>
+									<tr ng-repeat="nutrientStatement in nutrientStatementController.data track by $index">
+										<td>
+											<div>{{nutrientStatement.sourceSystemReferenceId}}</div>
+										</td>
+										<td>
+											<div>{{nutrientStatement.imperialDisplayName}}</div>
+										</td>
+										<td>
+											<div>{{nutrientStatement.metricDisplayName}}</div>
+										</td>
+										<td>
+											<div  ng-if="nutrientStatement.servingSizeVariable">{{nutrientStatement.servingsPerContainer}} {{nutrientStatementController.VARIES_LABEL}}</div>
+											<div  ng-if="!nutrientStatement.servingSizeVariable">{{nutrientStatement.servingsPerContainer}}</div>
+										</td>
+										<td>
+											<div>{{nutrientStatement.effectiveDate | date: 'MM/dd/yyyy'}}</div>
+										</td>
+
+										<td>
+											<i
+												data-toggle="modal"
+												title = "Edit"
+												ng-click="nutrientStatementController.viewFullPanel(nutrientStatement)"
+												class="glyphicon glyphicon-edit pointer" style="color: orange; font-size: large"></i>
+											<span can-edit="SM_NTRN_02">
+									<a
+										class="glyphicon glyphicon-remove pointer"
+										title = "Delete"
+										style="color: red; font-size: large"></a>
+								</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<h1>{{authorizationController.test}}</h1>
+</div>
