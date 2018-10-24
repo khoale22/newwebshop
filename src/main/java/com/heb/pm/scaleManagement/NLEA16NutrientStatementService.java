@@ -26,6 +26,7 @@ import java.util.List;
 
 /**
  * Holds all business logic related for NLEA nutrient statements.
+ *
  * @author vn70633
  * @since 2.20.0
  */
@@ -47,7 +48,7 @@ public class NLEA16NutrientStatementService {
      * @param sourceSystemReferenceId the source system reference id.
      * @return the  List<NutrientStatementPanelHeader>
      */
-    public List<NutrientStatementPanelHeader> getNutrientPanelBySourceSystemReferenceId(String sourceSystemReferenceId){
+    public List<NutrientStatementPanelHeader> getNutrientPanelBySourceSystemReferenceId(String sourceSystemReferenceId) {
         return this.nutrientStatementPanelHeaderRepository.findAllBySourceSystemReferenceIdAndSourceSystemId(sourceSystemReferenceId, SRC_SYSTEM_ID_SCALE);
     }
 
@@ -55,17 +56,17 @@ public class NLEA16NutrientStatementService {
      * Find nutrient statement by statement id pageable result.
      *
      * @param statementIds the statement id
-     * @param ic          the ic
-     * @param ps          the ps
-     * @param pg          the pg
+     * @param ic           the ic
+     * @param ps           the ps
+     * @param pg           the pg
      * @return the pageable result
      */
     public PageableResult<NutrientStatementPanelHeader> findNutrientStatementByStatementId(List<String> statementIds, boolean ic, int ps, int pg) {
         List<String> statIds = new ArrayList<String>();
-        for(int i=0; i<statementIds.size(); i++){
+        for (int i = 0; i < statementIds.size(); i++) {
             statIds.add(String.valueOf(statementIds.get(i)));
         }
-        Pageable nutrientSatementsRequest = new PageRequest(pg, ps,	NutrientStatementPanelHeader.getDefaultSort());
+        Pageable nutrientSatementsRequest = new PageRequest(pg, ps, NutrientStatementPanelHeader.getDefaultSort());
         return ic ? this.findNutrientStatementByStatementIdWithCount(
                 statIds, nutrientSatementsRequest) :
                 this.findNutrientStatementByStatementIdWithoutCount(statIds, nutrientSatementsRequest);
@@ -75,10 +76,9 @@ public class NLEA16NutrientStatementService {
     /**
      * Find nutrient statement information by id.
      *
-     * @param statementIds id that will search by.
+     * @param statementIds             id that will search by.
      * @param nutrientStatementRequest the request
      * @return the pageable result
-
      */
     private PageableResult<NutrientStatementPanelHeader> findNutrientStatementByStatementIdWithCount(
             List<String> statementIds, Pageable nutrientStatementRequest) {
@@ -95,7 +95,7 @@ public class NLEA16NutrientStatementService {
     /**
      * Find nutrient statement information by id.
      *
-     * @param statementIds id to search by
+     * @param statementIds             id to search by
      * @param nutrientStatementRequest the request
      * @return the pageable result
      */
