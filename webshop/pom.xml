@@ -3,7 +3,19 @@
   <groupId>fdsf</groupId>
   <artifactId>webshop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <packaging>war</packaging>
     <url>http://maven.apache.org</url>
        <!-- Specifying the Versions of Spring, Hiberante, MySQL etc -->
        <properties>

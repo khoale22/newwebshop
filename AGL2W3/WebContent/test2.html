@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        AngularJs Set Default Value of Select Box or Dropdown List with ng-model example
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+        var app = angular.module('selectboxApp', []);
+        app.controller('selectboxCtrl', function ($scope) {
+            $scope.arrlist = [{
+                "userid": 1,
+                "name": "Suresh"
+            }, {
+                "userid": 2,
+                "name": "Rohini"
+            }, {
+                "userid": 3,
+                "name": "Praveen"
+            }];
+            $scope.userSelect = "2";
+        });
+    </script>
+</head>
+<body  ng-app="selectboxApp" ng-controller="selectboxCtrl"
+<div>
+    <h3>AngularJS Set Default Value of Select Box / Dropdown List</h3>
+    <select name="users" ng-model="userSelect">
+        <option value="">--Select User--</option>
+        <option ng-repeat="option in arrlist" value="{{option.userid}}">{{option.name}}</option>
+    </select>
+</div>
+</body>
+</html>

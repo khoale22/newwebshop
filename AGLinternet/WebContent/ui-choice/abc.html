@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="../ui-choice/khoa.js"></script>
+    <!-- // khi thu muc hien tai nam trong session 6 -->
+    <!--  <script src="session6/script.js"></script>  // khi thu muc hien tai nam trong webcontent -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.19.8/select.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.19.8/select.css">
+</head>
+<body>
+
+<div ng-app="app" ng-controller="myCtrl as $ctrl">
+    <ui-select ng-model="$ctrl.salesChannel" theme="bootstrap" ng-change="$ctrl.handleChangeSalesChannel()">
+        <ui-select-match placeholder="Pick one...">2{{$select.selected.value2}}</ui-select-match>
+        <ui-select-choices repeat="val in $ctrl.values | filter: $select.search track by val.value2">
+            <div ng-bind="val.value2 | highlight: $select.search"></div>
+        </ui-select-choices>
+    </ui-select>
+    <h1>you choosed : {{$ctrl.salesChannel}}</h1>
+    <h1>you choosed : {{$ctrl.salesChannel.key}}</h1>
+    <h1>you choosedabc : {{$ctrl.values[0].key}}</h1>
+
+
+    <h1 ng-show="$ctrl.showIfNotNullKevin">Show Kevin</h1>
+    <h1 ng-show="$ctrl.showIfNotNullFiona">Show Fiona</h1>
+
+     <h1> </h1>
+    <div class="form-group pull-left" style="margin-top: 0px;">
+        <label style="font-weight: bold; width: 100%">Store</label>
+        <ui-select ng-model="$ctrl.selectedStore" theme="bootstrap" search-enabled="false">
+            <ui-select-match placeholder="SelectKhoa">
+                <span style="margin-top:5px"> {{$select.selected}} </span>
+            </ui-select-match>
+            <ui-select-choices refresh-delay="0" repeat="number in $ctrl.numbers">
+                {{number}}
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</div>
+</body>
+</html>

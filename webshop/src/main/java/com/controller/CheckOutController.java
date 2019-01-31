@@ -1,19 +1,5 @@
 package com.controller;
 
-import java.sql.Timestamp;
-import java.util.Date;
-import java.util.Map;
-import java.util.Random;
-
-import javax.servlet.http.HttpSession;
-
-import org.apache.catalina.Role;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.dao.BillDetailDao;
 import com.entity.Bill;
 import com.entity.Billdetail;
@@ -21,6 +7,17 @@ import com.entity.User;
 import com.model.Cart;
 import com.model.Item;
 import com.service.BillService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpSession;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.Map;
+import java.util.Random;
 
 @Controller
 public class CheckOutController {

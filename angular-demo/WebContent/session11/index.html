@@ -51,7 +51,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="employee in employees | orderBy:sortColumn:reverse | filter:searchText">
+        <tr ng-repeat="employee in employees | orderBy:sortColumn:reverse | filter: {name : 'Long'}">
           <td>{{employee.name | uppercase}}</td>
           <td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
           <td>{{employee.salary | currency:""}}</td>
