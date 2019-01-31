@@ -1,0 +1,78 @@
+<div id="productNotesModal" class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header pm-modal-header">
+				<div class="row">
+					<div class="col-md-2" style="text-align: left"><h5 class="modal-title">Notes</h5></div>
+					<div class="col-md-8" style="text-align: center">
+						{{$ctrl.workRequest.productMaster.description}}[{{$ctrl.workRequest.productId}}]
+					</div>
+					<div class="col-md-2" style="text-align: right">
+						<span class="close close-white" data-dismiss="modal" aria-hidden="true" style="color: #ffffff">&times;</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="col-md-12" ng-show="$ctrl.message" style="margin-bottom: 2%; margin-top: 2%">
+					<div class="col-md-2" style="" ></div>
+					<div class="col-md-8" style="text-align: center; vertical-align: middle; padding-top: 0.7%">
+						<div>
+							<span ng-class="{'alert' : true,
+							'alert-danger' : $ctrl.isError,
+							'alert-success' : !$ctrl.isError}"
+								  style="padding: 1%" role="alert">{{$ctrl.message}}</span>
+						</div>
+					</div>
+					<div class="col-md-2" style="margin-bottom: 0.5%;text-align: right"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12" style="" >
+						<table ng-table="$ctrl.tableParams"
+							   class="table-heb table-bordered table-striped" style="width: 100%">
+							<thead>
+							<tr style="text-align: center">
+								<th>Notes</th>
+								<th>Date</th>
+								<th>UserId</th>
+								<th ng-show="$ctrl.isAdding"></th>
+							</tr>
+							</thead>
+							<tr ng-repeat="comment in $data track by $index" ng-show="!$ctrl.isWaiting"
+								style="text-align: center">
+								<td data-title="'Notes'" width="55%">
+									<div ng-if="!comment.isEditing" ng-model="comment.comments" style="text-align: left">
+										{{comment.comments}}
+									</div>
+									<input type="text" class="form-control" ng-model="comment.comments"
+										   ng-if="comment.isEditing" maxlength="255" />
+								</td>
+								<td data-title="'Created On'" width="20%">{{comment.time | date:"MM/dd/yyyy h:mm:ss"}}</td>
+								<td data-title="'Created By'" width="20%">{{comment.userId}}</td>
+								<td width="5%" ng-show="$ctrl.isAdding">
+									<i data-ng-click="$ctrl.cancel($index)" class="glyphicon glyphicon-ban-circle pointer"
+									   ng-if="comment.isEditing" style="color: red; font-size: large" title="Cancel"></i>
+								</td>
+							</tr>
+						</table>
+						<div ng-show="!$ctrl.isWaiting && $ctrl.isNoRecordsFound" style="text-align: center; margin: 3%">
+							No Records found!!
+						</div>
+						<loading-spinner ng-show="$ctrl.isWaiting"></loading-spinner>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" ng-click="$ctrl.addNote()">
+							<span class="glyphicon glyphicon-plus"></span> Add</button>
+						<button type="button" class="btn btn-primary" data-loading-text="Saving.." ng-click="$ctrl.save()"
+								ng-disabled="!$ctrl.isAdding"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+						<button type="button" class="btn btn-primary" ng-click="$ctrl.reset()">
+							<span class="glyphicon glyphicon-refresh"></span> Reset</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							<span class="glyphicon glyphicon-remove"></span> Close</button>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

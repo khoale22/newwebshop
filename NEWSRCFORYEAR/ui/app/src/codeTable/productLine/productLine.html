@@ -1,0 +1,36 @@
+<div can-view="CT_PRLN_01" style="margin-top: 10px;">
+	<loading-spinner ng-show="$ctrl.isWaitingForResponse">
+	</loading-spinner>
+	<!--Error span-->
+	<div class="row" data-ng-if="$ctrl.error" ng-show="!$ctrl.isWaitingForResponse">
+				<span class="alert alert-danger col-md-4 col-md-push-4 myfade text-center" role="alert"
+					  ng-bind-html="$ctrl.error"></span>
+	</div>
+	<!--Success span-->
+	<div class="row" data-ng-if="$ctrl.success" ng-show="!$ctrl.isWaitingForResponse">
+				<span class="alert alert-success col-md-4 col-md-push-4 text-center myfade"
+					  role="alert">{{$ctrl.success}}</span>
+	</div>
+	<div ng-show="!$ctrl.isWaitingForResponse">
+		<button type="button" class="inline-block btn btn-primary btn-sm pull-right"
+				style="margin-bottom: 10px;" data-ng-click="$ctrl.clearFilter()"
+				data-ng-disabled="$ctrl.isFilterCleared()">
+			Clear Filter
+		</button>
+		<form name="addEditForm" id="addEditForm" novalidate>
+			<table ng-table="$ctrl.tableParams" show-filter="true"
+				   class="table-heb table-bordered table-striped" style="width: 100%" current-page="currentPage">
+				<tr ng-repeat="item in $data">
+					<td data-title="'ID'" filter="{'id' : 'text'}" style="width: 20%">
+						<span>{{item.id}}</span>
+					</td>
+					<td data-title="'Product Line (Sub Brand)'" filter="{'description' : 'text'}" style="width: 70%">
+						<span>{{item.description}}</span>
+					</td>
+					<td style="width:7%;text-align: center" data-title="'Action'" can-edit="CT_PRLN_01" style="width: 10%">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
