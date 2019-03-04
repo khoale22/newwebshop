@@ -16,6 +16,17 @@
         ];
         $scope.employees = employees;
         $scope.limitRow = 3;
+
+        $scope.item = {};
+        $scope.items = [
+            { name: 'Item1', Code: 'Code1', },
+            { name: 'Item2', Code: 'Code3'},
+            { name: 'Item3',  Code: 'Code4'},
+            { name: 'Item4',  Code: 'Code4' },
+            { name: 'Item5', Code: 'Code5' },
+        ];
+
+        $scope.item.selected = $scope.items[0] //here you can set the item selected
     }
 
     // input o day chinh la =(NHIEU ) employee.status
@@ -28,7 +39,6 @@
                 return 'Khóa2';
         }
     });
-   
     
     
     

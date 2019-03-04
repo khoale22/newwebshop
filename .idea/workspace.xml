@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e563786-a871-48b2-b578-490d7605b5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AGL2W3/WebContent/test2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/ui-choice/abc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/ui-choice/khoa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session3/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session4/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session5/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session5/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGL/WebContent/REPORT.html" beforeDir="false" afterPath="$PROJECT_DIR$/AGL/WebContent/REPORT.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGLinternet/WebContent/session6/handle_event.html" beforeDir="false" afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session6/handle_event.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-demo/WebContent/session11/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-demo/WebContent/session11/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/src/main/java/com/controller/CheckOutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/src/main/java/com/controller/CheckOutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/src/main/java/com/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/src/main/java/com/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/webshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/webshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGLinternet/WebContent/session6/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session6/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGLinternet/WebContent/session8/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session8/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGLinternet/WebContent/session8/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/AGLinternet/WebContent/session8/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/task/ecommerceTaskDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/task/ecommerceTaskDetail.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/demoSpring4MVCAngularJsExample/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -147,60 +145,57 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
+    <session id="-1947322780">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="21" />
+          <entry key="js" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="21" />
+          <entry key="JavaScript" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="150" />
+          <entry key="js" value="941" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="154" />
+          <entry key="JavaScript" value="937" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/app.module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="53" lean-forward="true" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/data/roles.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/app.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.template.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.module.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.component.js">
+        <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session3/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+            <state relative-caret-position="256">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session3/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -222,6 +217,10 @@
       <find>selectedStore</find>
       <find>salesChannel</find>
       <find>breakPo</find>
+      <find>select-match</find>
+      <find>ng-model=&quot;$</find>
+      <find>ctrl</find>
+      <find>filterDemoCtrl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,10 +254,19 @@
         <option value="$PROJECT_DIR$/AGL/WebContent/REPORT.html" />
         <option value="$PROJECT_DIR$/angular-demo/WebContent/session11/index.html" />
         <option value="$PROJECT_DIR$/webshop/src/main/java/com/entity/Product.java" />
-        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session6/script.js" />
-        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session6/handle_event.html" />
         <option value="$PROJECT_DIR$/AGLinternet/WebContent/ui-choice/khoa.js" />
         <option value="$PROJECT_DIR$/AGLinternet/WebContent/ui-choice/abc.html" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session8/app.js" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session8/index.html" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session6/script.js" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session6/handle_event.html" />
+        <option value="$PROJECT_DIR$/app/src/task/ecommerceTaskDetail.html" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session4/index.html" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session5/index.html" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session5/app.js" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session4/app.js" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session3/index.html" />
+        <option value="$PROJECT_DIR$/AGLinternet/WebContent/session3/app.js" />
       </list>
     </option>
   </component>
@@ -345,14 +353,65 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="session3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="session4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="session5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="session6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="session8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newwebshop" type="462c0819:PsiDirectoryNode" />
+              <item name="AGLinternet" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="session9" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newwebshop" type="b2602c69:ProjectViewProjectNode" />
@@ -384,19 +443,23 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546930702279" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551718552136" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maich\Desktop\WEBSHOP\newwebshop\AGLinternet\WebContent" />
       <recent name="C:\Users\MRV\Desktop\New folder\newwebshop" />
     </key>
   </component>
@@ -448,6 +511,10 @@
       <workItem from="1546421852267" duration="1356000" />
       <workItem from="1546479468804" duration="595000" />
       <workItem from="1546922556612" duration="1570000" />
+      <workItem from="1551617116325" duration="1044000" />
+      <workItem from="1551625223210" duration="5903000" />
+      <workItem from="1551711324659" duration="2954000" />
+      <workItem from="1551714622407" duration="3919000" />
     </task>
     <task id="LOCAL-00001" summary="ewr">
       <created>1538646617866</created>
@@ -509,13 +576,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48411000" />
+    <option name="totallyTimeSpent" value="62231000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20948827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22163388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -547,7 +614,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21558245" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -564,7 +631,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.08125677" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.08125677" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -591,39 +658,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="ewrfdsf" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demoSpring4MVCAngularJsExample/src/main/webapp/static/js/controller/user_controller.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AGL/WebContent/REPORT.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="12" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angularjsNote.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-demo/WebContent/session9/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-demo/WebContent/session9/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-demo/WebContent/session8/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular-demo/WebContent/session8/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-demo/WebContent/session6/handle_event.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -756,12 +790,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/AGLABC2/AGLABC/src/app/bower_components/bootstrap/dist/css/bootstrap.min.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6919">
           <caret column="407129" selection-start-column="407129" selection-end-column="407129" />
         </state>
       </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/login-function/login.module.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -770,81 +804,142 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/angular4_5/DemoIntel/src/app/bower_components/bootstrap/dist/css/bootstrap-theme.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="32338" selection-start-column="32338" selection-end-column="32338" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session6/handle_event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session6/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/Header.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session8/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session8/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/BookAppNew.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/data/roles.json">
+    <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/app.module.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="144">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="53" lean-forward="true" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        <state relative-caret-position="48">
+          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/data/roles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/app.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="192">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/app.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.template.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.module.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.template.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/BookAppNew/src/app/student-function/student.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="144">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session8/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session8/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#ui-select#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session6/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4736">
+          <caret line="296" column="59" selection-start-line="296" selection-start-column="59" selection-end-line="296" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/task/ecommerceTaskDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session6/handle_event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="n#style#0;n#ui-select#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ui-select#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ui-select#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session5/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session4/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AGLinternet/WebContent/session3/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
