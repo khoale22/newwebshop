@@ -15,11 +15,18 @@
                 $ctrl.$onInit = function () { // khong can $onInit $ctrl.userName = 'Nick1'; van ok
                     $ctrl.userName = 'Nick1';
                 }
+               /* $ctrl.addAName = function (name) {
+                    $ctrl.hero1 = name;
+                }*/
+               // $ctrl.hero1 = $ctrl.hero.name;///khong hieu
 
             }],
                 template : ' <h2>Iam outerComp</h2>'+
             '<p> userName : {{$ctrl.userName }}</p>'+
-                    '<p> hero : {{$ctrl.hero }}</p>'
+                    '<p> hero0 : {{$ctrl.hero }}</p>'+
+                    '<p> hero1 : {{$ctrl.hero1 }}</p>'
+                    /*'<p><button ng-click="$ctrl.addAName($ctrl.hero)">ADDNAME1</button></p>'*/
+                  //  '<p> hero1 : {{$ctrl.hero1 }}</p>' ///khong hieu
 
 
         })
