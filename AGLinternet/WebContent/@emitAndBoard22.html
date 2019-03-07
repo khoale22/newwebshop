@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+    app.controller("MyController1", function ($scope, $scope) {
+
+        //broadcast the event down
+        $scope.OnClick = function (evt) {
+            $scope.$broadcast("SendDown", "some data");
+        }
+
+        //handle SendDown event
+        $scope.$on("SendDown", function (evt, data) {
+            $scope.Message = "Inside SendDown handler of MyController1 : " + data;
+        });
+
+        //handle SendUp event
+        $scope.$on("SendUp", function (evt, data) {
+            $scope.Message = "Inside SendUp handler of MyController1 : " + data;
+        });
+    });
+
+    app.controller("MyController2", function ($scope, $scope) {
+
+        //handle SendDown event
+        $scope.$on("SendDown", function (evt, data) {
+            $scope.Message = "Inside SendDown handler of MyController2 : " + data;
+        });
+
+        //handle SendUp event
+        $scope.$on("SendUp", function (evt, data) {
+            $scope.Message = "Inside SendUp handler of MyController2 : " + data;
+        });
+
+    });
+    app.controller("MyController3", function ($scope, $scope) {
+
+        //handle SendDown event
+        $scope.$on("SendDown", function (evt, data) {
+            $scope.Message = "Inside SendDown handler of MyController3 : " + data;
+        });
+
+        //emit SendUp event up
+        $scope.OnClick = function (evt) {
+            $scope.$emit("SendUp", "some data");
+        }
+
+        //handle SendUp event
+        $scope.$on("SendUp", function (evt, data) {
+            $scope.Message = "Inside SendUp handler of MyController3 : " + data;
+        });
+    });
+</script>
+<body ng-app="app">
+<div ng-controller="MyController1">
+    <input type="button" value="Broadcast Down"
+           ng-click="OnClick($event)" />
+    <h4>{{Message}}</h4>
+    <div ng-controller="MyController2">
+        <h4>{{Message}}</h4>
+        <div ng-controller="MyController3">
+            <h4>{{Message}}</h4>
+            <input type="button" value="Emit Up"
+                   ng-click="OnClick($event)" />
+        </div>
+    </div>
+</div>
+</body>
+</html>

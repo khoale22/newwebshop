@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+
+
+<script>
+    var shareModule = angular.module("shareModule", []);
+    shareModule.factory("shareService", function($rootScope){
+        var shareService = {};
+        shareService.message = "";
+        shareService.broadcastMessage = function(message){
+            shareService.message = message;
+            $rootScope.$broadcast("notifyMessageChange");
+        }
+        return shareService;
+    });
+    var myApp = angular.module("myapp",["shareModule"]);
+    //service style, probably the simplest one
+
+    myApp.controller("ACtrl", function($scope, shareService){
+        $scope.message = "Broadcast Message A";
+        $scope.notify = function(){
+            shareService.broadcastMessage($scope.message);
+        };
+        $scope.$on("notifyMessageChange", function(){
+            $scope.message = shareService.message;
+        });
+    });
+    myApp.controller("BCtrl", function($scope, shareService){
+        $scope.message = "Broadcast Message B";
+        $scope.$on("notifyMessageChange", function(){
+            $scope.message = shareService.message;
+        });
+    });
+    myApp.controller("CCtrl", function($scope, shareService){
+        $scope.message = "Broadcast Message C";
+        $scope.$on("notifyMessageChange", function(){
+            $scope.message = shareService.message;
+        });
+    });
+
+</script>
+
+
+
+<body>
+<div class="container" ng-app="myapp">
+    <div ng-controller="ACtrl">
+        <label>A Controller:</label>
+        <div class="form-group">
+            <label>Input message</label>
+            <input type="text" class="form-control" placeholder="Enter your message" ng-model="message">
+            <br />
+            <button class="btn btn-primary" ng-click="notify()">Notify</button>
+        </div>
+        Result: <div>{{message}}</div>
+    </div>
+    <div ng-controller="BCtrl">
+        <label>B Controller:</label><div>{{message}}</div>
+    </div>
+    <div ng-controller="CCtrl">
+        <label>C Controller:</label><div>{{message}}</div>
+    </div>
+</div>
+</body>
+</html>
